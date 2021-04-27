@@ -1,0 +1,29 @@
+.navWrapper{
+    display: flex;
+    background-color: rgba(250,250,250,250,1);
+    padding:0;
+    align-items: center;
+    position:fixed;
+    top:0;
+    width:100%;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(219,219,219,1);
+    justify-content: center;
+
+}
+
+.contentWrapper{
+    max-width: 975px;
+    height:54px;
+    background-color: blue;
+    padding:0 20px;
+    justify-content: center;
+
+}
+
+.navLogo{
+    margin-top: 15px;
+    min-width: 40px;
+    max-height: 100%;
+}
+
