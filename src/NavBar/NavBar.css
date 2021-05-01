@@ -29,28 +29,31 @@
     min-width: 40px;
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
+    margin:auto 0;
+
+}
+.navButtonWrapperContainer{
+    display:flex;
     margin:auto 0;
 
 }
 
 .navButtonWrapper{
     display:flex;
-    margin:auto 0;
-
+    
 }
 
 .navSearch{
     margin:13px 0 0 110px;
 }
 .navButton{
-    padding-left: 24px;
+    padding-left: 20px;
+    padding-right: 2px;;
     
 }
 
 .navSearch{
     height: 28px;
-    flex: 0 1 auto;
     min-width:125px;
     width:215px;
 }
