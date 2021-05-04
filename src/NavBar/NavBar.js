@@ -3,16 +3,14 @@ import Logo from  '../resources/insta_logo.png'
 import Profile from '../resources/profile_pic.jpg'
 const NavBar=()=>{
     return (
-        
             <div className="navWrapper">
                 <div className="contentWrapper">
                     <div className="navLogoWrapper">
-                    <a href='/' tabIndex="0">
-                        <div className="navLogo">
-                            <img alt="Instagram" src={Logo}/>
-                        </div>
-                    </a>
-                        
+                        <a href='/' tabIndex="0">
+                            <div className="navLogo">
+                                <img alt="Instagram" src={Logo}/>
+                            </div>
+                        </a>
                     </div>
                     <div className="navSearch">
                         <div>
