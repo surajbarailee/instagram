@@ -48,8 +48,12 @@
 }
 .navButton{
     padding-left: 20px;
-    padding-right: 2px;;
+    padding-right: 2px;
+    /* cursor: pointer; */
     
+}
+.svgWrapper{
+    cursor:pointer;
 }
 
 .navSearch{
