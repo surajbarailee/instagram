@@ -1,1 +1,1 @@
-An instagram desktop clone web using React.
+An instagram desktop clone website using React.
