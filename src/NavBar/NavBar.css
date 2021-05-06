@@ -1,76 +1,68 @@
 .navWrapper{
-    display: flex;
-    background-color: rgba(250,250,250,250,1);
-    padding:0;
-    position:fixed;
-    top:0;
-    width:100%;
+    align-items: center;
+    min-height:54px;
+    width: 100%;
     border-bottom: 1px solid rgba(219,219,219,1);
+    background-color: red;
+    top:0;
+    position: fixed;
+    display: flex;
     justify-content: center;
-    margin:auto;
 
 }
 
-.contentWrapper{
+.navContent{
+    padding: 0 20px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     max-width: 975px;
-    height:54px;
-    display:flex;
-    padding:0 20px;
-    justify-content: space-between;
-    width:100%;
+    width: 100%;
+    background-color: green;
+    
 }
+
 
 .navLogoWrapper{
-    margin:auto 0;
-    padding-left: 20px;
-}
-
-.navLogo{
+    flex: 1 9999 0%;
     min-width: 40px;
+    background-color: yellow;
+}
+
+.logoContainer{
+    align-content: stretch;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex: 0 0 auto;
+
+}
+
+.logoImage{
     max-height: 100%;
-    max-width: 100%;
-    margin:auto 0;
-    margin-top: 10px;
+    max-width:100%;
+    object-fit: contain;
 
 }
-.navButtonWrapperContainer{
-    display:flex;
-    margin:auto 0;
-    margin-right: 18px;
-    
-}
 
-.navButtonWrapper{
-    display:flex;
-    margin-top: 3px;;
-    
-}
-
-.navSearch{
-    margin:13px 0 0 90px;
-}
-.navButton{
-    padding-left: 20px;
-    padding-right: 2px;
-    
-}
-.svgWrapper{
-    cursor:pointer;
-}
-
-.navSearch{
-    height: 28px;
-    min-width:125px;
+.navSearchWrapper{
+    height:28px;
+    flex:0 1 auto;
+    min-width: 125px;
     width:215px;
+    background-color: blue;
+
 }
 
-
-.navSearchBox{
-    cursor: text;
-    background-color: rgba(250,250,250,1);
-    border: 1px solid rgba(219,219,219,1);
-    justify-content: center;
+.inputBox{
+    border: 1px rgba(219,219,219,1);
+    appearance: none;
+    font-size: 16px;
     border-radius: 3px;
-    outline:0;
-    padding:3px 10px 3px 26px;
+    color:rgba(38,38,38,1);
+    outline: 0;
+    padding: 3px 10px 3px 26px;
+    z-index: 2;
 }

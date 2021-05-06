@@ -4,7 +4,34 @@ import Profile from '../resources/profile_pic.jpg'
 const NavBar=()=>{
     return (
             <div className="navWrapper">
-                <div className="contentWrapper">
+                <div className="navContent">
+                    <div className="navLogoWrapper">
+                            <a href='/'>
+                                <div className="logoContainer">
+                                    <div style={{marginTop:'7px'}}>
+                                        <img class= 'logoImage'alt="Instagram" src={Logo}/>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+                    <div className="navSearchWrapper">
+                        <input type="text" autoCapitalize='none' placeholder = 'Search' className="inputBox"/>
+                    </div>
+                </div>
+                    
+
+            </div>      
+            
+            
+    
+    )
+}
+export default NavBar;
+
+{/* <div className="contentWrapper">
+                    <div>
+                        
+                    </div>
                     <div className="navLogoWrapper">
                         <a href='/' tabIndex="0">
                             <div className="navLogo">
@@ -13,9 +40,8 @@ const NavBar=()=>{
                         </a>
                     </div>
                     <div className="navSearch">
-                        <div>
-                            <input type="text" placeholder='Search' className='navSearchBox'/>
-                            
+                        <div className='searchBox'>
+                            Search
                         </div>
                         
                     </div>
@@ -49,15 +75,6 @@ const NavBar=()=>{
                                 </div>
                             </div>
 
-                        </div>
+                        </div> 
 
-                    </div>
-                </div>      
-            
-        </div>
-            
-    
-    )
-}
-export default NavBar;
-
+                    </div> */}
