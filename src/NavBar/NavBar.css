@@ -1,9 +1,8 @@
 .navWrapper{
     align-items: center;
-    min-height:54px;
+    min-height:53px;
     width: 100%;
     border-bottom: 1px solid rgba(219,219,219,1);
-    background-color: red;
     top:0;
     position: fixed;
     display: flex;
@@ -12,7 +11,7 @@
 }
 
 .navContent{
-    padding: 0 20px;
+    padding: 4px 20px 0px 20px;
     background-color: white;
     align-items: center;
     display: flex;
@@ -20,7 +19,6 @@
     justify-content: center;
     max-width: 975px;
     width: 100%;
-    background-color: green;
     
 }
 
@@ -28,7 +26,8 @@
 .navLogoWrapper{
     flex: 1 9999 0%;
     min-width: 40px;
-    background-color: yellow;
+    max-width: 360px;
+    padding-left: 20px;
 }
 
 .logoContainer{
@@ -48,21 +47,57 @@
 }
 
 .navSearchWrapper{
-    height:28px;
     flex:0 1 auto;
     min-width: 125px;
     width:215px;
-    background-color: blue;
-
+    position:relative;
 }
 
 .inputBox{
-    border: 1px rgba(219,219,219,1);
-    appearance: none;
+    border: 1px solid rgba(219,219,219,1);
+    height:28px;
     font-size: 16px;
     border-radius: 3px;
     color:rgba(38,38,38,1);
     outline: 0;
-    padding: 3px 10px 3px 26px;
+    padding: 0px 0px 0px 25px;
     z-index: 2;
+    background-color: red;
+    visibility: hidden;
+
+}
+
+.searchBoxCover{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    text-align: center;
+    /* background-color: red; */
+    height: 26px;
+    outline: 0;
+    border: 1px solid rgba(219,219,219,1);
+    border-radius: 3px;
+}
+
+.navButtonWrapper{
+    flex:1 0 0%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonContainer{
+    align-content: center;
+    align-items: center;
+    /* padding-left: 24px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-right:20px;
+}
+
+.svgWrapper{
+    padding-left: 22px;
 }
