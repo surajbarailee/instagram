@@ -1,8 +1,13 @@
 import './App.css';
 import NavBar from './NavBar/NavBar'
+import Body from './BodySection/Body'
 function App() {
   return (
-    <NavBar/>
+    <div>
+          <NavBar/>
+          <Body/>
+    </div>
+
   );
 }
 
