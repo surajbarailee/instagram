@@ -1,0 +1,11 @@
+.bodyWrapper{
+    align-items: center;
+    min-height:53px;
+    width: 100%;
+    border-bottom: 1px solid rgba(219,219,219,1);
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+}
