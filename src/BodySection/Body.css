@@ -1,11 +1,24 @@
 .bodyWrapper{
-    align-items: center;
+    /* align-items: center; */
     min-height:53px;
     width: 100%;
-    border-bottom: 1px solid rgba(219,219,219,1);
     display: flex;
+    width: 100%;
     justify-content: center;
     font-family: Montserrat;
     font-size: 12px;
     font-weight: 300;
+    background-color: rgba(250,250,250,1);
+}
+.bodyContent{
+    margin-top: 30px;
+    /* padding: 7px 20px 0px 20px; */
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    max-width: 935px;
+    width: 100%;
+    /* background-color: wheat; */
 }
