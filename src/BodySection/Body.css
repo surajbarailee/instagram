@@ -13,12 +13,52 @@
 .bodyContent{
     margin-top: 30px;
     /* padding: 7px 20px 0px 20px; */
-    background-color: white;
+    /* background-color: white; */
     align-items: center;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     max-width: 935px;
     width: 100%;
-    /* background-color: wheat; */
+}
+
+
+.accountAndSuggestionWrapper{
+    max-width: 293px;
+    width: 100%;
+    margin-left:30px;
+    
+}
+
+.accountDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 17px;
+
+}
+
+.realName{
+    color:rgba(142,142,142,1);
+    font-weight: 400;
+    padding-top:4px;
+}
+
+
+
+.accountNameWrapper{
+    align-items: stretch;
+    margin-left: 19px;
+}
+
+
+
+.accountSwitchWrapper{
+    width: 100%;
+}
+.switch{
+    float: right;
+    color:rgba(0,149,246,1);
+    font-size: 11px;
+    font-weight: 600;
 }
