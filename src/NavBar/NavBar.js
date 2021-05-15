@@ -21,10 +21,12 @@ const NavBar=()=>{
                             <input type="text" autoCapitalize='none' placeholder = 'Search' className="inputBox"/>
                         </div>
                         <div className="searchBoxCover">
-
-                            <SearchIcon  style={{width:'10px' ,height:'10px',padding:'8px 5px 0px 0px'}}/>
-
-                            Search
+                            <div>
+                                <SearchIcon  className="searchIcon"/>
+                            </div>
+                            <div style={{marginRight:'10px'}}>
+                               Search
+                            </div>
                         </div>
                     </div>
                     <div className="navButtonWrapper">
