@@ -22,7 +22,7 @@
 }
 
 
-.accountAndSuggestionWrapper{
+.accountDetailsWrapper{
     max-width: 293px;
     width: 100%;
     margin-left:30px;
@@ -61,4 +61,19 @@
     color:rgba(0,149,246,1);
     font-size: 11px;
     font-weight: 600;
+}
+
+
+.suggestionHeader{
+
+    display:flex;
+    justify-content: space-between;   
+}
+
+
+.suggestionSingleList{
+    padding-Top: 15px;
+    display: flex;
+    align-items: center;
+
 }
