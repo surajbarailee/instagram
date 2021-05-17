@@ -2,7 +2,7 @@
     border:  1px solid rgba(219,219,219,1);
     background-color: white;
     border-radius: 3px;
-    width:612px;
+    min-width:612px;
     height:115px;
     
 }
