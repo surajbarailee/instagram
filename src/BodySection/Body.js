@@ -37,90 +37,28 @@ const Body=()=>{
                             </div>
                             <div className="suggestionList">
                                 <div className="suggestionSingleList">
-                                    <img src={DefaultProfile} alt="asd" width='40px' height='40px' />  
+                                    <div>
+                                        <img src={DefaultProfile} alt="asd" width='35px' height='35px' />  
+                                    </div>
                                     <div className="accountNameWrapper">
                                         <div className="username">
                                             <b>suraj_barailee</b>
                                         </div>
-                                        <div className="realName" style={{fontSize:'12px',fontWeight:'400px'}}>
+                                        <div className="accountDetail"  >
                                             New to instagram
                                         </div>
                                     </div>
-                                    <div className="accountSwitchWrapper">
-                                            <div className="switch">
+                                    <div  >
                                                 Follow
-                                            </div>
                                     </div>
+                                
                                 </div>
-                                <div className="suggestionSingleList">
-                                    <img src={DefaultProfile} alt="asd" width='40px' height='40px' />  
-                                    <div className="accountNameWrapper">
-                                        <div className="username">
-                                            <b>suraj_barailee</b>
-                                        </div>
-                                        <div className="realName">
-                                            Suraj Barailee
-                                        </div>
-                                    </div>
-                                    <div className="accountSwitchWrapper">
-                                            <div className="switch">
-                                                Follow
-                                            </div>
-                                    </div>
-                                </div>
-                                <div className="suggestionSingleList">
-                                    <img src={DefaultProfile} alt="asd" width='40px' height='40px' />  
-                                    <div className="accountNameWrapper">
-                                        <div className="username">
-                                            <b>suraj_barailee</b>
-                                        </div>
-                                        <div className="realName">
-                                            Suraj Barailee
-                                        </div>
-                                    </div>
-                                    <div className="accountSwitchWrapper">
-                                            <div className="switch">
-                                                Follow
-                                            </div>
-                                    </div>
-                                </div>
-                                <div className="suggestionSingleList">
-                                    <img src={DefaultProfile} alt="asd" width='40px' height='40px' />  
-                                    <div className="accountNameWrapper">
-                                        <div className="username">
-                                            <b>suraj_barailee</b>
-                                        </div>
-                                        <div className="realName">
-                                            Suraj Barailee
-                                        </div>
-                                    </div>
-                                    <div className="accountSwitchWrapper">
-                                            <div className="switch">
-                                                Follow
-                                            </div>
-                                    </div>
-                                </div>
-                                <div className="suggestionSingleList">
-                                    <img src={DefaultProfile} alt="asd" width='40px' height='40px' />  
-                                    <div className="accountNameWrapper">
-                                        <div className="username">
-                                            <b>suraj_barailee</b>
-                                        </div>
-                                        <div className="realName">
-                                            Suraj Barailee
-                                        </div>
-                                    </div>
-                                    <div className="accountSwitchWrapper">
-                                            <div className="switch">
-                                                Follow
-                                            </div>
-                                    </div>
-                                </div>
+                                
+                              
                             </div>
                             <div className="helperLinks">
 
                                 About Help Press API Jobs Privacy Terms Locations Top Accounts Hashtags Language
-
 
 
                             </div>
