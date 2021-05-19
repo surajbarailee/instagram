@@ -36,9 +36,9 @@ const Body=()=>{
 
                             </div>
                             <div className="suggestionList">
-                                <div className="suggestionSingleList">
+                                <div className="suggestionSingleList" style={{paddingTop:'20px'}}>
                                     <div>
-                                        <img src={DefaultProfile} alt="asd" width='35px' height='35px' />  
+                                        <img src={DefaultProfile} alt="asd" width='32px' height='32px' />  
                                     </div>
                                     <div className="accountNameWrapper">
                                         <div className="username">
@@ -48,13 +48,34 @@ const Body=()=>{
                                             New to instagram
                                         </div>
                                     </div>
-                                    <div  >
-                                                Follow
+                                    <div style={{color:'rgba(0,149,246,1)',fontWeight:'600'}}>
+                                        Follow
                                     </div>
-                                
                                 </div>
                                 
-                              
+                            
+                            
+                                <div className="suggestionSingleList">
+                                    <div>
+                                        <img src={DefaultProfile} alt="asd" width='32px' height='32px' />  
+                                    </div>
+                                    <div className="accountNameWrapper">
+                                        <div className="username">
+                                            <b>suraj_barailee</b>
+                                        </div>
+                                        <div className="accountDetail"  >
+                                            New to instagram
+                                        </div>
+                                    </div>
+                                    <div style={{color:'rgba(0,149,246,1)',fontWeight:'600'}}>
+                                        Follow
+                                    </div>
+                                </div>
+                               
+                                
+                               
+                                
+                               
                             </div>
                             <div className="helperLinks">
 

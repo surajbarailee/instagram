@@ -1,7 +1,6 @@
 import './NavBar.css'
 import Logo from  '../resources/insta_logo.png'
 import Profile from '../resources/profile_pic.jpg'
-import {ReactComponent as SearchIcon} from '../resources/search.svg'
 
 const NavBar=()=>{
     return (
@@ -22,7 +21,6 @@ const NavBar=()=>{
                         </div>
                         <div className="searchBoxCover">
                             <div>
-                                <SearchIcon  className="searchIcon"/>
                             </div>
                             <div style={{marginRight:'10px'}}>
                                Search
