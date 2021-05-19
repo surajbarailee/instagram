@@ -86,16 +86,16 @@
 
 
 .suggestionSingleList{
-    padding-Top: 15px;
+    padding-Top: 12px;
     display: flex;
     align-items: center;
 
 }
 
 .accountDetail{
-    font-size: 12px;
-    
+    font-size: 11px;
     width:100%;
+    padding-top:3px;
 }
 
 .accountFollow{
