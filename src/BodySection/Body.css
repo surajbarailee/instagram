@@ -1,9 +1,8 @@
 .bodyWrapper{
-    /* align-items: center; */
     min-height:53px;
     width: 100%;
+    max-width: 100%;
     display: flex;
-    width: 100%;
     justify-content: center;
     font-family: Montserrat;
     font-size: 12px;
@@ -13,17 +12,17 @@
 }
 .bodyContent{
     margin-top: 30px;
-    /* padding: 7px 20px 0px 20px; */
-    /* background-color: white; */
     align-items: center;
     display: flex;
     flex-direction: row;
     max-width: 935px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .newsFeed{
-    margin-right: 2px;;
+    margin-right: 2px;
+    width:612px;
+    max-width: 612px;
 }
 
 
@@ -100,4 +99,73 @@
 
 .accountFollow{
     color:rgba(0,149,246,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SinglePost Wrapper */
+
+.postNav{
+    /* background-color: red; */
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.singlePostWrapper{
+    
+    max-width: 100%;
+    margin-top: 25px;
+    border:1px solid #DBDBDB;
+}
+.postNavLeft{
+    display: flex;
+    align-items: center;
+}
+.profileImage{
+    width:32px;
+    border-radius: 20px;;
+}
+.profileLink{
+    text-decoration: none;
+    font-weight:600;
+    font-size: 12px;
+}
+.profileLink:hover{
+    text-decoration: underline;
+}
+
+.postUsername{
+    cursor:pointer;
+    margin-left: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.dotMenu{
+    width:14px;
+    cursor: pointer;
+}
+
+.postImage{
+    max-width:100%;
+}
+.postBody{
+    width: 100%;
+    overflow: hidden;
+}
+
+.actionIcons{
+    padding-left: 15px;
 }
