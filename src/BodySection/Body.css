@@ -114,8 +114,7 @@
 /* SinglePost Wrapper */
 
 .postNav{
-    /* background-color: red; */
-    padding: 10px 16px;
+    padding: 10px 16px 0px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,4 +167,41 @@
 
 .actionIcons{
     padding-left: 15px;
+}
+
+
+.commentsWrapper{
+    text-decoration: none;
+    font-weight:400;
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.singleComment{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.postDetails{
+    padding-top: 8px;
+}
+
+.commentStatus{
+    padding-top: 6px;
+    color:rgba(142,142,142,1);
+}
+.commentList{
+    padding-top: 6px;
+}
+
+.time{
+    text-transform: uppercase;
+    color:rgba(142,142,142,1);
+    font-size: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.commentWrapper{
+    display: flex;
 }
