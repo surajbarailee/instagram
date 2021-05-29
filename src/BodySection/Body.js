@@ -8,92 +8,11 @@ const Body=()=>{
     return(
             <div className="bodyWrapper">
                 <div className="newsFeed">
-                        <Story/>
-                        <NewsFeed/>
+                    <Story/>
+                    <NewsFeed/>
                 </div>
-                <div className='accountSection'>
-                    <div className='accountDetailsWrapper'>
-                            <div className="accountDetails">
-                                <img src={DefaultProfile} alt="asd" width='56px' height='56px' />  
-                                <div className="accountNameWrapper">
-                                    <div className="username">
-                                        <b>suraj_barailee</b>
-                                    </div>
-                                    <div className="realName">
-                                        Suraj Barailee
-                                    </div>
-                                </div>
-                                    <div className="accountSwitchWrapper">
-                                        <div className="switch">
-                                            Switch
-                                        </div>
-                                    </div>
-                            </div>              
-                            <div className='suggestionHeader'>
-                                <div >
-                                    Suggestions For You
-                                </div>
-                                <div>
-                                    See All
-                                </div>
-
-                            </div>
-                            <div className="suggestionList">
-                                <div className="suggestionSingleList" style={{paddingTop:'20px'}}>
-                                    <div>
-                                        <img src={DefaultProfile} alt="asd" width='32px' height='32px' />  
-                                    </div>
-                                    <div className="accountNameWrapper">
-                                        <div className="username">
-                                            <b>suraj_barailee</b>
-                                        </div>
-                                        <div className="accountDetail"  >
-                                            New to instagram
-                                        </div>
-                                    </div>
-                                    <div style={{color:'rgba(0,149,246,1)',fontWeight:'600'}}>
-                                        Follow
-                                    </div>
-                                </div>
-                                
-                            
-                            
-                                <div className="suggestionSingleList">
-                                    <div>
-                                        <img src={DefaultProfile} alt="asd" width='32px' height='32px' />  
-                                    </div>
-                                    <div className="accountNameWrapper">
-                                        <div className="username">
-                                            <b>suraj_barailee</b>
-                                        </div>
-                                        <div className="accountDetail"  >
-                                            New to instagram
-                                        </div>
-                                    </div>
-                                    <div style={{color:'rgba(0,149,246,1)',fontWeight:'600'}}>
-                                        Follow
-                                    </div>
-                                </div>
-                               
-                                
-                               
-                                
-                               
-                            </div>
-                            <div className="helperLinks">
-
-                                About Help Press API Jobs Privacy Terms Locations Top Accounts Hashtags Language
-
-
-                            </div>
-                        
-                    </div>
-                </div>
-            
-            
-            
-            </div>    
-    
+                <AccountSection/>
+            </div>
     )
 }
 
@@ -112,10 +31,10 @@ const NewsFeed = ()=>{
 const SinglePost=()=>{
     return( 
         <div className="singlePostWrapper">
-                <div className="postNav">
+                <div className="postNav" style={{height:'60px'}}>
                     <div className="postNavLeft">
                         <div className="profileImageWrapper">
-                            <img src={DefaultProfile} alt="profile_picture" className = "profileImage"/>
+                            <img src={DefaultProfile} alt="profile_picture" className = "profileImage" />
                         </div>
                         <div className="postUsername">
                             <a href="https://instagram.com" className="profileLink">
@@ -132,7 +51,7 @@ const SinglePost=()=>{
                     <img src={PostImage} alt="post by memenepal" className="postImage" />
                 </div>
 
-                <div className="postNav" style={{paddingLeft:'0px'}}>
+                <div className="postNav" style={{paddingLeft:'0px',paddingTop:'12px'}}>
 
                     <div className="postNavLeft" >
                             <div className="actionIcons">
@@ -204,6 +123,103 @@ const SinglePost=()=>{
 
 
 
+const AccountSection =()=>{
+    return(
+    <div className='accountSection' >
+        <div className='accountDetailsWrapper' style={{position:'fixed'}}>
+                <div className="accountDetails">
+                    <div >
+                        <img src={DefaultProfile} alt="profile_picture" width='56px' height='56px' style={{borderRadius:'56px'}}/>  
+                    </div>
+                    <div className="accountNameWrapper" style={{marginLeft:'16px'}}>
+                        <div className="username">
+                            <b>suraj_barailee</b>
+                        </div>
+                        <div className="accountDetail"  style={{fontWeight:'500',color:'rgba(142,142,142,1)'}}>
+                            Suraj Barailee
+                        </div>
+                    </div>
+                    <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px'}}>
+                        Switch
+                    </div>
+                </div>          
+                <div className='suggestionHeader'style={{paddingBottom:'5px'}}>
+                    <div >
+                        Suggestions For You
+                    </div>
+                    <div>
+                        See All
+                    </div>
+
+                </div>
+                <div className="suggestionList">
+                    <SuggestionSingleList/>
+                    <SuggestionSingleList/>
+                    <SuggestionSingleList/>
+                    <SuggestionSingleList/>
+                    <SuggestionSingleList/>      
+                </div>
+                <div className="helperLinks">
+                    
+                        <Links link='About' url='https://about.instagram.com'/>
+                        <Links link='Help' url='https://about.instagram.com'/>
+                        <Links link='Press' url='https://about.instagram.com'/>
+                        <Links link='API' url='https://about.instagram.com'/>
+                        <Links link='Jobs' url='https://about.instagram.com'/>
+                        <Links link='Privacy' url='https://about.instagram.com'/>
+                        <Links link='Terms' url='https://about.instagram.com'/>
+                        <Links link='Locations' url='https://about.instagram.com'/>
+                        <br/>
+                        <Links link='Top' url='https://about.instagram.com'/>
+                        <Links link='Accounts' url='https://about.instagram.com'/>
+                        <Links link='Hashtags' url='https://about.instagram.com'/>
+                        <Links link='Language' url='https://about.instagram.com'/>
+
+                        <div style={{color :'#DEDEDE',
+                        fontSize:'11px',
+                        padding:'15px 0px 0px 5px',
+                        fontWeight:'600'
+
+                        
+                        }}> 
+                        &copy; 2021 INSTAGRAM FROM FACEBOOK 
+                        </div>
+                </div>
+        </div>
+    </div>
+    )
+}
+
+
+const SuggestionSingleList =()=>{
+    return(
+    <div className="suggestionSingleList" >
+        <div >
+            <img src={DefaultProfile} alt="asd" width='32px' height='32px' />  
+        </div>
+        <div className="accountNameWrapper" style={{marginLeft:'10px'}}>
+            <div className="username">
+                <b>suraj_barailee</b>
+            </div>
+            <div className="accountDetail"  >
+                New to instagramasdasdasdas
+            </div>
+        </div>
+        <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px'}}>
+            Follow
+        </div>
+    </div>
+    )
+}
+
+
+const Links=(props)=>{
+    return (
+        <li>
+            <a href={props.url} className="links">{props.link}</a>
+        </li>
+    )
+}
 
 
 export default Body;
