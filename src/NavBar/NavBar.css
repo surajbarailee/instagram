@@ -17,6 +17,9 @@
     font-family: Montserrat;
     font-size: 12px;
     font-weight: 300;
+    /* position:fixed; */
+    z-index: 2;
+    background-color: white;
 
 }
 

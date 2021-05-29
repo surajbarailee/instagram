@@ -34,7 +34,7 @@ const SinglePost=()=>{
                 <div className="postNav" style={{height:'60px'}}>
                     <div className="postNavLeft">
                         <div className="profileImageWrapper">
-                            <img src={DefaultProfile} alt="profile_picture" className = "profileImage"/>
+                            <img src={DefaultProfile} alt="profile_picture" className = "profileImage" />
                         </div>
                         <div className="postUsername">
                             <a href="https://instagram.com" className="profileLink">
@@ -125,24 +125,24 @@ const SinglePost=()=>{
 
 const AccountSection =()=>{
     return(
-    <div className='accountSection'>
-        <div className='accountDetailsWrapper'>
+    <div className='accountSection' >
+        <div className='accountDetailsWrapper' style={{position:'fixed'}}>
                 <div className="accountDetails">
-                    <img src={DefaultProfile} alt="asd" width='56px' height='56px' />  
-                    <div className="accountNameWrapper">
+                    <div >
+                        <img src={DefaultProfile} alt="profile_picture" width='56px' height='56px' style={{borderRadius:'56px'}}/>  
+                    </div>
+                    <div className="accountNameWrapper" style={{marginLeft:'16px'}}>
                         <div className="username">
                             <b>suraj_barailee</b>
                         </div>
-                        <div className="realName">
+                        <div className="accountDetail"  style={{fontWeight:'500',color:'rgba(142,142,142,1)'}}>
                             Suraj Barailee
                         </div>
                     </div>
-                        <div className="accountSwitchWrapper">
-                            <div className="switch">
-                                Switch
-                            </div>
-                        </div>
-                </div>              
+                    <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px'}}>
+                        Switch
+                    </div>
+                </div>          
                 <div className='suggestionHeader'style={{paddingBottom:'5px'}}>
                     <div >
                         Suggestions For You
@@ -152,32 +152,39 @@ const AccountSection =()=>{
                     </div>
 
                 </div>
-                <div className="suggestionList" >
-                    <SuggestionSingleList style={{backgroundColor:'blue'}}/>
+                <div className="suggestionList">
                     <SuggestionSingleList/>
                     <SuggestionSingleList/>
                     <SuggestionSingleList/>
                     <SuggestionSingleList/>
-                    
-                    
+                    <SuggestionSingleList/>      
                 </div>
                 <div className="helperLinks">
-                    <ul>
-                    <Links link='About' url='https://about.instagram.com'/>
-                    <Links link='Help' url='https://about.instagram.com'/>
-                    <Links link='Press' url='https://about.instagram.com'/>
-                    <Links link='API' url='https://about.instagram.com'/>
-                    <Links link='Jobs' url='https://about.instagram.com'/>
-                    <Links link='Privacy' url='https://about.instagram.com'/>
-                    <Links link='Terms' url='https://about.instagram.com'/>
-                    <Links link='Location' url='https://about.instagram.com'/>
-                    <Links link='Top' url='https://about.instagram.com'/>
-                    <Links link='Accounts' url='https://about.instagram.com'/>
-                    <Links link='Hashtags' url='https://about.instagram.com'/>
-                    <Links link='Language' url='https://about.instagram.com'/>
-                    </ul>
+                    
+                        <Links link='About' url='https://about.instagram.com'/>
+                        <Links link='Help' url='https://about.instagram.com'/>
+                        <Links link='Press' url='https://about.instagram.com'/>
+                        <Links link='API' url='https://about.instagram.com'/>
+                        <Links link='Jobs' url='https://about.instagram.com'/>
+                        <Links link='Privacy' url='https://about.instagram.com'/>
+                        <Links link='Terms' url='https://about.instagram.com'/>
+                        <Links link='Locations' url='https://about.instagram.com'/>
+                        <br/>
+                        <Links link='Top' url='https://about.instagram.com'/>
+                        <Links link='Accounts' url='https://about.instagram.com'/>
+                        <Links link='Hashtags' url='https://about.instagram.com'/>
+                        <Links link='Language' url='https://about.instagram.com'/>
+
+                        <div style={{color :'#DEDEDE',
+                        fontSize:'11px',
+                        padding:'15px 0px 0px 5px',
+                        fontWeight:'600'
+
+                        
+                        }}> 
+                        &copy; 2021 INSTAGRAM FROM FACEBOOK 
+                        </div>
                 </div>
-            
         </div>
     </div>
     )
@@ -198,7 +205,7 @@ const SuggestionSingleList =()=>{
                 New to instagramasdasdasdas
             </div>
         </div>
-        <div style={{color:'rgba(0,149,246,1)',fontWeight:'600'}}>
+        <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px'}}>
             Follow
         </div>
     </div>
