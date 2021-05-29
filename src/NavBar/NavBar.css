@@ -1,3 +1,11 @@
+@media screen and (max-width: 650px) {
+    .navSearchWrapper{
+        display: none !important; 
+    }
+}
+
+
+
 .navWrapper{
     align-items: center;
     min-height:53px;
@@ -14,7 +22,7 @@
 
 .navContent{
     padding: 4px 20px 0px 20px;
-    background-color: white;
+    
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -83,7 +91,6 @@
     left:0;
     width:100%;
     text-align: center;
-    /* background-color: red; */
     height: 26px;
     outline: 0;
     border: 1px solid rgba(219,219,219,1);
@@ -98,12 +105,13 @@
     flex:1 0 0%;
     display: flex;
     justify-content: flex-end;
+    width:70px;
+    min-width:250px;
 }
 
 .buttonContainer{
     align-content: center;
     align-items: center;
-    /* padding-left: 24px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -113,8 +121,8 @@
 
 .svgWrapper{
     padding-left: 22px;
-    /* cursor:pointer; */
 }
+
 svg{
     cursor:pointer;
 }

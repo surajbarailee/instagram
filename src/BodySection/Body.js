@@ -8,15 +8,11 @@ const Body=()=>{
     return(
             <div className="bodyWrapper">
                 <div className="newsFeed">
-                        <Story/>
-                        <NewsFeed/>
+                    <Story/>
+                    <NewsFeed/>
                 </div>
                 <AccountSection/>
-            
-            
-            
-            </div>    
-    
+            </div>
     )
 }
 
