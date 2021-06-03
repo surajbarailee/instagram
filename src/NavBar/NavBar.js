@@ -7,13 +7,13 @@ const NavBar=()=>{
             <div className="navWrapper">
                 <div className="navContent">
                     <div className="navLogoWrapper">
-                            <a href='/'>
-                                <div className="logoContainer">
-                                    <div style={{marginTop:'7px'}}>
-                                        <img class= 'logoImage'alt="Instagram" src={Logo}/>
-                                    </div>
+                        <a href='/'>
+                            <div className="logoContainer">
+                                <div style={{marginTop:'7px'}}>
+                                    <img class= 'logoImage'alt="Instagram" src={Logo}/>
                                 </div>
-                            </a>
+                            </div>
+                        </a>
                     </div>
                     <div className="navSearchWrapper">
                         <div className='inputBoxWrapper'>
