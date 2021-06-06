@@ -27,7 +27,7 @@
 
 .newsFeed{
     width:612px;
-    padding: 30px 30px 0px 20px;
+    padding: 85px 30px 0px 20px;
 }
 
 .accountDetailsWrapper{
@@ -35,9 +35,10 @@
 }
 
 .accountSection{
-    padding-top:22px;
+    padding-top:75px;
     width:293px;
     margin-right: 18px;
+    
 }
 
 .accountDetails{
@@ -45,6 +46,8 @@
     flex-direction: row;
     align-items: center;
     padding-bottom: 17px;
+    width:293px;
+    
 
 }
 
@@ -237,4 +240,34 @@
 
 li{
     display:inline
+}
+
+
+
+.controlsWrapper{
+    position:absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    cursor: pointer;
+    
+}
+
+.videoWrapper{
+    position:relative
+}
+
+.controlShown{
+opacity:1
+}
+.controlHidden{
+opacity: 0;
+}
+.controls{
+    transition: opacity 200ms linear;
 }
