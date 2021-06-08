@@ -1,0 +1,42 @@
+.singlePicture{
+    width: 100%;
+    height: 100%;
+}
+
+.singlePictureWrapper{
+    width:calc(33.33% - 48px);
+    
+
+}
+.imageArea{
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.galleryWrapper{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: rgba(250,250,250,1);
+    padding:0px 20px; 
+}
+
+.galleryContainer{
+    width:975px;
+    padding: 85px 30px 0px 20px;
+}
+
+.singlePictureWrapper{
+    padding:0px 14px 28px 14px;
+    width:293px;
+    height:293px;
+}
+
+.singlePicture{
+    cursor: pointer;
+}
