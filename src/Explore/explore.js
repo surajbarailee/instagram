@@ -9,10 +9,6 @@ import Picture8 from '../resources/ExploreResources/explorer8.jpg'
 import Picture9 from '../resources/ExploreResources/explorer9.jpg'
 
 
-
-
-
-
 import './explore.css'
 
 
