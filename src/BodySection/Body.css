@@ -207,10 +207,14 @@
 .postButton{
     flex:1 0 0;
     cursor: pointer;
-    color: #B7E1Fc;
-
 }
 
+.disabled{
+    color: #B7E1Fc;
+}
+.enabled{
+    color: #0095F6;
+}
 
 
 .inputComment{

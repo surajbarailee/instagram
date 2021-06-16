@@ -8,6 +8,16 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* overflow: hidden; */
+    position: relative;
+    
+}
+.storyPresentation{
+
+    height:115px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     overflow: hidden;
     position: relative;
     
@@ -49,3 +59,35 @@
     max-width: 100%;
 }
 
+.arrowWrapper{
+    position:absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.leftArrowWrapper{
+    width:45px;
+    height:45px;
+    background-image: url(/src/resources/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -379px -128px;
+    cursor: pointer;
+    
+}
+
+.rightArrowWrapper{
+    width:45px;
+    height:45px;
+    background-image: url(/src/resources/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -244px -107px;
+    cursor: pointer;
+    
+}
+
+.removeArrow{
+    /* visibility: visible; */
+}

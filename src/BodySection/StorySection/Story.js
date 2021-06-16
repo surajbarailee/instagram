@@ -1,18 +1,33 @@
 import './Story.css'
 
 
-// import HorizontalScroll from 'react-scroll-horizontal'
 const Story=()=>{
+    const scrollLeft=()=>{
+
+        var element = document.getElementById("storyPresentation")
+        element.scrollLeft = element.scrollLeft - 240
+    }
+    const scrollRight=()=>{
+        var element = document.getElementById("storyPresentation")
+        element.scrollLeft = element.scrollLeft + 240
+    }
     return (
-        <div className="storyWrapper">
-            
-            {/* <HorizontalScroll className='storyScroll' reverseScroll={true}> */}
+        <div className="storyWrapper"  id="storyWrapper">
+            <div id='storyPresentation' className='storyPresentation'>
                 {
                     userStory.map((data,i)=>{
                         return <SingleStory imgsource={data.profile} username={data.username} key={data.id}/>
                     })
                 }
-            {/* </HorizontalScroll> */}
+            </div>
+            <div className = "arrowWrapper">
+                <div className="leftArrowWrapper" onClick={scrollLeft}/>
+                    
+                <div className="rightArrowWrapper" onClick={scrollRight}/>   
+                {/* <div className={"leftArrowWrapper "+ (document.getElementById("storyPresentation").scrollLeft===0? "removeArrow":"")} onClick={scrollLeft}/>
+                    
+                <div className={"rightArrowWrapper "+ (document.getElementById("storyPresentation").scrollRight===0? "removeArrow":"")} onClick={scrollRight}/>    */}
+            </div>
         </div> 
     )
 }
