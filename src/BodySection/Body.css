@@ -136,6 +136,13 @@
     text-decoration: none;
 }
 
+.suggestionProfileLink{
+    cursor:pointer
+}
+.suggestionProfileLink:hover{
+    text-decoration: underline;
+}
+
 
 .dotMenu{
     width:14px;
