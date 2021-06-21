@@ -201,11 +201,11 @@ const AccountSection =()=>{
 
                 </div>
                 <div className="suggestionList">
-                    <SuggestionSingleList/>
-                    <SuggestionSingleList/>
-                    <SuggestionSingleList/>
-                    <SuggestionSingleList/>
-                    <SuggestionSingleList/>      
+                {
+                    suggestionData.map((data,i)=>{
+                        return <SuggestionSingleList data={data} key={data.id}/>
+                    })
+                }     
                 </div>
                 <div className="helperLinks">
                     
@@ -239,18 +239,27 @@ const AccountSection =()=>{
 }
 
 
-const SuggestionSingleList =()=>{
+const SuggestionSingleList =(props)=>{
+    var followers = props.data.followerFriends[0]
+    if (props.data.followerFriends.length>1){
+        followers = followers + " + " +(props.data.followerFriends.length-1).toString() + " more"
+    }
+    
+
+
     return(
     <div className="suggestionSingleList" >
         <div >
-            <img src={DefaultProfile} alt="asd" width='32px' height='32px' />  
+            <img src={props.data.profilePicture} alt="profile" width='32px' height='32px' style={{borderRadius:'32px'}}/>  
         </div>
         <div className="accountNameWrapper" style={{marginLeft:'10px'}}>
             <div className="username">
-                <b>suraj_barailee</b>
+                <a className="suggestionProfileLink">
+                    <b>{props.data.username}</b>
+                </a>
             </div>
             <div className="accountDetail"  >
-                New to instagramasdasdasdas
+                Followed by {followers}
             </div>
         </div>
         <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px'}}>
@@ -268,6 +277,47 @@ const Links=(props)=>{
         </li>
     )
 }
+
+const suggestionData=[
+    {
+        id:1,
+        username:'bipulchettri',
+        followerFriends:['gaben','invoker','phantom_assasin'],
+        accountLink:'https://www.instagram.com/bipulchettri/',
+        profilePicture:'https://picsum.photos/id/1001/60/60'
+    },
+    {
+        id:2,
+        username:'coder.wow',
+        followerFriends:['phantom.lancer'],
+        accountLink:'https://www.instagram.com/bipulchettri/',
+        profilePicture:'https://picsum.photos/id/21/60/60'
+    },
+    {
+        id:3,
+        username:'coder.wow',
+        followerFriends:['ogre_magi','slark','lancer','io'],
+        accountLink:'https://www.instagram.com/coder.wow/',
+        profilePicture:'https://picsum.photos/id/1/50/50'
+    },
+    {
+        id:4,
+        username:'penandink_art',
+        followerFriends:['nature_prophet','lancer'],
+        accountLink:'https://www.instagram.com/penandink_art/',
+        profilePicture:'https://picsum.photos/id/1035/60/60'
+    },
+    {
+        id:5,
+        username:'asmishresth',
+        followerFriends:['lina','rikimaru'],
+        accountLink:'https://www.instagram.com/asmishrestha/',
+        profilePicture:'https://picsum.photos/id/1082/60/60'
+    }
+
+]
+
+
 
 
 export default Body;
