@@ -1,8 +1,20 @@
 import './NavBar.css'
 import Logo from  '../resources/insta_logo.png'
 import Profile from '../resources/profile_pic.jpg'
+import { useState } from 'react'
+
+
 
 const NavBar=()=>{
+    const [showSearch,setShowSearch] =useState(false)
+    const toggleSearch=()=>{
+        setShowSearch(true);
+        document.getElementById('searchBoxCover').style.visibility='hidden'
+        document.getElementById('searchBox').style.visibility='visible'
+        document.getElementById('searchBox').focus();
+
+    }
+
     return (
             <div className="navWrapper">
                 <div className="navContent">
@@ -15,14 +27,15 @@ const NavBar=()=>{
                             </div>
                         </a>
                     </div>
-                    <div className="navSearchWrapper">
-                        <div className='inputBoxWrapper'>
-                            <input type="text" autoCapitalize='none' placeholder = 'Search' className="inputBox"/>
+                    <div className="navSearchWrapper" >
+                        <div className='inputBoxWrapper' >
+                            <input type="text" autoCapitalize='none' placeholder = 'Search' className="inputBox" id="searchBox"/>
                         </div>
-                        <div className="searchBoxCover">
-                            <div>
-                            </div>
-                            <div style={{marginRight:'10px'}}>
+                        <div className={'searchBoxCover'}
+                        id='searchBoxCover'
+                        style={{cursor:'text'}} 
+                        onClick={toggleSearch}>
+                            <div style={{marginRight:'10px' }} >
                                Search
                             </div>
                         </div>

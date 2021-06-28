@@ -295,7 +295,7 @@ const suggestionData=[
     },
     {
         id:3,
-        username:'coder.wow',
+        username:'programcreator',
         followerFriends:['ogre_magi','slark','lancer','io'],
         accountLink:'https://www.instagram.com/coder.wow/',
         profilePicture:'https://picsum.photos/id/1/50/50'
