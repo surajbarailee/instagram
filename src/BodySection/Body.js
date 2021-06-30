@@ -254,7 +254,7 @@ const SuggestionSingleList =(props)=>{
         </div>
         <div className="accountNameWrapper" style={{marginLeft:'10px'}}>
             <div className="username">
-                <a className="suggestionProfileLink">
+                <a className="suggestionProfileLink" href='/'>
                     <b>{props.data.username}</b>
                 </a>
             </div>
