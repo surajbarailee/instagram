@@ -254,7 +254,7 @@ const SuggestionSingleList =(props)=>{
         </div>
         <div className="accountNameWrapper" style={{marginLeft:'10px'}}>
             <div className="username">
-                <a className="suggestionProfileLink">
+                <a className="suggestionProfileLink" href='/'>
                     <b>{props.data.username}</b>
                 </a>
             </div>
@@ -295,7 +295,7 @@ const suggestionData=[
     },
     {
         id:3,
-        username:'coder.wow',
+        username:'programcreator',
         followerFriends:['ogre_magi','slark','lancer','io'],
         accountLink:'https://www.instagram.com/coder.wow/',
         profilePicture:'https://picsum.photos/id/1/50/50'

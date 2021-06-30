@@ -69,16 +69,16 @@
 }
 
 .inputBox{
-    border: 1px solid rgba(219,219,219,1);
-    height:28px;
-    font-size: 16px;
+    height:26px;
+    font-size: 12px;
     border-radius: 3px;
-    color:rgba(38,38,38,1);
-    outline: 0;
+    min-width: 125px;
+    width:189px;
     padding: 0px 0px 0px 25px;
-    z-index: 2;
     visibility: hidden;
-
+    outline: none !important;
+    background-color:rgba(250,250,250,1);
+    border: 1px solid rgba(219,219,219,1);
 }
 
 
@@ -128,4 +128,10 @@
 
 svg{
     cursor:pointer;
+}
+
+
+.hideSearchBoxCover{
+    visibility: hidden;
+    opacity: 0;
 }
