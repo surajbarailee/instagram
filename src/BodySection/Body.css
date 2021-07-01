@@ -137,7 +137,9 @@
 }
 
 .suggestionProfileLink{
-    cursor:pointer
+    cursor:pointer;
+    text-decoration: none;
+    color:black
 }
 .suggestionProfileLink:hover{
     text-decoration: underline;
