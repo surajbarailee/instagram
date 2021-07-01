@@ -135,3 +135,14 @@ svg{
     visibility: hidden;
     opacity: 0;
 }
+
+.profileActive{
+    border-radius:50px;
+    border:1px solid black;
+    cursor: pointer;
+}
+.profileInactive{
+    border-radius:50px;
+    border:1px solid white;
+    cursor: pointer;
+}
