@@ -1,0 +1,14 @@
+.diamondDiv{
+    /* background-color: red; */
+    position: absolute;
+    transform: rotate(45deg);
+    width:14px;
+    height: 14px;
+}
+
+.searchResultWrapper{
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    background-color: yellow;
+}
