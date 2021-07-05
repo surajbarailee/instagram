@@ -24,16 +24,19 @@
 }
 
 .navContent{
-    padding: 4px 20px 0px 20px;
-    
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 975px;
     width: 100%;
     
 }
+.navContentWrapper{
+    max-width: 975px;
+    padding: 4px 20px 0px 20px;
+    width: 100%;
+}
+
 
 
 .navLogoWrapper{
