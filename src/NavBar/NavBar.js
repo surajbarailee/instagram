@@ -7,15 +7,18 @@ import SearchResult from './SearchBox/searchresult'
 
 const NavBar=()=>{
     const [activeIcon,updateActiveIcon] =useState('')
+    const [activeSearch,updateSearchIcon] =useState(false) 
     const toggleonSearch=()=>{
         document.getElementById('searchBoxCover').style.visibility='hidden'
         document.getElementById('searchBox').style.visibility='visible'
         document.getElementById('searchBox').focus();
+        updateSearchIcon(true)
+        
     }
     const toggleoffSearch=()=>{
         document.getElementById('searchBox').style.visibility='hidden'
         document.getElementById('searchBoxCover').style.visibility='visible'
-        
+        updateSearchIcon(false)
     }
     const togglesvgIcon=(value)=>{  
         var location = window.location.pathname
@@ -69,7 +72,10 @@ const NavBar=()=>{
                         </div>
                         <div className="navSearchWrapper" >
                                 <div className='inputBoxWrapper' onBlur={toggleoffSearch}>
+                                    <div className='searchIcon'></div>
                                     <input type="text" autoCapitalize='none' placeholder = 'Search' className="inputBox" id="searchBox"/>
+                                    <div className='closeIcon'></div>
+
                                 </div>
                                 <div className={'searchBoxCover'}
                                 id='searchBoxCover'
@@ -133,7 +139,7 @@ const NavBar=()=>{
                     </div>
                 </div>
                     </div>
-                    <SearchResult/>
+                    {activeSearch?<SearchResult/>:''}
                 </div>  
                 
             </div>

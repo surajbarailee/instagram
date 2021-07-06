@@ -1,14 +1,41 @@
 .diamondDiv{
-    /* background-color: red; */
     position: absolute;
     transform: rotate(45deg);
     width:14px;
     height: 14px;
+    box-shadow:  0 0 5px 1px rgba(0,0,0,.0975);
+    border:1px solid rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255,1);
+    margin-left: 15px;
+    z-index: 1;
+    
+    
 }
 
-.searchResultWrapper{
+.searchResult{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 375px;
-    background-color: yellow;
+    width: 100%;
+}
+
+.searchSuggestionWrapper{
+    margin-top: 5px;
+    position: absolute;
+    width:375px;
+    min-height: 362px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.0975);
+    border-radius: 6px;
+    background-color: white;
+    z-index: 0;
+}
+
+.searchSuggestion{
+    margin-top: 5px;
+    width:375px;
+    min-height: 362px;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 2;
+    position: absolute;
+    
 }

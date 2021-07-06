@@ -3,12 +3,11 @@ import './Searchresult.css'
 const searchresult=()=>{
     return (
         <div className='searchResult'>
-            <div className="diamondDiv">
-                
+            <div className="diamondDiv"/>
+            <div className='searchSuggestionWrapper'>
             </div>
-            <div>
-                
-            </div>
+            <div className='searchSuggestion'>
+                </div>
         </div>
     )
 }
