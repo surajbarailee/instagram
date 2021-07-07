@@ -7,15 +7,23 @@ import SearchResult from './SearchBox/searchresult'
 
 const NavBar=()=>{
     const [activeIcon,updateActiveIcon] =useState('')
+    const [activeSearch,updateSearchIcon] =useState(false) 
+    const [searchPlaceHolder,updatesearchPlaceHolder]=useState('')
     const toggleonSearch=()=>{
         document.getElementById('searchBoxCover').style.visibility='hidden'
         document.getElementById('searchBox').style.visibility='visible'
         document.getElementById('searchBox').focus();
+        updateSearchIcon(true)
+        
     }
-    const toggleoffSearch=()=>{
+    const toggleoffSearch=(button)=>{
         document.getElementById('searchBox').style.visibility='hidden'
         document.getElementById('searchBoxCover').style.visibility='visible'
-        
+        if (button===true){
+            console.log('asd')
+            updatesearchPlaceHolder('')
+        }
+        updateSearchIcon(false)
     }
     const togglesvgIcon=(value)=>{  
         var location = window.location.pathname
@@ -51,6 +59,9 @@ const NavBar=()=>{
 
         
     }
+    const textSearch=(e)=>{
+        updatesearchPlaceHolder(e.target.value)
+    }
     if (activeIcon===''){
         togglesvgIcon();
     }
@@ -67,16 +78,23 @@ const NavBar=()=>{
                                 </div>
                             </a>
                         </div>
-                        <div className="navSearchWrapper" >
-                                <div className='inputBoxWrapper' onBlur={toggleoffSearch}>
-                                    <input type="text" autoCapitalize='none' placeholder = 'Search' className="inputBox" id="searchBox"/>
+                        <div className="navSearchWrapper" onBlur={()=>{toggleoffSearch(false)}} >
+                                <div className='inputBoxWrapper' >
+                                    <div className='searchIcon'>
+                                        <div className="searchIconImage">
+                                        </div>
+                                    </div>
+                                    <input type="text"  onChange={textSearch} placeholder = {searchPlaceHolder===''?'Search':searchPlaceHolder} className="inputBox" id="searchBox" value = {searchPlaceHolder} />
+                                    <div className='searchIcon'>
+                                        <div className='closeIcon' onClick={()=>{toggleoffSearch(true)}}></div>
+                                    </div>
                                 </div>
                                 <div className={'searchBoxCover'}
                                 id='searchBoxCover'
                                 style={{cursor:'text'}} 
                                 onClick={toggleonSearch}>
                                     <div style={{marginRight:'10px' }} >
-                                    Search
+                                    {searchPlaceHolder===''?'Search':searchPlaceHolder}
                                     </div>
                                 </div> 
                             </div>    
@@ -133,7 +151,7 @@ const NavBar=()=>{
                     </div>
                 </div>
                     </div>
-                    <SearchResult/>
+                    {activeSearch?<SearchResult/>:''}
                 </div>  
                 
             </div>
