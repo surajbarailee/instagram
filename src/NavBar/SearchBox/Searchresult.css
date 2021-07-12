@@ -32,10 +32,53 @@
 .searchSuggestion{
     margin-top: 5px;
     width:375px;
-    min-height: 362px;
+    max-height: 362px;
     background-color: white;
     border-radius: 6px;
     z-index: 2;
     position: absolute;
+    overflow-y: scroll;
     
 }
+
+.searchHeader{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    color:rgba(38,38,38,1);
+    justify-content:space-between;
+    padding: 15px 10px 10px 15px;
+    
+}
+
+.historyList{
+    padding-top: 13px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 15px;
+}
+.historyList:hover{
+    background-color: #FAFAFA;
+    cursor: pointer;
+}
+
+.SuggestionList{
+    overflow-y: scroll;
+}
+
+
+.verifiedIcon{
+    margin-top: 2px;
+    background-image: url(/src/resources/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -522px -525px;
+    height: 12px;
+    width: 12px;
+}
+
+
+
+
+

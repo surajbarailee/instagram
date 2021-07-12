@@ -20,7 +20,6 @@ const NavBar=()=>{
         document.getElementById('searchBox').style.visibility='hidden'
         document.getElementById('searchBoxCover').style.visibility='visible'
         if (button===true){
-            console.log('asd')
             updatesearchPlaceHolder('')
         }
         updateSearchIcon(false)
@@ -65,7 +64,9 @@ const NavBar=()=>{
     if (activeIcon===''){
         togglesvgIcon();
     }
+
     return (
+        
             <div className="navWrapper">
                 <div className='navContentWrapper'>
                     <div className='navContent'>
@@ -95,6 +96,7 @@ const NavBar=()=>{
                                 onClick={toggleonSearch}>
                                     <div style={{marginRight:'10px' }} >
                                     {searchPlaceHolder===''?'Search':searchPlaceHolder}
+                                    
                                     </div>
                                 </div> 
                             </div>    
