@@ -80,12 +80,13 @@ const NavBar=()=>{
                             </a>
                         </div>
                         <div className="navSearchWrapper" onBlur={()=>{toggleoffSearch(false)}} >
+                            
                                 <div className='inputBoxWrapper' >
                                     <div className='searchIcon'>
                                         <div className="searchIconImage">
                                         </div>
                                     </div>
-                                    <input type="text"  onChange={textSearch} placeholder = {searchPlaceHolder===''?'Search':searchPlaceHolder} className="inputBox" id="searchBox" value = {searchPlaceHolder} />
+                                    <input type="text"  onChange={textSearch} placeholder = {searchPlaceHolder===''?'Search':searchPlaceHolder} className="inputBox" id="searchBox" value = {searchPlaceHolder} autoComplete='off'/>
                                     <div className='searchIcon'>
                                         <div className='closeIcon' onClick={()=>{toggleoffSearch(true)}}></div>
                                     </div>
