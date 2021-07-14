@@ -183,3 +183,44 @@ svg{
     border:1px solid white;
     cursor: pointer;
 }
+
+.profileOption{
+    display: flex;
+    justify-content:flex-end;
+    position: relative;
+}
+
+.profileContainerWrapper{
+    margin-top: 5px;
+    position: absolute;
+    border-radius: 6px;
+    background-color: white;
+    z-index: 0;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.0975);
+}
+
+.optionContainer{
+    width:100%;
+    border-radius: 6px;
+}
+
+.options{
+    display: flex;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 8px 8px 10px 8px;
+    line-height: 18px;
+    align-items: center;
+    
+}
+.options:hover{
+    cursor: pointer;
+    background-color: rgba(250,250,250,1);
+}
+
+.options>.svg{
+    padding: 0px 12px 0px 8px;
+}
+.optionLink{
+    min-width: 170px;
+}
