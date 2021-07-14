@@ -16,7 +16,6 @@ const SearchResult=()=>{
         <div className='searchResult'>
             <div className="diamondDiv"/>
             <div className='searchSuggestionWrapper'/>
-                
             <div className='searchSuggestion'>
                 <div className="searchHeader">
                     <div className="recent">
