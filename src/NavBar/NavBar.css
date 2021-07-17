@@ -245,3 +245,44 @@ right:25px;
 top:-5px;
 z-index: -1;
 }
+
+
+.singleActivityContainer{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px;
+    font-weight: 300;
+    font-size: 14px;
+}
+.activityHeading{
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.singleActivityDetail{
+    display:flex;
+    align-items:center;
+    padding:10px 40px 0px 10px;
+}
+
+.singleActivityButton{
+    background: transparent;
+	color: black;
+	font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+	padding: 5px 9px;
+	font-weight:400 ;
+	cursor: pointer;
+    
+    border:1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+.followButton{
+    min-height: 28px;
+    min-width: 42px;
+}
+
