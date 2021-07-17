@@ -38,7 +38,6 @@ const NavBar=()=>{
             if (activeIcon!=='profile'){        
                 updateActiveIcon('profile')
                 checklocation=false
-                console.log('asd')
             }
         }
         if (checklocation===true){
@@ -156,6 +155,32 @@ const NavBar=()=>{
                     </div>
 
                     {activeSearch?<SearchResult/>:''}
+                    {activeIcon==='activity'&&
+                                    <div className='profileOption'>
+                                        <div className='profileContainerWrapper' >
+                                            <div className='optionContainer' style={{minHeight:'360px'}}>
+                                                <div className='activityContainer'>
+                                                {
+                                                activitydata.map((data,i)=>{
+                                                        return (
+                                                          <div>
+                                                              <ActivityDetails data={data} key={data.id}/>
+                                                              {
+                                                                activitydata.length === i+1?
+                                                                '':
+                                                                <hr style={{height:'1px',backgroundColor:'#dbdbdb',border:'none'}}/>
+                                                              
+                                                            }
+                                                          </div>
+                                                        )
+                                                })
+                                                }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+
                     {activeIcon==='profile'&&
                                     <div className='profileOption'>
                                         <div className='profileContainerWrapper' >
@@ -218,4 +243,67 @@ const NavBar=()=>{
              
     )
 }
+
+const ActivityDetails=(props)=>{
+
+    return (
+        <div style={{padding:'5px 10px 5px 10px'}}>
+            <div className='activityHeading'>
+                {props.data.heading}
+            </div>
+            <a href='https://instagram.com' style={{textDecoration:'None'}}>
+            <div className='singleActivityContainer'>
+                <div className='singleActivityDetail'>
+                    <div style={{paddingRight:'10px'}}>
+                        <img src={props.data.picture} alt="profile" width='44px' height='44px' style={{borderRadius:'32px'}}/>  
+                    </div>
+                    <div>
+                        <span style={{fontWeight:'400'}}>{props.data.username}</span> started following you. {props.data.date}
+                    </div>
+                </div>
+                <div className='followButton'>
+                    <button className='singleActivityButton'>
+                        {props.data.following?'Following':'Follow'}
+                    </button>
+                </div>
+            </div>
+
+            </a>
+            
+        </div>
+    
+        )
+}
+
+
+const activitydata=[
+    {
+        id:1,
+        picture:'https://source.unsplash.com/user/erondu',
+        username:'accesskumaripati',
+        following:true,
+        date:'2d',
+        heading:'This Week'
+    },
+    {
+        id:2,
+        picture:'https://source.unsplash.com/random',
+        username:'handemiyy',
+        following:true,
+        date:'5w',
+        heading:'This Month'
+    },{
+        id:3,
+        picture:'https://source.unsplash.com/user/nick',
+        username:'willybilly',
+        following:true,
+        date:'10w',
+        heading:'Earlier'
+    }
+]
+
+
+
 export default NavBar;
+
+
