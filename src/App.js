@@ -4,6 +4,7 @@ import Body from './BodySection/Body'
 import Explore from './Explore/explore'
 
 import {Route,Redirect,BrowserRouter as Router} from 'react-router-dom'
+import Inbox from './Inbox/Inbox';
 function App() {
   return (
     <div>
@@ -14,6 +15,7 @@ function App() {
                   <Redirect to="/" />
                 </Route>
                 <Route exact path="/explore/" component={Explore} />
+                <Route exact path="/inbox/" component={Inbox} />
                 {/* <Route exact path="/" component={Body} /> */}
                 {/* <Route exact path="/About" component={About} /> */}
           </Router>

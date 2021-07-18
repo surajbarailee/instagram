@@ -1,0 +1,42 @@
+.inboxMainWrapper{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: rgba(250,250,250,1);
+    min-height: 600px;
+}
+
+.inboxMainContainer{
+    width:975px;
+    margin-top: 75px;
+    display: flex;
+    
+    padding:20px;
+}
+
+.messageNavigation{
+    width: 350px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+}
+
+
+.profileName{
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.newMessage{
+    border-bottom:1px solid #dbdbdb;
+    display: flex;
+    justify-content: flex-end;
+    padding:15px 20px;
+}
+
