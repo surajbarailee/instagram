@@ -7,7 +7,7 @@ import {Route,Redirect,BrowserRouter as Router} from 'react-router-dom'
 import Inbox from './Inbox/Inbox';
 function App() {
   return (
-    <div>
+    <div style={{height:'100%',width:'100%'}}>
           <Router>
             <NavBar></NavBar>
                 <Route exact path="/" component={Body} />
