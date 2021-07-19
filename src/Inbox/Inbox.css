@@ -1,25 +1,29 @@
 .inboxMainWrapper{
+    width: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
     font-family: Montserrat;
     font-size: 12px;
     font-weight: 300;
     background-color: rgba(250,250,250,1);
-    min-height: 600px;
+
 }
 
 .inboxMainContainer{
     width:975px;
-    margin-top: 75px;
+    max-height: 100%;
+    padding-top: 75px;
     display: flex;
-    
-    padding:20px;
 }
 
 .messageNavigation{
     width: 350px;
+    max-height: 100%;
     background-color: white;
-    border: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    overflow-y: scroll;
+    border-right: 1px solid #dbdbdb;
 }
 
 
@@ -38,5 +42,37 @@
     display: flex;
     justify-content: flex-end;
     padding:15px 20px;
+}
+
+
+.messageIndexList{
+    padding:8px 20px;
+    display: flex;
+    align-items: center;
+}
+.messageIndexList:hover{
+    cursor: pointer;
+    background-color: rgba(250,250,250,1);
+}
+
+.lastMessage{
+    font-size: 13px;
+    margin-top: 2px;
+    font-weight: 400;
+    display:flex;
+    color:rgba(142,142,142,1);
+}
+
+
+.inboxContainer{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+html,body,#root{
+    height: 100%;
+    width: 100%;
+    background-color: red;
 }
 
