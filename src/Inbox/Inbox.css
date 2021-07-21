@@ -1,5 +1,4 @@
 .inboxMainWrapper{
-    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -14,7 +13,7 @@
 }
 
 .inboxMainContainer{
-    width:975px;
+    width:935px;
     max-height: 100%;
     padding-top: 75px;
     display: flex;
@@ -118,5 +117,21 @@ html,body,#root{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
+
+.startNewChat > button{
+    cursor: pointer;
+    margin-top: 24px;
+    border:1px solid transparent;
+    background-color: #0095F6;
+    color:white;
+    border-radius: 4px;
+    padding:6px 10px;
+
+}
+
+.messageIndex:first-child{
+    padding-top: 10px;
+}
