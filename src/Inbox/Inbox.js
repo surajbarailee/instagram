@@ -113,7 +113,7 @@ const Inbox=()=>{
                 <div className="leftContainer">
                     <div className="newMessage" >
                             <div className="profileName">
-                                <div>
+                                <div style={{fontWeight:'600',marginLeft:'20px'}}>
                                     suraj_barailee
                                 </div>
                                 <div style={{transform: 'rotate(180deg)',padding:'0px 10px'}}>
@@ -139,8 +139,8 @@ const Inbox=()=>{
                     <div className="startNewChat">
                         <div className="sendIcon">
                         </div>
-                        <h2>Your Messages</h2>
-                        <div>
+                        <div style={{fontSize:'20px',paddingTop:'16px'}}> Your Messages</div>
+                        <div style={{paddingTop:'16px',fontSize:'14px'}}>
                             Send private photos and messages to a friend or group.
                         </div> 
                         <button>
