@@ -273,7 +273,7 @@ const SuggestionSingleList =(props)=>{
 const Links=(props)=>{
     return (
         <li>
-            <a href={props.url} className="links">{props.link}</a>
+            <a href={props.url} className="links" style={{color:'#d3d3d3'}}>{props.link}</a>
         </li>
     )
 }
