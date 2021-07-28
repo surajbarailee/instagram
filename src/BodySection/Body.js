@@ -2,8 +2,30 @@ import './Body.css'
 import Story from './StorySection/Story'
 import ThreeDotMenu from '../resources/postNavMenu.svg'
 import PostImage from '../resources/posts/post1.jpg'
-import VideoPost from '../resources/ExploreResources/download.mp4'
 import PlayButton from '../resources/play.png'
+
+
+//first post
+import GuitarOne from '../resources/guitar1.jpg'
+import VideoPost from '../resources/videos/guitartutorial.mp4'
+import GuitarTwo from '../resources/guitar2.jpg'
+
+//second post
+import PostImage1 from '../resources/posts/post1.jpg'
+
+//third post
+import PostImage3a from '../resources/posts/post3a.jpg'
+import PostImage3b from '../resources/posts/post3b.jpg'
+import PostImage3c from '../resources/posts/post3c.jpg'
+import PostImage3d from '../resources/posts/post3d.jpg'
+
+//fourth post
+import PostImage4a from '../resources/posts/post4a.jpg'
+
+//fifthpost
+import PostImage5a from '../resources/posts/post5a.mp4'
+
+
 
 import {useRef,useState} from "react";
 
@@ -23,10 +45,21 @@ const Body=()=>{
 
 const NewsFeed = ()=>{
     return <div>
-        <SinglePost/>
+        {
+        postdata.map((data,index)=>{
+
+            return <SinglePost data={data}/>
+
+        })
+        
+        
+        }
+
+
+        {/* <SinglePost/>
         <SinglePost video='true' videosource={VideoPost} />
         <SinglePost/>
-        <SinglePost video='true' videosource={VideoPost} />
+        <SinglePost video='true' videosource={VideoPost} /> */}
 
     </div>
 }
@@ -85,7 +118,7 @@ const SinglePost=(props)=>{
                             </div>
                             <div className="postUsername">
                                 <a href="https://instagram.com" className="profileLink">
-                                memenepal
+                                {props.data.postowner}
                                 </a>
                             </div>
     
@@ -98,7 +131,6 @@ const SinglePost=(props)=>{
                         <Post video={props.video} src={props.videosource}  alt="post by memenepal"/>
                     </div>
                     <div className="postNav" style={{paddingLeft:'0px',paddingTop:'12px'}}>
-    
                         <div className="postNavLeft" >
                                 <div className="actionIcons">
                                     <svg aria-label="Like" fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path></svg>
@@ -115,13 +147,12 @@ const SinglePost=(props)=>{
                         </div>
     
                     </div>
-    
                     <div className="commentsWrapper">
                         <div className="likeStatus">
                             Liked by <b>nanapatekar</b> and <b>others</b>
                         </div>
                         <div className="postDetails">
-                            <b>nanapatekar</b> VOTE: Gareth Southgate will reveal his squad for the Euros tomorrow but who would you pick? 
+                            <b>{props.data.postowner}</b> {props.data.postCaption} 
                         </div>
                         <div className="commentStatus">
                             View all 300 comments
@@ -150,7 +181,6 @@ const SinglePost=(props)=>{
                         </div>
                     </div>
                     <hr style={{borderTop:'1px solid #DBDBDB'}}/>
-                    
                     <div className= 'commentWrapper'>
                             <div className="smiley">
                                 <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M24 48C10.8 48 0 37.2 0 24S10.8 0 24 0s24 10.8 24 24-10.8 24-24 24zm0-45C12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21S35.6 3 24 3z"></path><path d="M34.9 24c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5 1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5zm-21.8 0c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5zM24 37.3c-5.2 0-8-3.5-8.2-3.7-.5-.6-.4-1.6.2-2.1.6-.5 1.6-.4 2.1.2.1.1 2.1 2.5 5.8 2.5 3.7 0 5.8-2.5 5.8-2.5.5-.6 1.5-.7 2.1-.2.6.5.7 1.5.2 2.1 0 .2-2.8 3.7-8 3.7z"></path></svg>
@@ -322,7 +352,185 @@ const suggestionData=[
 
 export default Body;
 
+var postdata = [
+    {
+        'postid':'asd123456789456',
+        'postowner':'guitartutsforyou',
+        'likedby':['sanja01','jamal57','levchonu','priya'],
+        'innerpostlength':3,
+        'post':[{
+            'innerpostid':1,
+            'posttype':'video',
+            'mainpost':VideoPost
+        },
+        {
+            'innerpostid':2,
+            'posttype':'umage',
+            'mainpost':GuitarOne
+        },
+        {
+            'innerpostid':2,
+            'posttype':'video',
+            'mainpost':GuitarTwo
+        }
+        ],
+        'postCaption':'Here is the tutorial you have been asking for since ages...',
+        'comments':[{
+            'id':1,
+            'username':'christinvofe',
+            'liked':false,
+            'comment':'cok seviorum!!! was waiting for this. ',
+        },
+        {
+            'id':2,
+            'username':'runeetsingh',
+            'liked':true,
+            'comment':'Hey,mate very good job ',
+        }]
+    },
+    {
+        'postid':'asd123456789459',
+        'postowner':'memenepal',
+        'likedby':['onequotes','sanja01','jamal57','levchonu','priya'],
+        'innerpostlength':1,
+        'post':[{
+            'innerpostid':1,
+            'posttype':'image',
+            'mainpost':PostImage1
+        }
+        ],
+        'postCaption':'Is this same for everyone ? ki ma matrai special case ho?',
+        'comments':[{
+            'id':1,
+            'username':'nepali_kaila',
+            'liked':false,
+            'comment':'haha testai hola ',
+        },
+        {
+            'id':2,
+            'username':'lonelybird',
+            'liked':false,
+            'comment':'ahh ni mero ma ni testai ho brudaaaaaa ',
+        }]
+    },
 
+    {
+        'postid':'asd1234567894',
+        'postowner':'memenepal',
+        'likedby':['onequotes','sanja01','jamal57','levchonu','priya'],
+        'innerpostlength':1,
+        'post':[{
+            'innerpostid':1,
+            'posttype':'image',
+            'mainpost':PostImage1
+        }
+        ],
+        'postCaption':'Is this same for everyone ? ki ma matrai special case ho?',
+        'comments':[{
+            'id':1,
+            'username':'nepali_kaila',
+            'liked':false,
+            'comment':'haha testai hola ',
+        },
+        {
+            'id':2,
+            'username':'lonelybird',
+            'liked':false,
+            'comment':'ahh ni mero ma ni testai ho brudaaaaaa ',
+        }]
+    },
+    {
+        'postid':'asd1234567895',
+        'postowner':'sencalkapimi',
+        'likedby':['hande_ercel','jerem_b','layla','adam','priya'],
+        'innerpostlength':4,
+        'post':[{
+            'innerpostid':1,
+            'posttype':'image',
+            'mainpost':PostImage3a
+        },
+        {
+            'innerpostid':2,
+            'posttype':'image',
+            'mainpost':PostImage3b
+        },
+        {
+            'innerpostid':3,
+            'posttype':'image',
+            'mainpost':PostImage3c
+        },
+        {
+            'innerpostid':4,
+            'posttype':'image',
+            'mainpost':PostImage3d
+        }
+        ],
+        'postCaption':'Siz hep böyle gülün!',
+        'comments':[{
+            'id':1,
+            'username':'christinavod',
+            'liked':false,
+            'comment':'Evet❤️ Evet❤️❤️ Evet❤️❤️❤️!!! ',
+        },
+        {
+            'id':2,
+            'username':'yenele_qurbanova',
+            'liked':false,
+            'comment':'😍😍😍😍🔥🔥🔥',
+        }]
+    },
+    {
+        'postid':'asd123456789',
+        'postowner':'cristiano',
+        'likedby':['karan_bians','raut6349','jamal57','levchonu','priya'],
+        'innerpostlength':1,
+        'post':[{
+            'innerpostid':1,
+            'posttype':'image',
+            'mainpost': PostImage4a
+        }
+        ],
+        'postCaption':'Felice di tornare al lavoro ⚽️💪🏽',
+        'comments':[{
+            'id':1,
+            'username':'66omid',
+            'liked':false,
+            'comment':'Woooo🔥',
+        },
+        {
+            'id':2,
+            'username':'akash avlan',
+            'liked':false,
+            'comment':'❤️💥',
+        }]
+    },
+    {
+        'postid':'asd123456790',
+        'postowner':'mohanpandey',
+        'likedby':['nidhikumardance','raut6349','jamal57','levchonu','priya'],
+        'innerpostlength':1,
+        'post':[{
+            'innerpostid':1,
+            'posttype':'video',
+            'mainpost': PostImage5a
+        }
+        ],
+        'postCaption':'This song hits me different',
+        'comments':[{
+            'id':1,
+            'username':'krisnap',
+            'liked':false,
+            'comment':'aag laga dala bhai tunee🔥',
+        },
+        {
+            'id':2,
+            'username':'akash avlan',
+            'liked':false,
+            'comment':'Sir your hand moves vala video banakar apke YouTube ke Chanel par dalo na please || your fan Mayank',
+        }]
+    },
+    
+]
 
                         
                             
