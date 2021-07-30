@@ -6,23 +6,28 @@ import PlayButton from '../resources/play.png'
 
 
 //first post
+import Profile1 from '../resources/posts/guitartutsforyou.jpg'
 import GuitarOne from '../resources/guitar1.jpg'
 import VideoPost from '../resources/videos/guitartutorial.mp4'
 import GuitarTwo from '../resources/guitar2.jpg'
 
 //second post
+import Profile2 from '../resources/posts/memenepal.jpg'
 import PostImage1 from '../resources/posts/post1.jpg'
 
 //third post
+import Profile3 from '../resources/posts/sencalkapimi.jpg'
 import PostImage3a from '../resources/posts/post3a.jpg'
 import PostImage3b from '../resources/posts/post3b.jpg'
 import PostImage3c from '../resources/posts/post3c.jpg'
 import PostImage3d from '../resources/posts/post3d.jpg'
 
 //fourth post
+import Profile4 from '../resources/posts/cristiano.jpg'
 import PostImage4a from '../resources/posts/post4a.jpg'
 
 //fifthpost
+import Profile5 from '../resources/posts/mohanpandey.jpg'
 import PostImage5a from '../resources/posts/post5a.mp4'
 
 
@@ -114,7 +119,7 @@ const SinglePost=(props)=>{
                     <div className="postNav" style={{height:'60px'}}>
                         <div className="postNavLeft">
                             <div className="profileImageWrapper">
-                                <img src={DefaultProfile} alt="profile_picture" className = "profileImage" />
+                                <img src={props.data['profile_picture']} alt="profile_picture" className = "profileImage" />
                             </div>
                             <div className="postUsername">
                                 <a href="https://instagram.com" className="profileLink">
@@ -348,8 +353,11 @@ export default Body;
 var postdata = [
     {
         'postid':'asd123456789456',
+        'profile_picture':Profile1,
         'postowner':'guitartutsforyou',
         'likedby':['sanja01','jamal57','levchonu','priya'],
+        'liked':true,
+        'saved':false,
         'innerpostlength':3,
         'post':[{
             'innerpostid':1,
@@ -383,9 +391,12 @@ var postdata = [
     },
     {
         'postid':'asd123456789459',
+        'profile_picture':Profile2,
         'postowner':'memenepal',
         'likedby':['onequotes','sanja01','jamal57','levchonu','priya'],
         'innerpostlength':1,
+        'liked':true,
+        'saved':false,
         'post':[{
             'innerpostid':1,
             'type':'image',
@@ -408,9 +419,12 @@ var postdata = [
     },
     {
         'postid':'asd1234567895',
+        'profile_picture':Profile3,
         'postowner':'sencalkapimi',
         'likedby':['hande_ercel','jerem_b','layla','adam','priya'],
         'innerpostlength':4,
+        'liked':true,
+        'saved':false,
         'post':[{
             'innerpostid':1,
             'type':'image',
@@ -448,7 +462,10 @@ var postdata = [
     },
     {
         'postid':'asd123456789',
+        'profile_picture':Profile4,
         'postowner':'cristiano',
+        'liked':true,
+        'saved':false,
         'likedby':['karan_bians','raut6349','jamal57','levchonu','priya'],
         'innerpostlength':1,
         'post':[{
@@ -473,7 +490,10 @@ var postdata = [
     },
     {
         'postid':'asd123456790',
+        'profile_picture':Profile5,
         'postowner':'mohanpandey',
+        'liked':true,
+        'saved':false,
         'likedby':['nidhikumardance','raut6349','jamal57','levchonu','priya'],
         'innerpostlength':1,
         'post':[{
