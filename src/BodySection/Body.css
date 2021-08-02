@@ -283,3 +283,19 @@ opacity: 0;
 .controls{
     transition: opacity 200ms linear;
 }
+
+
+
+
+.buttonDiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.sliderButton{
+}

@@ -92,6 +92,12 @@ const Post=(props)=>{
     if (props.data[0]['type']==='video'){
         return(
             <div className="videoWrapper">
+                <div className="buttonDiv">
+                    <div className=" leftArrowWrapper">
+                    </div>
+                    <div className=" rightArrowWrapper">
+                    </div>
+                </div>
                 <video src={props.data[0]['mainpost']} 
                 onPlay={onPlay}
                 onPause={onPause}
@@ -107,7 +113,17 @@ const Post=(props)=>{
         )
     }
     return(
-        <img src={props.data[0]['mainpost']} alt={`post by${props.user}`} className="postImage" />
+        <div  style={{position:'relative'}}>
+            <div className="buttonDiv">
+                <div className=" leftArrowWrapper">
+                </div>
+                <div className=" rightArrowWrapper">
+                </div>
+            </div>
+            <div>
+                <img src={props.data[0]['mainpost']} alt={`post by${props.user}`} className="postImage" />
+            </div>
+        </div>
     )
 }
 
