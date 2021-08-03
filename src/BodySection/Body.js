@@ -47,7 +47,6 @@ const Body=()=>{
     )
 }
 
-
 const NewsFeed = ()=>{
     return <div>
         {
@@ -69,10 +68,10 @@ const NewsFeed = ()=>{
     </div>
 }
 
-
 const Post=(props)=>{
     
     const [isPlaying,setIsPlaying] = useState(false)   
+    const [currentlyShown,setcurrentlyShown] = useState(0)
     const videoRef = useRef(null);
     const onPlay=()=>{
         setIsPlaying(true)
@@ -82,23 +81,38 @@ const Post=(props)=>{
     }
     const playorPause=()=>{
         if (videoRef.current.paused){
-
             videoRef.current.play();
         }        
         else{
             videoRef.current.pause();
         }
     }
-    if (props.data[0]['type']==='video'){
+
+    const updatecurrentlyShown=(value)=>{
+        
+        if (props.data.length>1 && value>=0 && value<props.data.length){
+            setcurrentlyShown(value)
+        }
+    }
+    
+    
+    if (props.data[currentlyShown]['type']==='video'){
         return(
             <div className="videoWrapper">
                 <div className="buttonDiv">
-                    <div className=" leftArrowWrapper">
+                    <div className={`leftArrowWrapper ${currentlyShown===0 ? "controlHidden":""} `}
+                    onClick={()=>{updatecurrentlyShown(currentlyShown-1)}}
+                    style={{zIndex:2}}
+                    >
                     </div>
-                    <div className=" rightArrowWrapper">
+                    <div 
+                    className={`rightArrowWrapper ${currentlyShown===props.data.length-1 ? "controlHidden":""} `} 
+                    onClick={()=>{updatecurrentlyShown(currentlyShown+1)}}
+                    style={{zIndex:2}}
+                    >
                     </div>
                 </div>
-                <video src={props.data[0]['mainpost']} 
+                <video src={props.data[currentlyShown]['mainpost']} 
                 onPlay={onPlay}
                 onPause={onPause}
                 style={{width: '100%'}} 
@@ -107,7 +121,6 @@ const Post=(props)=>{
                 <img src={PlayButton} alt="" 
                 className={`controls ${isPlaying ? "controlHidden":"controlShown"} `}
                 />
-
                 </div>
             </div>
         )
@@ -115,18 +128,22 @@ const Post=(props)=>{
     return(
         <div  style={{position:'relative'}}>
             <div className="buttonDiv">
-                <div className=" leftArrowWrapper">
+                <div className={`leftArrowWrapper ${currentlyShown===0 ? "controlHidden":""} `}
+                onClick={()=>{updatecurrentlyShown(currentlyShown-1)}}
+                >
                 </div>
-                <div className=" rightArrowWrapper">
+                <div 
+                className={`rightArrowWrapper ${currentlyShown===props.data.length-1 ? "controlHidden":""} `} 
+                onClick={()=>{updatecurrentlyShown(currentlyShown+1)}}
+                >
                 </div>
             </div>
             <div>
-                <img src={props.data[0]['mainpost']} alt={`post by${props.user}`} className="postImage" />
+                <img src={props.data[currentlyShown]['mainpost']} alt={`post by${props.user}`} className="postImage" />
             </div>
         </div>
     )
 }
-
 
 const SinglePost=(props)=>{
     const [comment,updateComment] = useState('')
@@ -148,8 +165,8 @@ const SinglePost=(props)=>{
                             <img src={ThreeDotMenu} alt="profile_picture" className = "dotMenu"/>
                         </div>
                     </div>
-                    <div className="postBody" >
-                        <Post   alt="post by memenepal" data = {props.data['post']} user = {props.data['postowner']}/>
+                    <div className="postBody" style={{maxHeight:'770px'}}>
+                        <Post  alt="post by memenepal" data = {props.data['post']} user = {props.data['postowner']}/>
                     </div>
                     <div className="postNav" style={{paddingLeft:'0px',paddingTop:'12px'}}>
                         <div className="postNavLeft" >
@@ -387,7 +404,7 @@ var postdata = [
         },
         {
             'innerpostid':2,
-            'type':'video',
+            'type':'image',
             'mainpost':GuitarTwo
         }
         ],
