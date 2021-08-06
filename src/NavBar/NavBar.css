@@ -213,6 +213,8 @@ svg{
     align-items: center;
     background-color: white;
     z-index: 1;
+    text-decoration: none;
+    color: black;
     
     
 }
