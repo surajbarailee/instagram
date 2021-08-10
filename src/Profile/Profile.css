@@ -1,5 +1,83 @@
 .profileContainer{
-    height:500px;
-    background-color: red;
+    /* height:500px; */
+    
     margin-top: 53px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(250,250,250,1);
+}
+
+.profilePicture{
+    width: 150px;
+    height:150px;
+    border-radius: 75px;
+}
+.profileNameLine{
+    display: flex;
+    padding-top: 8px;
+
+}
+
+
+.mainProfileName{
+ font-size: 24px;
+ line-height: 32px;
+ font-family: Montserrat;
+font-weight: 300;
+}
+
+
+.topDiv{
+    display: flex;
+    
+    padding-top: 30px;
+    flex-grow: 1;
+}
+
+.profileWrapper{
+    width: 935px;
+}
+
+.profileDiv{
+    width:300px;
+    display: flex;
+    justify-content: center;
+}
+
+.EditButton{
+    background-color: none;
+    cursor: pointer;
+    background:transparent;
+    border:1px solid #dbdbdb;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 6px 9px;
+    text-align: center;
+    color:rgba(38,38,38,1);
+    margin-left: 20px;
+}
+
+.settingIcon{
+    padding:3px 10px;
+}
+
+.postDetails{
+    display: flex;
+    justify-content: space-between;
+    padding:20px 0px;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+.realName{
+    font-family: Montserrat;
+    font-size: 14px;
+    color:rgb(0, 0, 0);
+    word-wrap: break-word;
+    font-weight: 400;
+}
+
+.headers{
+    display: flex;
+    justify-content: center;
 }
