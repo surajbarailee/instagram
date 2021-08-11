@@ -29,8 +29,8 @@ font-weight: 300;
 
 .topDiv{
     display: flex;
-    
-    padding-top: 30px;
+    padding: 30px 0px 44px 0px;
+
     flex-grow: 1;
 }
 
@@ -69,6 +69,10 @@ font-weight: 300;
     font-size: 14px;
 }
 
+.profileDetails{
+    margin-left: 20px;
+}
+
 .realName{
     font-family: Montserrat;
     font-size: 14px;
@@ -80,4 +84,88 @@ font-weight: 300;
 .headers{
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#262626;
+    font-weight:500;
+}
+
+.headersTag{
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-right: 60px;
+    padding-top: 20px;
+    padding: 15px 2px;
+    margin-top: -1px;
+
+}
+.headersName{
+    padding-left: 6px;
+    letter-spacing: 1px;
+}
+
+.headersSvg{
+    /* padding:7px 5px 5px 5px; */
+
+}
+
+.bottomDiv{
+    border-top: 1px solid #dbdbdb;
+}
+
+.headersTag:last-child {
+    margin-right: 0px;
+}
+
+.profilePostWrapper{
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.storeLinks{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.rightPostDiv{
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto 0;
+}
+
+.firstMessage, .secondMessage{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.secondMessage{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+
+.igtvWrapper{
+    display: flex;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.uploadButton{
+    appearance: none;
+    background-color: #0095f6;
+    border:1px solid transparent;
+    font-family: inherit;
+    border-radius: 4px; 
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color:white;
+    padding:5px 26px;
 }
