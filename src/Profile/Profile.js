@@ -1,8 +1,141 @@
 import './Profile.css';
+import { useState } from 'react';
 import DefaultProfile from '../resources/default_profile.jpg'
 import PostFiller from '../resources/postfiller.jpg'
 import PlayStoreImage from '../resources/playstore.png'
 import AppStoreImage from '../resources/appstore.png' 
+
+
+import Image1 from '../resources/savedResources/image1.jpg'
+import Image2 from '../resources/savedResources/image2.jpg'
+import Image3 from '../resources/savedResources/image3.jpg'
+import Image4 from '../resources/savedResources/image4.jpg'
+import Image5 from '../resources/savedResources/image5.jpg'
+import Image6 from '../resources/savedResources/image6.jpg'
+
+const Posts=()=>{
+    return (
+        <div className='profilePostWrapper'>
+            <div className='leftPostDiv'>
+                <img src={PostFiller} alt="postfiller" width='380px' height='380px'/>
+            </div>
+
+            <div className='rightPostDiv'>
+                <div className='firstMessage'>
+                    Start capturing and sharing your moments.
+                </div>
+                <div className='secondMessage'>
+                    Get the app to share your first photo or video.
+                </div>
+                <div className='storeLinks'>
+                    <div >
+                        <a href="https://apps.apple.com/app/instagram/id389801252?vt=li">
+                            <img src={AppStoreImage} alt="appstore link" width='136px'/>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
+                                <img src={PlayStoreImage} alt="playstore link" width='136px' />
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    )
+
+}
+
+
+const Igtv=()=>{
+    return (
+        <div className='igtvWrapper'>
+            <div style={{fontFamily:'inherit',fontSize:'14px',fontWeight:600,color:'rgba(142,142,142,1)'}}>
+                Videos
+            </div>
+            <div>
+                <a href='/'>
+                    <button className='uploadButton'>
+                        Upload
+                    </button>
+                </a>
+            </div>
+        </div>
+    )
+}
+
+
+const Saved=()=>{
+    return (
+        <div>
+            <div className='igtvWrapper savedWrapper'>
+                    <div style={{fontFamily:'inherit',fontSize:'12px',fontWeight:400,color:'rgba(142,142,142,1)'}}>
+                        Only you can see what you've saved
+                    </div>
+                    <div>
+                        <a href='/'>
+                            <button className='newCollectionButton'>
+                                + New Collection 
+                            </button>
+                        </a>
+                    </div>
+            </div>
+            <div className="galleryWrapper" style={{width:'100%',padding:'0px',margin:'0px'}}>
+                    <div className="galleryContainer" style={{width:'100%',padding:'0px',margin:'0px'}}>
+                        <div className="savedImageArea">
+                            <div className="savedPictureWrapper">
+                                <img src={Image1} alt="picture1" className='singlePicture' />
+                            </div>
+                            <div className="savedPictureWrapper">
+                                <img src={Image2} alt="picture1" className='singlePicture' />
+                            </div>
+                            <div className="savedPictureWrapper">
+                                <img src={Image3} alt="picture1" className='singlePicture' />
+                            </div>
+                            <div className="savedPictureWrapper">
+                                <img src={Image4} alt="picture1" className='singlePicture' />
+                            </div>
+                            <div className="savedPictureWrapper">
+                                <img src={Image5} alt="picture1" className='singlePicture' />
+                            </div>
+                            <div className="savedPictureWrapper">
+                                <img src={Image6} alt="picture1" className='singlePicture' />
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>     
+    )
+
+}
+
+
+
+
+
+
+const BodyDivToggler=(divflag)=>{
+    // const [showdiv, updateShowDiv] = useState('posts')
+
+    
+
+    // if (showdiv ==='POSTS'){
+    //     return <Posts/>
+    // }
+
+    // else if (showdiv ==='IGTV'){
+    //     return <Igtv/>
+    // }
+    // else if (showdiv ==='SAVED'){
+    //     return <Saved/>
+    // }
+    console.log('asd')
+    return <Posts/>
+    
+
+}
+
 
 const Profile =()=>{
     return (
@@ -82,8 +215,8 @@ const Profile =()=>{
                         </div>
                     </div>
 
-                    {/* <Posts/> */}
-                    <Igtv/>
+                    <BodyDivToggler/>
+
                 </div>
             </div>  
         </div>
@@ -92,59 +225,6 @@ const Profile =()=>{
 
 
 
-const Posts=()=>{
-
-    return (
-        <div className='profilePostWrapper'>
-            <div className='leftPostDiv'>
-                <img src={PostFiller} alt="postfiller" width='380px' height='380px'/>
-            </div>
-
-            <div className='rightPostDiv'>
-                <div className='firstMessage'>
-                    Start capturing and sharing your moments.
-                </div>
-                <div className='secondMessage'>
-                    Get the app to share your first photo or video.
-                </div>
-                <div className='storeLinks'>
-                    <div >
-                        <a href="https://apps.apple.com/app/instagram/id389801252?vt=li">
-                            <img src={AppStoreImage} alt="appstore link" width='136px'/>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
-                                <img src={PlayStoreImage} alt="playstore link" width='136px' />
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    )
-
-}
-
-
-const Igtv=()=>{
-    return (
-
-        <div className='igtvWrapper'>
-            <div style={{fontFamily:'inherit',fontSize:'14px',fontWeight:600,color:'rgba(142,142,142,1)'}}>
-                Videos
-            </div>
-            <div>
-                <a href='/'>
-
-                    <button className='uploadButton'>
-                        Upload
-                    </button>
-                </a>
-            </div>
-        </div>
-    )
-}
 
 
 export default Profile;

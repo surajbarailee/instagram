@@ -169,3 +169,30 @@ font-weight: 300;
     color:white;
     padding:5px 26px;
 }
+
+
+.newCollectionButton{
+    color:#0095f6;
+    font-family: inherit;
+    border:1px solid transparent;
+    background-color: transparent;
+    font-weight: 600;
+
+}
+
+.savedWrapper{
+    padding-top:30px;
+}
+
+.savedImageArea{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding-top:10px;
+}
+
+.savedPictureWrapper{
+    padding:0px 0px 28px 0px;
+    width:293px;
+    height:293px;
+}
