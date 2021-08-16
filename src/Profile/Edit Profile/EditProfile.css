@@ -1,0 +1,112 @@
+
+.editProfileWrapper{
+    padding-top: 30px;
+}
+
+
+.editLeftDiv{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    max-width: 236px;
+    border: 1px solid #dbdbdb;
+}
+
+.editColumnOptions{
+    font-family: inherit;
+    padding:10px 14px 14px 30px;
+    border:3px solid transparent;
+}
+.editColumnOptions:hover{
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 1);
+    border-left:3px solid #dbdbdb; 
+}
+.active{
+    border-left:3px solid rgba(38,38,38,1);
+    font-weight: 600; 
+}
+
+.sameLine{
+    width: 100%;
+    display: flex;
+    padding-bottom:15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+
+
+.editWrapper{
+    width: 100%;
+    display: flex;
+    min-width: 696px;
+    border: 1px solid #dbdbdb;
+    border-left: 0px;
+    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+.submitButton{
+    
+        appearance: none;
+        background-color: #0095f6;
+        border:1px solid transparent;
+        font-family: inherit;
+        border-radius: 4px; 
+        cursor:pointer;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color:white;
+        padding:5px 26px;
+    
+}
+
+.editOptionBodyWrapper{
+    margin-top: 28px;
+    width: 100%;
+}
+
+.editInput{
+  min-width:355px;
+  height:25px;
+  padding-left:8px;
+  border:1px solid #dbdbdb;
+  border-radius:4px;
+  font:inherit;
+    
+}
+
+
+.changeProfile{
+    align-items: center;
+}
+
+.submitButton{
+    appearance: none;
+    background-color: #0095f6;
+    border:1px solid transparent;
+    font-family: inherit;
+    border-radius: 4px; 
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color:white;
+    padding:5px 26px;
+}
+
+.disableLink{
+    color:#0095f6;
+    font-family: inherit;
+    border:1px solid transparent;
+    background-color: transparent;
+    font-weight: 600;
+}
