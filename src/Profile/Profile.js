@@ -28,12 +28,12 @@ const Posts=()=>{
                     Get the app to share your first photo or video.
                 </div>
                 <div className='storeLinks'>
-                    <div >
+                    <div style={{paddingRight:'4px'}}>
                         <a href="https://apps.apple.com/app/instagram/id389801252?vt=li">
                             <img src={AppStoreImage} alt="appstore link" width='136px'/>
                         </a>
                     </div>
-                    <div>
+                    <div style={{paddingLeft:'4px'}}>
                         <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
                                 <img src={PlayStoreImage} alt="playstore link" width='136px' />
                         </a>
@@ -232,7 +232,60 @@ const Profile =()=>{
                     {showdiv==='TAGGED' && <Posts/>}
 
                 </div>
+                <ProfileFooter/>
             </div>  
+        </div>
+    )
+}
+
+
+const ProfileFooter=()=>{
+    return (
+        <div style={{paddingTop:'15px',paddingBottom:'52px',backgroundColor:'rgba(250,250,250,1)'}}>
+            <div className='footerLinks'>
+                <div>
+                    <a href="https://about.instagram.com">About</a>
+                </div>
+                <div>
+                    <a href="https://about.instagram.com/blog">Blog</a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/about/jobs">Jobs</a>
+                </div>
+                <div>
+                    <a href="https://help.instagram.com">Help</a>
+                </div>
+                <div>
+                    <a href="https://developers.facebook.com">API</a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/legal/privacy">Privacy</a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/legal/terms">Terms</a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/directory/profiles">Top Accounts</a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/directory/hashtags">HashTags</a>
+                    </div>
+                <div>
+                    <a href="https://instagram.com/explore/locations/">Locations</a>
+                </div>
+            </div>
+        <div className='footerLinks footerCopyRight'>
+            <div>
+            English&nbsp;&nbsp;
+            <span style={{display: 'inline-block', transform: 'rotate(180deg)'}}>
+                <svg aria-label="Down Chevron Icon" class="_8-yf5 " fill="#8e8e8e" height="12" role="img" viewBox="0 0 48 48" width="12"><path d="M40 33.5c-.4 0-.8-.1-1.1-.4L24 18.1l-14.9 15c-.6.6-1.5.6-2.1 0s-.6-1.5 0-2.1l16-16c.6-.6 1.5-.6 2.1 0l16 16c.6.6.6 1.5 0 2.1-.3.3-.7.4-1.1.4z"></path></svg>
+            </span>
+
+            </div>  
+            <div style={{display:'flex',alignItems:'center'}}>
+            &copy; 2021 Instagram from facebook
+            </div>
+        </div>
         </div>
     )
 }
@@ -241,4 +294,6 @@ const Profile =()=>{
 
 
 
+
 export default Profile;
+export {ProfileFooter};
