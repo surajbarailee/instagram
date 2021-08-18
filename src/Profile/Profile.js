@@ -112,34 +112,6 @@ const Saved=()=>{
 
 
 
-
-
-
-const BodyDivToggler=(divflag)=>{
-    // const [showdiv, updateShowDiv] = useState('POSTS')
-
-    console.log('asd')
-
-    if (divflag ==='POSTS'){
-        return <Posts/>
-    }
-
-    else if (divflag ==='IGTV'){
-        return <Igtv/>
-    }
-    else if (divflag ==='SAVED'){
-        return <Saved/>
-    }
-    else if (divflag ==='TAGGED'){
-        return <Saved/>
-    }
-
-    return <Posts/>
-    
-
-}
-
-
 const Profile =()=>{
     const [showdiv, updateShowDiv] = useState('POSTS')
 
@@ -232,7 +204,7 @@ const Profile =()=>{
                     {showdiv==='TAGGED' && <Posts/>}
 
                 </div>
-                <ProfileFooter/>
+            <ProfileFooter/>
             </div>  
         </div>
     )
@@ -241,7 +213,11 @@ const Profile =()=>{
 
 const ProfileFooter=()=>{
     return (
-        <div style={{paddingTop:'15px',paddingBottom:'52px',backgroundColor:'rgba(250,250,250,1)'}}>
+        <div style={{
+        padding:'15px 0px 0px 0px',
+        backgroundColor:'rgba(250,250,250,1)',
+        bottom:'0'
+        }}>
             <div className='footerLinks'>
                 <div>
                     <a href="https://about.instagram.com">About</a>
