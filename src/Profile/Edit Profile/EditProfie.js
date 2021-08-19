@@ -3,6 +3,8 @@ import './EditProfile.css'
 import ProfileImage from '../../resources/profile_pic.jpg'
 import {ProfileFooter} from '../Profile.js'
 
+import { useState } from 'react'
+
 
 const EditProfile=()=>{
 return <div>
@@ -60,7 +62,8 @@ return <div>
         </div>
         <div className="editRightDiv" >
             {/* <Edit/> */}
-        <ChangePassword/>    
+        {/* <ChangePassword/>     */}
+        <AppsAndWebsite/>
         </div>
     </div>
     <ProfileFooter/>
@@ -289,10 +292,70 @@ const Edit=()=>{
         </div>
                
     )
-                        }
+}
 
 
 
+const AppsAndWebsite=()=>{
+
+    const [flag, setflag] = useState('active')
+
+
+    return (
+        <div className='appsAndWebsiteWrapper'>
+            <div className="appandwebHeading ">
+                Apps and Websites
+            </div>
+            <div className="appandwebOptions">
+                <div className ={`appandwebOptionList ${flag==='active' ? "appsandWebsite-active":""} `}
+                onClick={()=>{setflag('active')}}>
+                    Active
+                </div>
+                <div className ={`appandwebOptionList ${flag==='expired' ? "appsandWebsite-active":""} `}
+                 onClick={()=>{setflag('expired')}}>
+                    Expired
+                </div>
+                <div className ={`appandwebOptionList ${flag==='removed' ? "appsandWebsite-active":""} `}
+                 onClick={()=>{setflag('removed')}}>
+                    Removed
+                </div>
+            </div>
+            <hr style={{padding:'0px',margin:'0px',marginTop:'-1px',opacity:'0.5'}}/>
+            {flag==='active' && <div className='appandwebDescription ' >
+                These are apps and websites you've used Instagram to log into and have recently<br/>
+                used. They can request info you chose to share with them.
+            </div>}
+            {flag==='expired' &&<div className='appandwebDescription'>
+                These are apps and websites you've used Instagram to log into and may not have <br/>
+                used in a while. They may still have access to info you previously shared, but their <br/> 
+                ability to make additional requests for private info has expired.
+                <p>
+                You have no expired applications that had access to your Instagram account.
+                </p>
+                    
+            </div>}
+
+            
+            {flag==='removed' && <div className='appandwebDescription' >
+                These are apps and websites you removed from your account. This means they <br/>
+                may still have access to info you previously shared, but can't make additional <br/>
+                requests for private info.
+                <p>
+
+                You have no removed applications that had access to your Instagram account.
+                </p>
+
+            </div>}
+
+        </div>
+
+
+
+
+    )
+
+
+}
 
 
 export default EditProfile;
