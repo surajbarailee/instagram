@@ -17,7 +17,7 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     background-color: white;
-    
+    min-width: 696px;
     border: 1px solid #dbdbdb;
     border-left: 0px;
     
@@ -235,4 +235,39 @@
 .appandwebDescription{
     margin-top:32px;
     width: 580px;
+}
+
+
+
+.emailsHeading{
+    font-size: 22px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    color:rgba(38,38,38,1);
+    padding-bottom:10px;
+}
+.subscribeOptions{
+    margin:16px 0px 24px 0px;
+}
+.subscribeOptionsHeading{
+    font-weight: 600;
+    font-size: 14px;
+    font-family: inherit;
+}
+.subscribeOptionsHeading> input[type='checkbox']{
+    /* -webkit-appearance: none; */
+    height:16px;
+    width: 16px;
+    border:1px solid rgba(142,142,142,1);
+    border-radius: 3px;
+    margin:0px;
+    padding: 0px;
+}
+
+.subscribeOptionsDetails{
+    color:rgba(142,142,142,1);
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 4px;
 }

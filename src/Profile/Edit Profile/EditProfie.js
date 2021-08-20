@@ -63,7 +63,8 @@ return <div>
         <div className="editRightDiv" >
             {/* <Edit/> */}
         {/* <ChangePassword/>     */}
-        <AppsAndWebsite/>
+        {/* <AppsAndWebsite/> */}
+        <Emails/>
         </div>
     </div>
     <ProfileFooter/>
@@ -333,9 +334,7 @@ const AppsAndWebsite=()=>{
                 You have no expired applications that had access to your Instagram account.
                 </p>
                     
-            </div>}
-
-            
+            </div>}    
             {flag==='removed' && <div className='appandwebDescription' >
                 These are apps and websites you removed from your account. This means they <br/>
                 may still have access to info you previously shared, but can't make additional <br/>
@@ -346,13 +345,75 @@ const AppsAndWebsite=()=>{
                 </p>
 
             </div>}
+        </div>
+    )
+}
+
+
+
+
+const Emails=()=>{
+
+    return (
+        <div style={{margin:'24px 32px 32px 64px'}}>
+            <div className='emailsHeading'>
+                Subscribe to:
+            </div>
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        FeedBack Emails
+                    </span>    
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Give Feedback on Instagram.
+                </div>
+            </div >
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        Reminder Emails
+                    </span>   
+                    
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Get notifications you may have missed.
+                </div>
+            </div>
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        Product Emails
+                    </span>   
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Get tips about Instagram's tools.
+                </div>
+            </div>
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        News Emails
+                    </span>   
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Learn about new Instagram features.
+                </div>
+            </div>
+
+
+
+
 
         </div>
 
 
-
-
     )
+
 
 
 }
