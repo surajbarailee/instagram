@@ -64,7 +64,8 @@ return <div>
             {/* <Edit/> */}
         {/* <ChangePassword/>     */}
         {/* <AppsAndWebsite/> */}
-        <Emails/>
+        {/* <Emails/> */}
+        <PushNotification/>
         </div>
     </div>
     <ProfileFooter/>
@@ -418,5 +419,162 @@ const Emails=()=>{
 
 }
 
+
+
+
+const PushNotification=()=>{
+
+
+    const OptionRadioDesc={
+        1:'Off',
+        2:'From People I follow',
+        3:'From Everyone',
+        4:'On'
+    }
+    const initialoptionsValue=[
+        {
+            heading:'Likes',
+            options:[1,2,3],
+            checked:2,
+            example:'johnappleseed liked your photo'
+        },
+        {
+            heading:'Comments',
+            options:[1,2,3],
+            checked:2,
+            example:'johnappleseed commented: "Nice shot!"'
+        },
+        {
+            heading:'Comment Likes',
+            options:[1,2],
+            checked:2,
+            example:'johnappleseed liked  your comment:"Nice shot!"'
+        },
+        {
+            heading:'Likes and Comments on Photos of You',
+            options:[1,2,3],
+            checked:2,
+            example:"johnappleseed commented on a post you're tagged in."
+        },
+        {
+            heading:'Accepted Follow Requests',
+            options:[1,3],
+            checked:2,
+            example:"John Appleseed (johnappleseed) accepted your follow request."
+        },
+        {
+            heading:'Instagram Direct Requests',
+            options:[1,3],
+            checked:2,
+            example:"johnappleseed wants to send you a message."
+        },
+        {
+            heading:'Instagram Direct',
+            options:[1,3],
+            checked:2,
+            example:"johnappleseed sent you a message."
+        },
+        {
+            heading:'Reminders',
+            options:[1,3],
+            checked:2,
+            example:"You have unseen notifications, and other similar notifications."
+        },
+        {
+            heading:'First Posts and Stories',
+            options:[1,2,3],
+            checked:2,
+            example:"See johnappleseed's first story on Instagram, and other similar notifications."
+        },
+        {
+            heading:'Video View Conts',
+            options:[1,3],
+            checked:2,
+            example:"Your video has more than 100K views."
+        },
+        {
+            heading:'Support Requests',
+            options:[1,4],
+            checked:2,
+            example:"See johnappleseed's first story on Instagram, and other similar notifications."
+        },
+        {
+            heading:'Live Videos',
+            options:[1,4],
+            checked:2,
+            example:"johnappleseed started a live video. Watch it before it ends!"
+        },
+        
+        
+        
+        
+        
+        
+
+
+
+
+    ]
+    const [optionValue, setoptionValue] = useState(initialoptionsValue)
+    
+
+
+
+
+    const OptionsDiv=(props)=>{
+
+        function changeButtonValue(heading,index){
+            var temp_optionValue=optionValue
+            temp_optionValue.map((data,i)=>{
+                if (data.heading===heading){
+                    data.checked=index
+                }
+                console.log('asd')
+                setoptionValue(temp_optionValue)
+            })
+        }
+
+        return (
+
+        <div>
+            <p style={{fontSize:'22px'}}>
+                {props.data.heading}
+            </p>
+            {props.data.options.map((data,index)=>{
+                return(
+                    <div>
+                        <input type="radio" 
+                        name={props.data.heading} 
+                        checked={index+1===props.data.checked?true:false} 
+                        onChange={()=>{changeButtonValue(props.data.heading,index)}}
+                        
+                        />
+                        {OptionRadioDesc[data]}
+                    </div>
+                )
+            }
+            )}
+            
+        </div>
+            )
+
+
+
+    }
+    return (
+        <div>
+        push notifications
+        {optionValue.map((data,index)=>{
+            return (
+                <OptionsDiv data={data}/>
+            )
+        })}
+
+
+
+    </div>
+    )
+
+}
 
 export default EditProfile;
