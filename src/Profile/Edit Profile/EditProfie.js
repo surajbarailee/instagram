@@ -424,7 +424,6 @@ const Emails=()=>{
 
 const PushNotification=()=>{
 
-
     const OptionRadioDesc={
         1:'Off',
         2:'From People I follow',
@@ -436,7 +435,7 @@ const PushNotification=()=>{
             heading:'Likes',
             options:[1,2,3],
             checked:2,
-            example:'johnappleseed liked your photo'
+            example:'johnappleseed liked your photo.',
         },
         {
             heading:'Comments',
@@ -515,58 +514,59 @@ const PushNotification=()=>{
 
 
     ]
-    const [optionValue, setoptionValue] = useState(initialoptionsValue)
     
-
-
-
-
     const OptionsDiv=(props)=>{
 
-        function changeButtonValue(heading,index){
-            var temp_optionValue=optionValue
-            temp_optionValue.map((data,i)=>{
+        function isChecked(heading,index,checked){
+            console.log(heading,index,checked)
+            initialoptionsValue.forEach(data=>{
                 if (data.heading===heading){
-                    data.checked=index
+                     return index === data.checked-1 ? true : false
                 }
-                console.log('asd')
-                setoptionValue(temp_optionValue)
             })
+
         }
 
         return (
 
-        <div>
+        <div style={{borderBottom:'1px solid rgba(219,219,219,1)'}}>
             <p style={{fontSize:'22px'}}>
                 {props.data.heading}
             </p>
             {props.data.options.map((data,index)=>{
                 return(
-                    <div>
-                        <input type="radio" 
-                        name={props.data.heading} 
-                        checked={index+1===props.data.checked?true:false} 
-                        onChange={()=>{changeButtonValue(props.data.heading,index)}}
+                    <label className='notificationOptionsWrapper'>
+                        <div>
+                            <input type="radio" 
+                            name={props.data.heading} 
+                            checked={index===props.data.checked-1}
+                            style={{height:'18px',width:'18px'}}
+                            />
+                        </div>
+                        <div style={{paddingLeft:'5px',height:'18px'}}>
                         
-                        />
                         {OptionRadioDesc[data]}
-                    </div>
+                        </div>
+                    </label>
                 )
             }
             )}
+
+            <div className='optionDescription'>
+                {props.data['example']}
+            </div>
             
         </div>
             )
 
-
-
     }
     return (
         <div>
-        push notifications
-        {optionValue.map((data,index)=>{
+        {initialoptionsValue.map((data,index)=>{
             return (
+                <div style={{padding:'0px 25px'}} key={data.heading}>
                 <OptionsDiv data={data}/>
+                </div>
             )
         })}
 
