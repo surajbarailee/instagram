@@ -446,37 +446,37 @@ const PushNotification=()=>{
         {
             heading:'Comment Likes',
             options:[1,2],
-            checked:2,
+            checked:1,
             example:'johnappleseed liked  your comment:"Nice shot!"'
         },
         {
             heading:'Likes and Comments on Photos of You',
             options:[1,2,3],
-            checked:2,
+            checked:3,
             example:"johnappleseed commented on a post you're tagged in."
         },
         {
             heading:'Accepted Follow Requests',
             options:[1,3],
-            checked:2,
+            checked:1,
             example:"John Appleseed (johnappleseed) accepted your follow request."
         },
         {
             heading:'Instagram Direct Requests',
             options:[1,3],
-            checked:2,
+            checked:1,
             example:"johnappleseed wants to send you a message."
         },
         {
             heading:'Instagram Direct',
             options:[1,3],
-            checked:2,
+            checked:1,
             example:"johnappleseed sent you a message."
         },
         {
             heading:'Reminders',
             options:[1,3],
-            checked:2,
+            checked:1,
             example:"You have unseen notifications, and other similar notifications."
         },
         {
@@ -486,21 +486,21 @@ const PushNotification=()=>{
             example:"See johnappleseed's first story on Instagram, and other similar notifications."
         },
         {
-            heading:'Video View Conts',
+            heading:'Video View Counts',
             options:[1,3],
-            checked:2,
+            checked:1,
             example:"Your video has more than 100K views."
         },
         {
             heading:'Support Requests',
             options:[1,4],
-            checked:2,
+            checked:1,
             example:"See johnappleseed's first story on Instagram, and other similar notifications."
         },
         {
             heading:'Live Videos',
             options:[1,4],
-            checked:2,
+            checked:4,
             example:"johnappleseed started a live video. Watch it before it ends!"
         },
         
@@ -516,36 +516,29 @@ const PushNotification=()=>{
     ]
     
     const OptionsDiv=(props)=>{
-
-        function isChecked(heading,index,checked){
-            console.log(heading,index,checked)
-            initialoptionsValue.forEach(data=>{
-                if (data.heading===heading){
-                     return index === data.checked-1 ? true : false
-                }
-            })
-
-        }
-
+        const data=props.data
+        const [check, setData] = useState(props.data.checked)
         return (
 
-        <div style={{borderBottom:'1px solid rgba(219,219,219,1)'}}>
+        <div className='singleNotifcationSetting'>
             <p style={{fontSize:'22px'}}>
-                {props.data.heading}
+                {data.heading}
             </p>
-            {props.data.options.map((data,index)=>{
+            {data.options.map((radiobutton_index,index)=>{
+                
                 return(
                     <label className='notificationOptionsWrapper'>
                         <div>
                             <input type="radio" 
-                            name={props.data.heading} 
-                            checked={index===props.data.checked-1}
+                            name={data.heading} 
+                            checked={radiobutton_index===check}
+                            onChange={()=>{setData(radiobutton_index)}}
                             style={{height:'18px',width:'18px'}}
                             />
                         </div>
                         <div style={{paddingLeft:'5px',height:'18px'}}>
                         
-                        {OptionRadioDesc[data]}
+                        {OptionRadioDesc[radiobutton_index]}
                         </div>
                     </label>
                 )
@@ -561,18 +554,66 @@ const PushNotification=()=>{
 
     }
     return (
-        <div>
+    <div  style={{}}>
         {initialoptionsValue.map((data,index)=>{
             return (
-                <div style={{padding:'0px 25px'}} key={data.heading}>
+                <div style={{padding:'0px 25px'}} key={data.heading} className='pushNotificationWrapper'>
                 <OptionsDiv data={data}/>
                 </div>
             )
         })}
-
-
-
     </div>
+    )
+
+}
+
+
+
+const manageContact=()=>{
+
+    return (
+
+        <div>
+
+            <div>
+                Manage Contacts
+            </div>
+
+            <div>
+                <p>
+                The people listed here are contacts you've uploaded to Instagram. To remove 
+                your synced contacts, tap Delete All. Your contacts will be re-uploaded the next time Instagram syncs your contacts 
+                unless you go to your device settings and turn off access to contacts.
+                </p>
+
+                <p>
+                Only you can see your contacts, but Instagram uses the info you've uploaded about your contacts to make friend suggestions
+                 for you and others and to provide a better experience for everyone.
+                </p>
+            </div>
+
+            <div>
+                <div>
+                    0 synced Contacts
+                </div>
+                <div>
+                    Delete All
+                </div>
+            </div>
+            <div>
+                When you upload your contact to Instagram,you'll see them here.
+            </div>
+
+            <div>
+                <button>
+                    Delete All
+                </button>
+            </div>
+
+        </div>
+
+
+
     )
 
 }
