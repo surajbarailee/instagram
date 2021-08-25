@@ -63,7 +63,9 @@ return <div>
         <div className="editRightDiv" >
             {/* <Edit/> */}
         {/* <ChangePassword/>     */}
-        <AppsAndWebsite/>
+        {/* <AppsAndWebsite/> */}
+        {/* <Emails/> */}
+        <PushNotification/>
         </div>
     </div>
     <ProfileFooter/>
@@ -333,9 +335,7 @@ const AppsAndWebsite=()=>{
                 You have no expired applications that had access to your Instagram account.
                 </p>
                     
-            </div>}
-
-            
+            </div>}    
             {flag==='removed' && <div className='appandwebDescription' >
                 These are apps and websites you removed from your account. This means they <br/>
                 may still have access to info you previously shared, but can't make additional <br/>
@@ -346,16 +346,276 @@ const AppsAndWebsite=()=>{
                 </p>
 
             </div>}
+        </div>
+    )
+}
+
+
+
+
+const Emails=()=>{
+
+    return (
+        <div style={{margin:'24px 32px 32px 64px'}}>
+            <div className='emailsHeading'>
+                Subscribe to:
+            </div>
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        FeedBack Emails
+                    </span>    
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Give Feedback on Instagram.
+                </div>
+            </div >
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        Reminder Emails
+                    </span>   
+                    
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Get notifications you may have missed.
+                </div>
+            </div>
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        Product Emails
+                    </span>   
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Get tips about Instagram's tools.
+                </div>
+            </div>
+            <div className="subscribeOptions">
+                <div className='subscribeOptionsHeading'>
+                    <input type="checkbox" />
+                    <span style={{padding:'5px'}}>
+                        News Emails
+                    </span>   
+                </div>
+                <div className='subscribeOptionsDetails'>
+                    Learn about new Instagram features.
+                </div>
+            </div>
+
+
+
+
 
         </div>
-
-
 
 
     )
 
 
+
 }
 
+
+
+
+const PushNotification=()=>{
+
+    const OptionRadioDesc={
+        1:'Off',
+        2:'From People I follow',
+        3:'From Everyone',
+        4:'On'
+    }
+    const initialoptionsValue=[
+        {
+            heading:'Likes',
+            options:[1,2,3],
+            checked:2,
+            example:'johnappleseed liked your photo.',
+        },
+        {
+            heading:'Comments',
+            options:[1,2,3],
+            checked:2,
+            example:'johnappleseed commented: "Nice shot!"'
+        },
+        {
+            heading:'Comment Likes',
+            options:[1,2],
+            checked:1,
+            example:'johnappleseed liked  your comment:"Nice shot!"'
+        },
+        {
+            heading:'Likes and Comments on Photos of You',
+            options:[1,2,3],
+            checked:3,
+            example:"johnappleseed commented on a post you're tagged in."
+        },
+        {
+            heading:'Accepted Follow Requests',
+            options:[1,3],
+            checked:1,
+            example:"John Appleseed (johnappleseed) accepted your follow request."
+        },
+        {
+            heading:'Instagram Direct Requests',
+            options:[1,3],
+            checked:1,
+            example:"johnappleseed wants to send you a message."
+        },
+        {
+            heading:'Instagram Direct',
+            options:[1,3],
+            checked:1,
+            example:"johnappleseed sent you a message."
+        },
+        {
+            heading:'Reminders',
+            options:[1,3],
+            checked:1,
+            example:"You have unseen notifications, and other similar notifications."
+        },
+        {
+            heading:'First Posts and Stories',
+            options:[1,2,3],
+            checked:2,
+            example:"See johnappleseed's first story on Instagram, and other similar notifications."
+        },
+        {
+            heading:'Video View Counts',
+            options:[1,3],
+            checked:1,
+            example:"Your video has more than 100K views."
+        },
+        {
+            heading:'Support Requests',
+            options:[1,4],
+            checked:1,
+            example:"See johnappleseed's first story on Instagram, and other similar notifications."
+        },
+        {
+            heading:'Live Videos',
+            options:[1,4],
+            checked:4,
+            example:"johnappleseed started a live video. Watch it before it ends!"
+        },
+        
+        
+        
+        
+        
+        
+
+
+
+
+    ]
+    
+    const OptionsDiv=(props)=>{
+        const data=props.data
+        const [check, setData] = useState(props.data.checked)
+        return (
+
+        <div className='singleNotifcationSetting'>
+            <p style={{fontSize:'22px'}}>
+                {data.heading}
+            </p>
+            {data.options.map((radiobutton_index,index)=>{
+                
+                return(
+                    <label className='notificationOptionsWrapper'>
+                        <div>
+                            <input type="radio" 
+                            name={data.heading} 
+                            checked={radiobutton_index===check}
+                            onChange={()=>{setData(radiobutton_index)}}
+                            style={{height:'18px',width:'18px'}}
+                            />
+                        </div>
+                        <div style={{paddingLeft:'5px',height:'18px'}}>
+                        
+                        {OptionRadioDesc[radiobutton_index]}
+                        </div>
+                    </label>
+                )
+            }
+            )}
+
+            <div className='optionDescription'>
+                {props.data['example']}
+            </div>
+            
+        </div>
+            )
+
+    }
+    return (
+    <div  style={{}}>
+        {initialoptionsValue.map((data,index)=>{
+            return (
+                <div style={{padding:'0px 25px'}} key={data.heading} className='pushNotificationWrapper'>
+                <OptionsDiv data={data}/>
+                </div>
+            )
+        })}
+    </div>
+    )
+
+}
+
+
+
+const manageContact=()=>{
+
+    return (
+
+        <div>
+
+            <div>
+                Manage Contacts
+            </div>
+
+            <div>
+                <p>
+                The people listed here are contacts you've uploaded to Instagram. To remove 
+                your synced contacts, tap Delete All. Your contacts will be re-uploaded the next time Instagram syncs your contacts 
+                unless you go to your device settings and turn off access to contacts.
+                </p>
+
+                <p>
+                Only you can see your contacts, but Instagram uses the info you've uploaded about your contacts to make friend suggestions
+                 for you and others and to provide a better experience for everyone.
+                </p>
+            </div>
+
+            <div>
+                <div>
+                    0 synced Contacts
+                </div>
+                <div>
+                    Delete All
+                </div>
+            </div>
+            <div>
+                When you upload your contact to Instagram,you'll see them here.
+            </div>
+
+            <div>
+                <button>
+                    Delete All
+                </button>
+            </div>
+
+        </div>
+
+
+
+    )
+
+}
 
 export default EditProfile;
