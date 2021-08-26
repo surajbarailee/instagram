@@ -65,7 +65,9 @@ return <div>
         {/* <ChangePassword/>     */}
         {/* <AppsAndWebsite/> */}
         {/* <Emails/> */}
-        <PushNotification/>
+        {/* <PushNotification/> */}
+        {/* <ManageContact/> */}
+        <Privacy/>
         </div>
     </div>
     <ProfileFooter/>
@@ -405,18 +407,8 @@ const Emails=()=>{
                     Learn about new Instagram features.
                 </div>
             </div>
-
-
-
-
-
         </div>
-
-
     )
-
-
-
 }
 
 
@@ -569,43 +561,45 @@ const PushNotification=()=>{
 
 
 
-const manageContact=()=>{
+const ManageContact=()=>{
 
     return (
 
-        <div>
+        <div className='manageContactWrapper' >
 
-            <div>
+            <div className='manageContactHeading'>
                 Manage Contacts
             </div>
 
-            <div>
-                <p>
-                The people listed here are contacts you've uploaded to Instagram. To remove 
-                your synced contacts, tap Delete All. Your contacts will be re-uploaded the next time Instagram syncs your contacts 
-                unless you go to your device settings and turn off access to contacts.
+            <div className='manageContactDescription'>
+                <p style={{padding:'20px 0px 10px 0px'}}>
+                The people listed here are contacts you've uploaded to Instagram. To remove<br/>
+                your synced contacts, tap Delete All. Your contacts will be re-uploaded the next<br/>
+                time Instagram syncs your contacts unless you go to your device settings and<br/> 
+                turn off access to contacts.
                 </p>
 
-                <p>
-                Only you can see your contacts, but Instagram uses the info you've uploaded about your contacts to make friend suggestions
-                 for you and others and to provide a better experience for everyone.
+                <p style={{padding:'0px 0px 20px 0px'}}>
+                Only you can see your contacts, but Instagram uses the info you've uploaded<br/>
+                about your contacts to make friend suggestions for you and others and to<br/>
+                provide a better experience for everyone.
                 </p>
             </div>
 
-            <div>
-                <div>
-                    0 synced Contacts
+            <div className='manageContactDelete'>
+                <div style={{fontWeight:'600'}}>
+                    0 Synced Contacts
                 </div>
-                <div>
+                <div style={{cursor:'pointer',color:'#b2dffc',fontSize:'14px',lineHeight:'18px'}}>
                     Delete All
                 </div>
             </div>
-            <div>
+            <div style={{fontSize:'16px',padding:'32px 0px 32px 0px',borderBottom:'1px solid #dbdbdb'}} >
                 When you upload your contact to Instagram,you'll see them here.
             </div>
 
-            <div>
-                <button>
+            <div style={{paddingTop:'15px'}}>
+                <button className='uploadButton disabledUploadButton'  style={{padding:'5px 10px'}}>
                     Delete All
                 </button>
             </div>
@@ -617,5 +611,55 @@ const manageContact=()=>{
     )
 
 }
+
+
+const Privacy=()=>{
+
+
+    return (
+        <div className=" privacyWrapper ">
+            <div className='privacyOptionWrapper'>
+                <div className='privacyOptionHeading'>
+                    Account Privacy
+                </div>
+                <div className='privacyOption'>
+                    <input type="checkbox" checked/> 
+                    <label>Private Account</label>
+                </div>
+                <div className='privacyOptionDescription'>
+                    When your account is private, only people you approve can see your photos and videos on<br/>
+                    Instagram. Your existing followers won't be affected.
+                </div>
+            </div>
+            <div className='privacyOptionWrapper'>
+                <div className='privacyOptionHeading'>
+                    Activity Status
+                </div>
+                <div className='privacyOption'>
+                    <input type="checkbox" checked/> 
+                    <label>Private Account</label>
+                </div>
+                <div className='privacyOptionDescription'>
+                    When your account is private, only people you approve can see your photos and videos on<br/>
+                    Instagram. Your existing followers won't be affected.
+                </div>
+            </div>
+            <div className='privacyOptionWrapper'>
+                <div className='privacyOptionHeading'>
+                    Story Sharing
+                </div>
+                <div className='privacyOption'>
+                    <input type="checkbox" checked/> 
+                    <label>Allow Sharing</label>
+                </div>
+                <div className='privacyOptionDescription'>
+                    Let people share your story as messages.
+                </div>
+            </div>
+        </div>
+    )
+
+}
+
 
 export default EditProfile;

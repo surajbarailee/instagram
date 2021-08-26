@@ -300,3 +300,71 @@
 
 
 
+
+
+.manageContactWrapper{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:35px 64px 32px 64px;
+    line-height: 18px;
+}
+
+.manageContactHeading{
+    font-family: inherit;
+    color:#262626;
+    font-weight: 400;
+    font-size: 24px;
+    
+}
+
+.manageContactDelete{
+    display:flex;
+    justify-content: space-between;
+    padding:10px 0px 10px 0px;
+    border-bottom: 1px solid #dbdbdb;
+    color:#262626;
+    
+}
+
+.disabledUploadButton{
+    background-color: #b2dffc;
+}
+
+.privacyWrapper{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:8px 64px 32px 48px;
+    line-height: 18px;
+}
+
+.privacyOptionWrapper{
+    padding-bottom: 25px;
+    padding-top:24px;
+    border-bottom: 1px solid #dbdbdb;
+    
+}
+
+.privacyOptionHeading{
+    font-family: inherit;
+    color:#262626;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom:25px ;
+}
+
+.privacyOption{
+    font-size: 14px;
+    font-weight: 600;
+    padding:3px 0px 10px 0px;
+    display: flex;
+}
+
+.privacyOptionDescription{
+    font-size:14px;
+    color:rgba(142,142,142,1);
+    font-weight:400;
+    line-height: 20px;
+}
+
+.privacyOption> label{
+    padding-left:5px;
+    
+}
