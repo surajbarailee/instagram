@@ -8,6 +8,7 @@ import EditProfile from './Profile/Edit Profile/EditProfie';
 
 import {Route,Redirect,BrowserRouter as Router} from 'react-router-dom'
 import Inbox from './Inbox/Inbox';
+import NameTag from './Profile/NameTag/NameTag';
 function App() {
   return (
     <div style={{height:'100%',width:'100%'}}>
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path="/inbox/" component={Inbox} />
                 <Route exact path="/suraj_barailee/" component={Profile} />
                 <Route exact path="/accounts/edit" component={EditProfile} />
+                <Route exact path="/nametag" component={NameTag} />
                 {/* <Route exact path="/" component={Body} /> */}
                 {/* <Route exact path="/About" component={About} /> */}
           </Router>

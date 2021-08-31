@@ -1,0 +1,96 @@
+.nameTagMainWrapper
+{
+    padding-top: 55px;
+    display:flex;
+    justify-content: center;
+}
+.tagScanMainWrapper
+{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display:flex;
+}
+
+.nameTagTop{
+    width:100%;
+    min-height: 400px;
+    background-image: linear-gradient(to right top, rgb(253, 141, 50), rgb(163, 7, 186));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.nameTagHeading{
+    max-width: 500px;
+    color:white;
+    font-size: 28px;
+    font-family: inherit;
+    font-weight: 300;
+    line-height:32px;
+    padding-top:26px;
+}
+.nameTagDescription{
+    max-width: 500px;
+    font-size: 16px;
+    font-family: inherit;
+    color:white;
+    padding-top:10px;
+    line-height:24px;
+}
+
+
+.tagScanLeft{
+    display: flex;
+    justify-content: center;
+}
+.tagScanRight{
+    margin:0px 60px;
+}
+
+@media screen and (max-width: 915px) {
+    .nameTagDescription{
+        text-align: center;
+    }
+    .nameTagHeading{
+        text-align: center;
+    }
+    .tagScanMainWrapper{
+        flex-direction: column-reverse;
+    }
+}
+
+.palleteButtonWrapper{
+    padding:20px 0px;
+}
+
+.palleteButton{
+    border: 0;
+    border-radius: 50%;
+    height: 26px;
+    margin-right: 12px;
+    outline: 0;
+    padding: 0;
+    pointer-events: auto;
+    width: 26px;
+}
+.palleteButtonPurple{
+    background-image:linear-gradient(to right top, rgb(253, 141, 50), rgb(163, 7, 186))
+}
+.palleteButtonOrange{
+    background-image: linear-gradient(to right top, rgb(253, 203, 92), rgb(237, 73, 86));
+}
+.palleteButtonBlue{
+    background-image: linear-gradient(to right top, rgb(39, 196, 245), rgb(163, 7, 186));
+}
+.palleteButtonSkyBlue{
+    background-image: linear-gradient(to right top, rgb(84, 215, 255), rgb(19, 114, 204));
+}
+.palleteButtonGreen{
+    background-image: linear-gradient(to right top, rgb(112, 192, 80), rgb(39, 196, 245));
+}
+.palleteButtonBlack{
+    background-image: linear-gradient(to right top, rgb(115, 115, 115), rgb(38, 38, 38));
+}

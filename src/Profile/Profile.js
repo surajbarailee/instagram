@@ -12,6 +12,7 @@ import Image3 from '../resources/savedResources/image3.jpg'
 import Image4 from '../resources/savedResources/image4.jpg'
 import Image5 from '../resources/savedResources/image5.jpg'
 import Image6 from '../resources/savedResources/image6.jpg'
+import { Link } from 'react-router-dom';
 
 const Posts=()=>{
     return (
@@ -221,51 +222,67 @@ const Profile =()=>{
                 </div>
             <ProfileFooter/>
             </div>  
-        {showSettingOption && 
-        
+        {showSettingOption &&     
         <div className= 'settingOptionWrapper'>
             <div className="settingOption">
                 <div style={{borderTopLeftRadius:'12px',borderTopRightRadius:'12px'}}>
-                    <button className="singleSettingOption" style={{borderTopLeftRadius:'12px',borderTopRightRadius:'12px'}}>
-                        Change Password
-                    </button>
+                    <Link to ='../accounts/edit'>
+                        <button className="singleSettingOption" style={{borderTopLeftRadius:'12px',borderTopRightRadius:'12px'}}>
+                            Change Password
+                        </button>
+                    </Link>
                 </div>
                 <div>
+                <Link to ='../nametag'>
                     <button className="singleSettingOption">
                         Nametag
                     </button>
+                </Link>
                 </div>
                 <div>
+                <Link to ='../accounts/edit'>
                     <button className="singleSettingOption">
                         Apps and Websites
                     </button>
+                </Link>
                 </div>
                 <div>
+                <Link to ='../accounts/edit'>
                     <button className="singleSettingOption">
                         Notifications
                     </button>
+                </Link>
                 </div>
                 <div>
+                <Link to ='../accounts/edit'>
                     <button className="singleSettingOption">
                         Privacy And Security
                     </button>
+                </Link>
                 </div>
                 <div>
+                <Link to ='../accounts/edit'>
                     <button className="singleSettingOption">
                         Login Activity
                     </button>
+                </Link>
                 </div>
                 <div>
+                <Link to ='../accounts/edit'>
                     <button className="singleSettingOption">
                         Emails from Instagram
                     </button>
+                </Link>
                 </div>
                 <div>
+                <Link to ='../accounts/edit'>
                     <button className="singleSettingOption">
                         Report a Problem
                     </button>
+                </Link>
                 </div>
                 <div>
+
                     <button className="singleSettingOption">
                         Log Out
                     </button>
