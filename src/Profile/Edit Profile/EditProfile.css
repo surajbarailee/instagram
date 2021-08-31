@@ -416,7 +416,6 @@
     height:100%;
 }
 .loginMapButtonSeperator{
-    /* style={{padding:'13px 0px',fontSize:'18px',fontWeight:'100',color:'#dbdbdb'}} */
     padding:13px 0px;
     font-size: 18px;
     font-weight:100;
@@ -483,3 +482,5 @@
     background-color: white;
     max-width:100%
 }
+
+

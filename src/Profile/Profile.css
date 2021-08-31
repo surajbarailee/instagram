@@ -1,6 +1,6 @@
 .profileContainer{
     margin-top: 53px;
-    height: 100%;
+    height: inherit;
     display: flex;
     justify-content: center;
     background-color: rgba(250,250,250,1);
@@ -199,4 +199,41 @@ font-weight: 300;
 }
 
 
+.settingOptionWrapper{
+   display:flex;
+   align-items: center;
+}
 
+.settingOption{
+    justify-content: center;
+    width: 400px;
+    border-radius: 12px;
+}
+
+
+.singleSettingOption{
+    background-color: white;
+    min-height: 48px;
+    line-height: 1.5;
+    padding:4px 8px;
+    font-size: 14px;
+    border:0;
+    cursor: pointer;
+    width:100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.settingOptionWrapper{
+    /* style={{position:'absolute',top:0,left:0,zIndex:'2',backgroundColor:'rgba(0,0,0,0.65)',width:'100%' */
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 2;
+        background-color: rgba(0,0,0,0.65);
+        width:100%;
+        height: inherit;
+        display:flex;
+        justify-content: center;
+        
+
+}

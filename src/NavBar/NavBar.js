@@ -77,7 +77,7 @@ const NavBar=()=>{
 
 
     return (
-            <div className="navWrapper">
+            <div className="navWrapper" id='navWrapper'>
                 <div className='navContentWrapper'>
                     <div className='navContent'>
                         <div className="navLogoWrapper">
