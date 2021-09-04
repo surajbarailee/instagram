@@ -1,8 +1,7 @@
 .nameTagMainWrapper
 {
     padding-top: 55px;
-    display:flex;
-    justify-content: center;
+    background-color: rgba(250,250,250,1);
 }
 .tagScanMainWrapper
 {
@@ -30,7 +29,7 @@
     font-family: inherit;
     font-weight: 300;
     line-height:32px;
-    padding-top:26px;
+    padding-top:35px;
 }
 .nameTagDescription{
     max-width: 500px;
@@ -60,37 +59,150 @@
     .tagScanMainWrapper{
         flex-direction: column-reverse;
     }
+    .palleteButtonWrapper,
+    .downloadNametagWrapper{
+        justify-content: center;
+    }
+    
+}
+
+.singleButtonWrapper{
+    border:1px solid white;
+    display:flex;
+    border-radius: 50%;
+    margin:7px 10px 7px 0px;
 }
 
 .palleteButtonWrapper{
     padding:20px 0px;
+    display: flex;
 }
 
 .palleteButton{
-    border: 0;
+    border:1px solid transparent;
     border-radius: 50%;
-    height: 26px;
-    margin-right: 12px;
+    height: 25px;
     outline: 0;
     padding: 0;
     pointer-events: auto;
-    width: 26px;
+    width: 25px;
 }
-.palleteButtonPurple{
+.selectedButton{
+    border:2px solid black;
+}
+.palleteButtonPurple,
+.background1
+{
     background-image:linear-gradient(to right top, rgb(253, 141, 50), rgb(163, 7, 186))
 }
-.palleteButtonOrange{
+.palleteButtonOrange,
+.background2{
     background-image: linear-gradient(to right top, rgb(253, 203, 92), rgb(237, 73, 86));
 }
-.palleteButtonBlue{
+.palleteButtonBlue,
+.background3{
     background-image: linear-gradient(to right top, rgb(39, 196, 245), rgb(163, 7, 186));
 }
-.palleteButtonSkyBlue{
+.palleteButtonSkyBlue,
+.backgroud4{
     background-image: linear-gradient(to right top, rgb(84, 215, 255), rgb(19, 114, 204));
 }
-.palleteButtonGreen{
+.palleteButtonGreen,
+.background5{
     background-image: linear-gradient(to right top, rgb(112, 192, 80), rgb(39, 196, 245));
 }
-.palleteButtonBlack{
+.palleteButtonBlack,
+.background6{
     background-image: linear-gradient(to right top, rgb(115, 115, 115), rgb(38, 38, 38));
 }
+
+.downloadNametag{
+    color:rgba(28,28,28,1);
+    appearance:none;
+    box-sizing: border-box;
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    padding:5px 9px;
+    text-align: center;
+    border:1px solid rgba(219,219,219,1);
+    border-radius:4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.downloadNametagWrapper{
+    display:flex;
+    padding-bottom: 30px;
+}
+
+
+.nameTagTips{
+    display:flex;
+    justify-content: center;
+}
+
+
+.nameTagBottom{
+    padding:60px 0px;
+    max-width:935px;
+    margin: 0 auto;
+    text-align: center;
+    /* text-align: center; */
+    /* display: flex; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.bottomHeader{
+    text-align: center;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+
+}
+
+.nametagTips{
+    display:flex;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-top: 40px ;
+}
+
+.singleTipWrapper{
+    padding:0px 32px;
+}
+
+
+.nametagTipsImage{
+    background-image: url(../../resources/nameTagSprite.png);
+    height:120px;
+    width:120px;
+    background-repeat: no-repeat;
+    margin:0 auto;
+}
+.bgp1{
+    background-position: 0 0;
+}
+.bgp2{
+    background-position: -122px 0;
+}
+.bgp3{
+    background-position:0 -122px ;
+}
+
+
+.nametagTipsDesription{
+    font-size:14px;
+    color:#8e8e8e;
+    font-weight: 300;
+    word-wrap: break-word;
+    line-height: 18px;
+    padding-top:5px;
+    max-width:250px
+}
+
+
+
+
