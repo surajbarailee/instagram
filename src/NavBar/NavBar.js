@@ -89,7 +89,8 @@ const NavBar=()=>{
                                 </div>
                             </a>
                         </div>
-                        <div className="navSearchWrapper" onBlur={()=>{toggleoffSearch(false)}}>
+                        <div className="navSearchWrapper" >
+                        {/* onBlur={()=>{toggleoffSearch(false)}} */}
                                 <div className='inputBoxWrapper' >
                                     <div className='searchIcon'>
                                         <div className="searchIconImage">
