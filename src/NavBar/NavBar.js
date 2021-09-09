@@ -166,7 +166,7 @@ const NavBar=()=>{
                         </div>
                     </div>
 
-                    {activeSearch?<SearchResult/>:''}
+                    {activeSearch?<SearchResult searchOff={toggleoffSearch}/>:''}
                     {activeIcon==='activity'&& 
                                     <div className='profileOption'>
                                         <div className='profileContainerWrapper' >

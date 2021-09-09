@@ -1,7 +1,7 @@
 
 import './Searchresult.css'
 import { useState } from 'react'
-const SearchResult=()=>{
+const SearchResult=(props)=>{
     const [history,updateHistory]=useState(searchHistoryData)
     const updateHistoryWrapper=(id)=>{
     if (id===0){
@@ -13,40 +13,44 @@ const SearchResult=()=>{
     }
 }
     return (
-        <div className='searchResult'>
-            <div className="diamondDiv"/>
-            <div className='searchSuggestionWrapper'/>
-            <div className='searchSuggestion'>
-                <div className="searchHeader">
-                    
-                    <div className="recent">
-                        Recent
+        <div className='searchResultWrapper'>
+            <div className='outerCover' onClick={()=>{props.searchOff(true)}}>
+            </div>
+            <div className='searchResult'>
+                <div className="diamondDiv"/>
+                <div className='searchSuggestionWrapper'/>
+                <div className='searchSuggestion'>
+                    <div className="searchHeader">
+                        
+                        <div className="recent">
+                            Recent
+                        </div>
+                        {
+                            history.length > 0 ?
+                            <div className='clear' style={{color:'#0095f6',cursor:'pointer'}} onClick={()=>{updateHistoryWrapper(0)}}>
+                            Clear All
+                            </div>
+                            :
+                            ''
+                        }
+                        
                     </div>
-                    {
-                        history.length > 0 ?
-                        <div className='clear' style={{color:'#0095f6',cursor:'pointer'}} onClick={()=>{updateHistoryWrapper(0)}}>
-                        Clear All
-                        </div>
-                        :
-                        ''
-                    }
-                    
-                </div>
-                    {
-                        history.length > 0 ?
-                        <div className="suggestionList" style={{minHeight:'315px'}}>
-                            {
-                                history.map((data,i)=>{
-                                    return <SearchHistoryList data={data} key={data.id} updatehistory={updateHistoryWrapper}/>
-                                })
-                            }     
-                        </div>
-                        :
-                        <div className='emptySearchHistory'>
-                            No Recent Searches
-                        </div>
+                        {
+                            history.length > 0 ?
+                            <div className="suggestionList" style={{minHeight:'315px'}}>
+                                {
+                                    history.map((data,i)=>{
+                                        return <SearchHistoryList data={data} key={data.id} updatehistory={updateHistoryWrapper}/>
+                                    })
+                                }     
+                            </div>
+                            :
+                            <div className='emptySearchHistory'>
+                                    No Recent Searches.
+                            </div>
 
-                    }
+                        }
+                </div>
             </div>
         </div>
     )

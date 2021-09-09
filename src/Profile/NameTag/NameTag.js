@@ -100,16 +100,13 @@ const NameTag=()=>{
                                         className={`palleteButton palleteButtonBlack ${nameTag===6?'selectedButton':''}`}>
                                     </button>
                                 </div>
-                                
+
                             </div>
                             <div className='downloadNametagWrapper'>
-                                
                                 <button className='downloadNametag'
                                 onClick={()=>{saveFile(nameTag)}}>
                                     Download Nametag
                                 </button>
-                                
-                                
                             </div>
                         </div>
                     </div>
@@ -142,7 +139,6 @@ const NameTag=()=>{
                                 Cameras should be able to capture your entire nametag.
                             </div>
                         </div>
-
                         <div className='singleTipWrapper'>
                             <div className="nametagTipsImage bgp3">
 
@@ -157,10 +153,8 @@ const NameTag=()=>{
                     </div>
                 </div>
                 <ProfileFooter/>
-                
             </div>
         )
-
 }
 
 export default NameTag;

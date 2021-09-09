@@ -61,9 +61,8 @@ font-weight: 300;
 }
 
 .postDetails{
-    display: flex;
-    justify-content: space-between;
-    padding:20px 0px;
+    
+    padding-top:10px;
     font-family: Montserrat;
     font-size: 14px;
 }

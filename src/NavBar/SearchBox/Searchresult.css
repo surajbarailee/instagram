@@ -16,6 +16,7 @@
     width: 100%;
 }
 
+
 .searchSuggestionWrapper{
     margin-top: 5px;
     position: absolute;
@@ -68,7 +69,7 @@
 }
 
 .SuggestionList{
-    overflow-y: scroll;
+    overflow-y: auto;
     
 } 
 
@@ -82,10 +83,25 @@
     width: 12px;
 }
 .emptySearchHistory{
-    background-color: red;
     width:100%;
     flex:1 1 auto;
-    margin:auto 0;
-    vertical-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    line-height: 18px;
+    font-size:14px;
+    font-weight: 600;
+    color:rgba(142,142,142,1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
+.outerCover{
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    position:fixed;
+    z-index:1;
+}
