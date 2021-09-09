@@ -156,7 +156,7 @@ const Profile =()=>{
                                 </svg>
                             </div>
                         </div>
-                        <div className="postDetails">
+                        <div className="profilepostDetails">
                             <div>
                                 <b>0</b> posts
                             </div>

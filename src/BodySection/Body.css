@@ -123,6 +123,7 @@
     text-decoration: none;
     font-weight:600;
     font-size: 12px;
+    color:#262626;
 }
 .profileLink:hover{
     text-decoration: underline;
@@ -177,8 +178,13 @@
     justify-content: space-between;
     padding-bottom: 5px;
 }
-.postDetails{
-    padding-top: 8px;
+.profilepostDetails{
+    display:flex;
+    
+    justify-content: space-between;
+    padding:20px 0px;
+    font-family: Montserrat;
+    font-size: 14px;
 }
 
 .commentStatus{
