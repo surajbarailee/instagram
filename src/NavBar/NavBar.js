@@ -257,11 +257,11 @@ const NavBar=()=>{
 const ActivityDetails=(props)=>{
 
     return (
-        <div style={{padding:'5px 10px 5px 10px'}}>
+        <div style={{padding:'5px 10px 5px 10px'}} className='activitiyDetailsWrapper'>
             <div className='activityHeading'>
                 {props.data.heading}
             </div>
-            <a href='https://instagram.com' style={{textDecoration:'None'}}>
+            <a href='https://instagram.com' style={{textDecoration:'None',color:'rgba(32,32,32,1)'}}>
             <div className='singleActivityContainer'>
                 <div className='singleActivityDetail'>
                     <div style={{paddingRight:'10px'}}>
@@ -271,7 +271,7 @@ const ActivityDetails=(props)=>{
                         <span style={{fontWeight:'400'}}>{props.data.username}</span> started following you. {props.data.date}
                     </div>
                 </div>
-                <div className='followButton'>
+                <div>
                     <button className='singleActivityButton'>
                         {props.data.following?'Following':'Follow'}
                     </button>
