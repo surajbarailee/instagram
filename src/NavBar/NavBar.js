@@ -257,7 +257,9 @@ const NavBar=()=>{
 const ActivityDetails=(props)=>{
 
     return (
-        <div style={{padding:'5px 10px 5px 10px'}} className='activitiyDetailsWrapper'>
+        <div style={{padding:'5px 10px 5px 10px'}} className='activityWrapper'>
+            <div className='outerCover' style={{backgroundColor:'red'}}>
+            </div>
             <div className='activityHeading'>
                 {props.data.heading}
             </div>
@@ -281,7 +283,6 @@ const ActivityDetails=(props)=>{
             </a>
             
         </div>
-    
         )
 }
 

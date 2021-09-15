@@ -19,12 +19,14 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+    z-index:1;
     
 }
 
 .singleStory{
     margin-left: 10px;
     margin-top: 4px;
+    cursor:pointer;
     
 }
 
@@ -84,10 +86,42 @@
     background-repeat: no-repeat;
     background-position: -244px -107px;
     cursor: pointer;
-    
 }
 
 .buttonDiv{
     cursor: pointer;
 }
 
+.storyWrapperOn{
+    width: 100%;
+    height: 100;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:2;
+    background-color: #1a1a1a;
+    overflow:hidden;
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+    box-sizing: border-box;
+
+}
+
+.storyInstaLogo{
+    left:0;
+}
+
+.storyLogoImage{
+    max-width:103px;
+    max-height:100%;
+    object-fit: contain;
+}
+.exitStoryButton{
+    background-color: transparent;
+    border:none;
+    margin:8px 3px 0px 0px;
+    justify-content: center;
+}
