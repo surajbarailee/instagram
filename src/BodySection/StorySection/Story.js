@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import './Story.css'
-
+import StoryLogo from '../../resources/storylogo.png'
 
 const Story=()=>{
+    const [storymode, setstorymode] = useState(false)
     const scrollLeft=()=>{
 
         var element = document.getElementById("storyPresentation")
@@ -11,24 +13,45 @@ const Story=()=>{
         var element = document.getElementById("storyPresentation")
         element.scrollLeft = element.scrollLeft + 240
     }
+    const setStory=(value)=>{
+        setstorymode(value)
+    }
     return (
-        <div className="storyWrapper"  id="storyWrapper">
-            <div id='storyPresentation' className='storyPresentation'>
-                {
-                    userStory.map((data,i)=>{
-                        return <SingleStory imgsource={data.profile} username={data.username} key={data.id}/>
-                    })
-                }
-            </div>
-            <div className = "arrowWrapper">
-                <div className="leftArrowWrapper" onClick={scrollLeft}/>
-                    
-                <div className="rightArrowWrapper" onClick={scrollRight}/>   
-                {/* <div className={"leftArrowWrapper "+ (document.getElementById("storyPresentation").scrollLeft===0? "removeArrow":"")} onClick={scrollLeft}/>
-                    
-                <div className={"rightArrowWrapper "+ (document.getElementById("storyPresentation").scrollRight===0? "removeArrow":"")} onClick={scrollRight}/>    */}
-            </div>
-        </div> 
+        <div>
+            {
+                storymode?
+                <div className='storyWrapperOn'>
+                    <div className="storyInstaLogo">
+                        <img src={StoryLogo} alt="" className='storyLogoImage'/>
+                    </div>
+                    <div className="storyPlayer">
+                        hello
+                    </div>
+                    <div className="exitStory">
+                        <button className='exitStoryButton'>
+                            <svg aria-label="Close" class="_8-yf5 " color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24"><path clip-rule="evenodd" d="M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z" fill-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                
+                :
+                <div className="storyWrapper"  id="storyWrapper" >
+                    <div id='storyPresentation' className='storyPresentation'>
+                        {
+                            userStory.map((data,i)=>{
+                                return <SingleStory imgsource={data.profile} username={data.username} key={data.id} setStory={setStory}/>
+                            })
+                        }
+                    </div>
+                    <div className = "arrowWrapper">
+                        <div className="leftArrowWrapper" onClick={scrollLeft} style={{zIndex:'1'}}/>
+                        <div className="rightArrowWrapper" onClick={scrollRight} style={{zIndex:'1'}}/>   
+                    </div>
+                </div> 
+            }
+        </div>
+        
+        
     )
 }
 
@@ -36,8 +59,9 @@ const Story=()=>{
 
 
 const SingleStory=(props)=>{
+
     return (
-        <div className="singleStory" style={{paddingLeft:'6px'}}>
+        <div className="singleStory" style={{paddingLeft:'6px'}} onClick={()=>{props.setStory(true)}}>
                 <div className='storyImageWrapper'>
                     <div className='storyImageDiv' >
                         <img src={props.imgsource} alt="" width='56px' height='56px' className='storyImage'/>
@@ -47,6 +71,7 @@ const SingleStory=(props)=>{
                     {props.username.length > 8 ? props.username.substring(0,8)+'...' : props.username}
                 </div>
         </div>
+        
     )
 }
 

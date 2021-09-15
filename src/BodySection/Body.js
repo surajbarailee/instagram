@@ -50,20 +50,10 @@ const Body=()=>{
 const NewsFeed = ()=>{
     return <div>
         {
-        postdata.map((data,index)=>{
-
-            return <SinglePost data={data}/>
-
-        })
-        
-        
+            postdata.map((data,index)=>{
+                return <SinglePost data={data}/>
+            })
         }
-
-
-        {/* <SinglePost/>
-        <SinglePost video='true' videosource={VideoPost} />
-        <SinglePost/>
-        <SinglePost video='true' videosource={VideoPost} /> */}
 
     </div>
 }
@@ -102,13 +92,13 @@ const Post=(props)=>{
                 <div className="buttonDiv">
                     <div className={`leftArrowWrapper ${currentlyShown===0 ? "controlHidden":""} `}
                     onClick={()=>{updatecurrentlyShown(currentlyShown-1)}}
-                    style={{zIndex:2}}
+                    style={{zIndex:'1'}}
                     >
                     </div>
                     <div 
                     className={`rightArrowWrapper ${currentlyShown===props.data.length-1 ? "controlHidden":""} `} 
                     onClick={()=>{updatecurrentlyShown(currentlyShown+1)}}
-                    style={{zIndex:2}}
+                    style={{zIndex:'1'}}
                     >
                     </div>
                 </div>
@@ -130,11 +120,13 @@ const Post=(props)=>{
             <div className="buttonDiv">
                 <div className={`leftArrowWrapper ${currentlyShown===0 ? "controlHidden":""} `}
                 onClick={()=>{updatecurrentlyShown(currentlyShown-1)}}
+                style={{zIndex:'1'}}
                 >
                 </div>
                 <div 
                 className={`rightArrowWrapper ${currentlyShown===props.data.length-1 ? "controlHidden":""} `} 
                 onClick={()=>{updatecurrentlyShown(currentlyShown+1)}}
+                style={{zIndex:'1'}}
                 >
                 </div>
             </div>
