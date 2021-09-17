@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import './Story.css'
 import StoryLogo from '../../resources/storylogo.png'
+import {Splide,SplideSlide} from '@splidejs/react-splide'
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+
+import Post1a from '../../resources/StoryPosts/post1a.jpg'
+import Post1b from '../../resources/StoryPosts/post1b.jpg'
+
 
 const Story=()=>{
     const [storymode, setstorymode] = useState(false)
@@ -24,11 +30,11 @@ const Story=()=>{
                     <div className="storyInstaLogo">
                         <img src={StoryLogo} alt="" className='storyLogoImage'/>
                     </div>
-                    <div className="storyPlayer">
-                        hello
+                    <div className="storyPlayer" style={{display:'flex'}}>
+                        <StoryPlayer/>
                     </div>
                     <div className="exitStory">
-                        <button className='exitStoryButton'>
+                        <button className='exitStoryButton' onClick={()=>{setstorymode(false)}}>
                             <svg aria-label="Close" class="_8-yf5 " color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24"><path clip-rule="evenodd" d="M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z" fill-rule="evenodd"></path></svg>
                         </button>
                     </div>
@@ -56,6 +62,243 @@ const Story=()=>{
 }
 
 
+const StoryPlayer=()=>{
+        return (
+            <Splide
+            options={ {
+                rewind : false,
+                perPage: 1,
+                perMove: 1,
+                gap    : '0.5rem',
+            } }
+            >
+                
+                        <SplideSlide>
+                            <img src={Post1a} alt = 'post' width='300'/>
+                        </SplideSlide>
+                        <SplideSlide>
+                            <img src={Post1a} alt = 'post' width='300'/>
+                        </SplideSlide>
+                    
+            
+            </Splide>
+        )
+}
+
+
+const StoryData=[
+    {
+        storyIndex:1,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:2,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:3,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:4,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:5,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:6,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:7,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:8,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:9,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    },
+    {
+        storyIndex:10,
+        userProfile:{
+            username:'sariturk',
+            profilePicture:Post1a,
+        },
+        story:[
+            {
+            id:1,
+            type:'image',
+            source:Post1a,
+            time:'17h'
+            },
+            {
+                id:2,
+                type:'image',
+                source:Post1b,
+                time:'15h'
+            }
+        ] 
+    }
+
+]
 
 
 const SingleStory=(props)=>{
