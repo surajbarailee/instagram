@@ -12,11 +12,11 @@ const Story=()=>{
     const [storymode, setstorymode] = useState(false)
     const scrollLeft=()=>{
 
-        var element = document.getElementById("storyPresentation")
+        var element = document.getElementById('storyPresentation')
         element.scrollLeft = element.scrollLeft - 240
     }
     const scrollRight=()=>{
-        var element = document.getElementById("storyPresentation")
+        var element = document.getElementById('storyPresentation')
         element.scrollLeft = element.scrollLeft + 240
     }
     const setStory=(value)=>{
@@ -27,21 +27,21 @@ const Story=()=>{
             {
                 storymode?
                 <div className='storyWrapperOn'>
-                    <div className="storyInstaLogo">
-                        <img src={StoryLogo} alt="" className='storyLogoImage'/>
+                    <div className='storyInstaLogo'>
+                        <img src={StoryLogo} alt='' className='storyLogoImage'/>
                     </div>
-                    <div className="storyPlayer" style={{display:'flex'}}>
+                    <div className='storyPlayer' style={{display:'flex'}}>
                         <StoryPlayer/>
                     </div>
-                    <div className="exitStory">
+                    <div className='exitStory'>
                         <button className='exitStoryButton' onClick={()=>{setstorymode(false)}}>
-                            <svg aria-label="Close" class="_8-yf5 " color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 48 48" width="24"><path clip-rule="evenodd" d="M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z" fill-rule="evenodd"></path></svg>
+                            <svg aria-label='Close' class='_8-yf5 ' color='#ffffff' fill='#ffffff' height='24' role='img' viewBox='0 0 48 48' width='24'><path clip-rule='evenodd' d='M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z' fill-rule='evenodd'></path></svg>
                         </button>
                     </div>
                 </div>
                 
                 :
-                <div className="storyWrapper"  id="storyWrapper" >
+                <div className='storyWrapper'  id='storyWrapper' >
                     <div id='storyPresentation' className='storyPresentation'>
                         {
                             userStory.map((data,i)=>{
@@ -49,9 +49,9 @@ const Story=()=>{
                             })
                         }
                     </div>
-                    <div className = "arrowWrapper">
-                        <div className="leftArrowWrapper" onClick={scrollLeft} style={{zIndex:'1'}}/>
-                        <div className="rightArrowWrapper" onClick={scrollRight} style={{zIndex:'1'}}/>   
+                    <div className = 'arrowWrapper'>
+                        <div className='leftArrowWrapper' onClick={scrollLeft} style={{zIndex:'1'}}/>
+                        <div className='rightArrowWrapper' onClick={scrollRight} style={{zIndex:'1'}}/>   
                     </div>
                 </div> 
             }
@@ -63,25 +63,45 @@ const Story=()=>{
 
 
 const StoryPlayer=()=>{
+    const [startingPointer, setstartingPointer] = useState(0)
         return (
-            <Splide
-            options={ {
-                rewind : false,
-                perPage: 1,
-                perMove: 1,
-                gap    : '0.5rem',
-            } }
-            >
-                
-                        <SplideSlide>
-                            <img src={Post1a} alt = 'post' width='300'/>
-                        </SplideSlide>
-                        <SplideSlide>
-                            <img src={Post1a} alt = 'post' width='300'/>
-                        </SplideSlide>
-                    
-            
-            </Splide>
+            <div className= 'storyPlayerWrapper'>
+                <div className='storyPlayerDiv'>
+                    <img src={Post1a} alt='' className='storyPictureSize'/>
+                </div>
+                <div className='storyPlayerDiv' style={{paddingRight:'4px'}}>
+                    <img src={Post1a} alt='' className='storyPictureSize'/> 
+                </div>
+                <div className='currentlyPlayed'>
+                    <div style={{width:'30px',paddingRight:'10px'}}>
+                        <div className='leftArrowWrapperStory' >
+                        </div>
+                    </div>
+                    <div style={{Width:'100%',Height:'100%',position:'relative'}}>
+                        <img src={Post1a} alt='' className='storyPictureSizePlaying'/>
+                        <div className='replyStoryWrapper'>
+                            <div className='replyStoryMessageWrapper'>
+                                <input type="text" placeholder='Reply to {username}' className='replyStoryMessage' />
+                            </div>
+                            <div className="replyStoryButtonWrapper">
+                                <button className='replyStoryButton'>
+                                    <svg aria-label="Direct" color="#dbdbdb" fill="#dbdbdb" height="24" role="img" viewBox="0 0 48 48" width="24"><path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{width:'30px', paddingLeft:'10px'}}>
+                        <div className='rightArrowWrapperStory' >
+                        </div>
+                    </div>
+                </div>
+                <div className='storyPlayerDiv' style={{paddingLeft:'4px'}}>
+                    <img src={Post1a} alt='' className='storyPictureSize'/>
+                </div>
+                <div className='storyPlayerDiv'>
+                    <img src={Post1a} alt='' className='storyPictureSize'/>
+                </div>
+            </div>
         )
 }
 
@@ -304,13 +324,13 @@ const StoryData=[
 const SingleStory=(props)=>{
 
     return (
-        <div className="singleStory" style={{paddingLeft:'6px'}} onClick={()=>{props.setStory(true)}}>
+        <div className='singleStory' style={{paddingLeft:'6px'}} onClick={()=>{props.setStory(true)}}>
                 <div className='storyImageWrapper'>
                     <div className='storyImageDiv' >
-                        <img src={props.imgsource} alt="" width='56px' height='56px' className='storyImage'/>
+                        <img src={props.imgsource} alt='' width='56px' height='56px' className='storyImage'/>
                     </div>
                 </div>
-                <div className="storyUsername" style={{textAlign:'center'}}>
+                <div className='storyUsername' style={{textAlign:'center'}}>
                     {props.username.length > 8 ? props.username.substring(0,8)+'...' : props.username}
                 </div>
         </div>
