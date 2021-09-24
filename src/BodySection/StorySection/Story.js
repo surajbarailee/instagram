@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './Story.css'
 import StoryLogo from '../../resources/storylogo.png'
 import {Splide,SplideSlide} from '@splidejs/react-splide'
@@ -7,6 +7,8 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import Post1a from '../../resources/StoryPosts/post1a.jpg'
 import Post1b from '../../resources/StoryPosts/post1b.jpg'
 import ProfilePost1 from '../../resources/StoryPosts/storyProfiles/profilepost1.jpg'
+import { findDOMNode } from 'react-dom';
+import { useRef } from 'react';
 
 
 const Story=()=>{
@@ -62,6 +64,44 @@ const Story=()=>{
     )
 }
 
+const StoryLoaderAnimation=()=>{
+
+    // const progress = Array.from(document.getElementsByClassName('progress'))
+    // const playNext = (e) => {
+    //     const current = e && e.target;
+    //     let next;
+
+    //     if (current) {
+    //       const currentIndex = progress.indexOf(current);
+    //       if (currentIndex < progress.length) {
+    //         next = progress[currentIndex+1];
+    //       }
+    //       current.classList.remove('active');
+    //       current.classList.add('passed');
+    //     } 
+        
+    //     if (!next) {
+    //       progress.map((el) => {
+    //         el.classList.remove('active');
+    //         el.classList.remove('passed');
+    //       })
+    //       next = progress[0];
+        
+    //     } 
+    //     next.classList.add('active'); 
+    // }
+      
+    // progress.map(el => el.addEventListener("animationend", playNext, false));
+    // playNext(progress[0]);
+    
+    return (
+    <div className='progressContainer'>
+        <div style={{animationDuration: '5s'}} className="progress">
+        </div>
+    </div>
+)
+}
+
 
 const StoryPlayer=()=>{
     const [startingPointer, setstartingPointer] = useState(0)
@@ -81,7 +121,7 @@ const StoryPlayer=()=>{
                     <div style={{width:'100%',height:'100%',position:'relative'}}>
                         <div className='storyDetailWrapper'>
                             <div className="loaderWrapper">
-
+                                <StoryLoaderAnimation/>
                             </div>
                             <div className="storyUserDetailWrapper">
                                 <div className="userStoryDetail">
@@ -89,7 +129,7 @@ const StoryPlayer=()=>{
                                         <img src={ProfilePost1} alt="" className='userStoryProfile'/>
                                     </div>
                                     <div className="storyUserName">
-                                        <a href="/sariturk">
+                                        <a href="/sariturk" className="storyUserName" style={{padding:'10px'}}>
                                             sariturk
                                         </a>
                                     </div>
