@@ -129,7 +129,6 @@
     left:0;
     z-index:2;
     background-color: #1a1a1a;
-    overflow:hidden;
     display:flex;
     justify-content: space-between;
     padding:15px;
@@ -160,7 +159,7 @@
 .storyPlayerDiv{
     height:278px;
     width:156px;
-    padding:0px 20px;
+    padding:0px 14px;
 }
 
 
@@ -169,7 +168,6 @@
     border-radius:0px;
     display:flex;
     align-items: center;
-    position: relative;
 }
 
 .rightArrowWrapperStory{
@@ -192,17 +190,15 @@
     height:100%;
     display:flex;
     align-items: center;
-
-    
 }
 
 .storyPictureSize{
-    max-width:100%;
+    width:136px;
     border-radius: 5px;
 }
 .storyPictureSizePlaying{
     height:100%;
-    border-radius: none;
+    border-radius: 8px;
     max-width:400px; 
 }
 
@@ -249,3 +245,149 @@
     padding: 10px 10px 10px 10px;
     margin:0;
 }
+
+
+
+.storyDetailWrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.userStoryProfile{
+    border-radius: 50%;
+    width:32px;
+    height:32px;
+}
+
+.storyUserDetailWrapper{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 16px;
+    box-sizing: border-box;
+}
+
+.userStoryDetail{
+    display: flex;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+.storyButtonsWrapper{
+    display:flex;
+    align-items: center;
+}
+
+.storyButtonsWrapper>div{
+    padding:5px;
+}
+
+.storyButtons{
+    border:none;
+    background: none;
+    cursor: pointer;
+    padding:0;
+}
+
+.storyUserName {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:#FFFFFF;
+    text-decoration: none;
+    /* padding:10px; */
+    font-family: inherit;
+    font-size:14px ;
+}
+.storyTime{
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    opacity:0.6;
+    color:#FFFFFF;
+    font-family: inherit;
+}
+
+
+
+/* Story Loader Animation */
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .progress {
+    height: 2px;
+    flex-grow: 1;
+    border-radius: 4px;
+    margin: 0 5px;
+    display: flex;
+    background-image: -webkit-linear-gradient(left, 
+      rgba(255,255,255,.5) 0%,
+      rgba(255,255,255,.5) 50%,
+      rgba(88, 89, 104,.5) 50.001%,
+      rgba(88, 89, 104,.5) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-color: #666;
+    background-position: 100% 50%;
+    animation-timing-function: linear;
+    animation-delay: .2s;
+  }
+  
+  .progress.active {
+      animation-name: Loader;
+  }
+  
+  .progress.passed {
+      background-position: 0 0; 
+  }
+  
+  @keyframes Loader {
+    0%   { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+  }
+
+
+
+  
+/************************/
+/************************/
+/***** DEBUG STYLES *****/
+/************************/
+/************************/
+
+.pause:hover .progress {
+    animation-play-state: paused;
+  }
+  
+  .pause .not-hovered {
+    display: block;
+  }
+  .pause .hovered {
+    display: none;
+  }
+  
+  .pause:hover .not-hovered {
+    display: none;
+  }
+  .pause:hover .hovered {
+    display: block;
+  }
+  
+
+
+
+
+  /* Story Loader Animation  */
+  
