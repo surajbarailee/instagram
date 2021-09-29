@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import './Story.css'
-import StoryLogo from '../../resources/storylogo.png'
+import React, { useState } from 'react';
+import './Story.css';
+import StoryLogo from '../../resources/storylogo.png';
+import { useEffect } from 'react';
 
-
-import Post1a from '../../resources/StoryPosts/post1a.jpg'
-import Post1b from '../../resources/StoryPosts/post1b.jpg'
+import Post1a from '../../resources/StoryPosts/post1a.jpg';
+import Post1b from '../../resources/StoryPosts/post1b.jpg';
 
 
 
@@ -108,6 +108,14 @@ const StoryPlayer=(props)=>{
     }
 
     const CurrentlyPlayed=(props)=>{
+        useEffect(() => {
+            const timer = setInterval(() => {
+              updatePlayingStory("i");
+            }, 5500);
+            return () => {
+              clearInterval(timer);
+            };
+          });
         function updatePlayingStory(value){
             if (value==='i'){
                 if (currentPlayerIndex + 1 < playingStory.length){
