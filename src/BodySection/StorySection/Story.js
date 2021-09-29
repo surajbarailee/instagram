@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-import './Story.css'
-import StoryLogo from '../../resources/storylogo.png'
+import React, { useState } from 'react';
+import './Story.css';
+import StoryLogo from '../../resources/storylogo.png';
+import { useEffect } from 'react';
 
-
-import Post1a from '../../resources/StoryPosts/post1a.jpg'
-import Post1b from '../../resources/StoryPosts/post1b.jpg'
-import { useEffect } from 'react'
+import Post1a from '../../resources/StoryPosts/post1a.jpg';
+import Post1b from '../../resources/StoryPosts/post1b.jpg';
 
 
 
@@ -62,43 +61,7 @@ const Story=()=>{
     )
 }
 
-const StoryLoaderAnimation=()=>{
 
-    // const progress = Array.from(document.getElementsByClassName('progress'))
-    // const playNext = (e) => {
-    //     const current = e && e.target;
-    //     let next;
-
-    //     if (current) {
-    //       const currentIndex = progress.indexOf(current);
-    //       if (currentIndex < progress.length) {
-    //         next = progress[currentIndex+1];
-    //       }
-    //       current.classList.remove('active');
-    //       current.classList.add('passed');
-    //     } 
-        
-    //     if (!next) {
-    //       progress.map((el) => {
-    //         el.classList.remove('active');
-    //         el.classList.remove('passed');
-    //       })
-    //       next = progress[0];
-        
-    //     } 
-    //     next.classList.add('active'); 
-    // }
-      
-    // progress.map(el => el.addEventListener("animationend", playNext, false));
-    // playNext(progress[0]);
-    
-    return (
-    <div className='progressContainer'>
-        <div style={{animationDuration: '5s'}} className="progress">
-        </div>
-    </div>
-)
-}
 
 const UserLabels=(props)=>{
     const data = StoryData[props.index]['userProfile']
@@ -130,7 +93,6 @@ const UserLabels=(props)=>{
 const StoryPlayer=(props)=>{
     const setStory = props.setStory
     const [startingPointer, setstartingPointer] = useState(0)
-    const [intervalID,setIntervalId] = useState()
 
     const StoryPlayerDiv =(props)=>{
         if (props.index<0 || props.index>= StoryData.length){ return <div className='storyPlayerDiv'></div>}
@@ -147,11 +109,13 @@ const StoryPlayer=(props)=>{
 
     const CurrentlyPlayed=(props)=>{
         useEffect(() => {
-            timer()
+            const timer = setInterval(() => {
+              updatePlayingStory("i");
+            }, 5500);
             return () => {
-                clearTimeout(timer)
-            }
-        })
+              clearInterval(timer);
+            };
+          });
         function updatePlayingStory(value){
             if (value==='i'){
                 if (currentPlayerIndex + 1 < playingStory.length){
@@ -182,17 +146,13 @@ const StoryPlayer=(props)=>{
                 }
             }
         }
-        const timer=()=>{
-            setTimeout(() => {
-                updatePlayingStory('i')
-            }, 6000);
-        }
+        
         
         const playingStory  = StoryData[props.index]['story']
         const userDetail =StoryData[props.index]['userProfile']
         const [currentPlayerIndex, setcurrentPlayerIndex] = useState(0)
         if (playingStory[currentPlayerIndex]['type']==='image'){
-            timer()
+            //animation starting...
         }
         return(
             <div className='currentlyPlayed'>
@@ -449,7 +409,6 @@ const StoryData=[
 
 
 const SingleStory=(props)=>{
-
     return (
         <div className='singleStory' style={{paddingLeft:'6px'}} onClick={()=>{props.setStory(true)}}>
                 <div className='storyImageWrapper'>
