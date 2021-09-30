@@ -11,17 +11,51 @@ import Post1b from '../../resources/StoryPosts/post1b.jpg';
 
 const Story=()=>{
     const [storymode, setstorymode] = useState(false)
+    const [arrowLeftFlag,setarrowLeftFlag] = useState(false)
+    const [arrowRightFlag,setarrowRightFlag] = useState(true)
     const scrollLeft=()=>{
+
         var element = document.getElementById('storyPresentation')
+
         element.scrollLeft = element.scrollLeft - 240
+        if (element.scrollLeft - 240 <= 0)
+        {
+            setarrowLeftFlag(false)
+        }
+        else{
+            setarrowLeftFlag(true)
+        }
+        if (element.scrollLeft <= element.scrollWidth - element.clientWidth)
+        {
+            setarrowRightFlag(true)
+        }
+        else{
+            setarrowRightFlag(false)
+        }
+
     }
     const scrollRight=()=>{
         var element = document.getElementById('storyPresentation')
+        
+        if (element.scrollLeft + 240 < element.scrollWidth - element.clientWidth)
+        {
+            setarrowRightFlag(true)
+        }
+        else{
+            setarrowRightFlag(false)
+        }
+        if (element.scrollLeft >= 0)
+        {
+            setarrowLeftFlag(true)
+        }
+        
         element.scrollLeft = element.scrollLeft + 240
+
     }
     const setStory=(value)=>{
         setstorymode(value)
     }
+    
     return (
         <div>
             {
@@ -49,11 +83,23 @@ const Story=()=>{
                             })
                         }
                     </div>
+                    
                     <div className = 'arrowWrapper'>
+                        { arrowLeftFlag?
+                         
                         <div className='leftArrowWrapper' onClick={scrollLeft} style={{zIndex:'1'}}/>
-                        <div className='rightArrowWrapper' onClick={scrollRight} style={{zIndex:'1'}}/>   
+                        :
+                        <div className='leftArrowWrapper' onClick={scrollLeft} style={{zIndex:'-1'}}/>
+                        }
+                        { arrowRightFlag?
+                         
+                         <div className='rightArrowWrapper' onClick={scrollRight} style={{zIndex:'1'}}/>
+                         :
+                         <div className='rightArrowWrapper' onClick={scrollRight} style={{zIndex:'-1'}}/>
+                         }
                     </div>
                 </div> 
+                
             }
         </div>
         
@@ -176,7 +222,7 @@ const StoryPlayer=(props)=>{
                                     </a>
                                 </div>
                                 <div className="storyTime">
-                                    {console.log(currentPlayerIndex)}
+                                    
                                     {playingStory[currentPlayerIndex]['time']}
                                 </div>
                             </div>                       

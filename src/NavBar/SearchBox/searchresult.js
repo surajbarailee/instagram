@@ -172,7 +172,7 @@ const searchHistoryData=[
 ]
 
 const SearchHistoryList =(props)=>{
-    console.log(props.data.id)
+
     var followers = props.data.followerFriends[0]
     var total= props.data.followerFriends.length
     if(total===1){

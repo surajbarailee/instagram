@@ -13,7 +13,7 @@ return <div>
     <div className="profileContainer editProfileWrapper" >
         <div className="editLeftDiv">
             <div className={editPageFlag==='editpage'?"activeLeftDivOption":"leftDivOption"}
-            onClick={()=>{console.log('asd');seteditPageFlag('editpage')}}>
+            onClick={()=>{seteditPageFlag('editpage')}}>
                 Edit Profile
             </div>
             <div className={editPageFlag==='changepassword'?"activeLeftDivOption":"leftDivOption"}
