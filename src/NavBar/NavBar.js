@@ -176,7 +176,7 @@ const NavBar=()=>{
                                                 activitydata.map((data,i)=>{
                                                         return (
                                                           <div>
-                                                              <ActivityDetails data={data} key={data.id}/>
+                                                              <ActivityDetails data={data} key={data.id} togglesvgIcon = {togglesvgIcon}/>
                                                               {
                                                                 activitydata.length === i+1?
                                                                 '':
@@ -258,7 +258,7 @@ const ActivityDetails=(props)=>{
 
     return (
         <div style={{padding:'5px 10px 5px 10px'}} className='activityWrapper'>
-            <div className='outerCover' style={{backgroundColor:'red'}}>
+            <div className='outerCover'onClick={()=>props.togglesvgIcon('')}>
             </div>
             <div className='activityHeading'>
                 {props.data.heading}
