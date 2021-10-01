@@ -27,6 +27,7 @@ const NavBar=()=>{
         updateSearchIcon(false)
     }
     const togglesvgIcon=(value)=>{  
+        console.log('asd')
         var location = window.location.pathname
         var checklocation=true
         if (value==='activity'){
@@ -60,7 +61,12 @@ const NavBar=()=>{
             {
                 updateActiveIcon('explore')
             }
-            
+            else if (location==='/suraj_barailee/'){
+                updateActiveIcon('profile')
+                if (showProfileOptions){
+                    updateshowProfileOptions(false)
+                }
+            }
         }
 
         
@@ -195,6 +201,7 @@ const NavBar=()=>{
 
                     {activeIcon==='profile' && showProfileOptions  &&
                                     <div className='profileOption'>
+                                        <div className='outerCover' onClick={()=>togglesvgIcon('')} />
                                         <div className='profileContainerWrapper' >
                                             <div className='optionContainer' >
                                                 <div className="diamondDivProfile"/>

@@ -191,7 +191,7 @@ svg{
     position: absolute;
     border-radius: 6px;
     background-color: white;
-    z-index: 0;
+    z-index: 1;
     box-shadow: 0 0 5px 1px rgba(0,0,0,.0975);
 }
 
