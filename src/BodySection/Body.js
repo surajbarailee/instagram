@@ -57,9 +57,44 @@ const NewsFeed = ()=>{
 
     </div>
 }
+var videoPlayerRef;
+const  PauseVideo=(value)=>{
+    if (videoPlayerRef!==undefined){
+        videoPlayerRef.pause()
+    }
+    videoPlayerRef = value
+}
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        (rect.top >= 0 || rect.bottom >= 0) && (rect.top <= window.innerHeight)
+    );
+}
+
+document.addEventListener('scroll',
+function(){
+    if (videoPlayerRef !== undefined && !isInViewport(videoPlayerRef)){
+        videoPlayerRef.load()
+        videoPlayerRef = undefined
+    }
+}
+)
+
+document.addEventListener('visibilitychange',
+function(){
+    if (videoPlayerRef !== undefined){
+        videoPlayerRef.load()
+        videoPlayerRef = undefined
+    }
+}
+)
+
+
+
+
 
 const Post=(props)=>{
-    
     const [isPlaying,setIsPlaying] = useState(false)   
     const [currentlyShown,setcurrentlyShown] = useState(0)
     const videoRef = useRef(null);
@@ -71,6 +106,7 @@ const Post=(props)=>{
     }
     const playorPause=()=>{
         if (videoRef.current.paused){
+            PauseVideo(videoRef.current)
             videoRef.current.play();
         }        
         else{
