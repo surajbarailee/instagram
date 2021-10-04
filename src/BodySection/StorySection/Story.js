@@ -7,7 +7,6 @@ import Post1a from '../../resources/StoryPosts/post1a.jpg';
 import Post1b from '../../resources/StoryPosts/post1b.jpg';
 
 
-
 const Story=()=>{
     const [storymode, setstorymode] = useState(false)
     const [arrowLeftFlag,setarrowLeftFlag] = useState(false)
