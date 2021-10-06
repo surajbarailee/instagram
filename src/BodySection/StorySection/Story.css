@@ -272,8 +272,12 @@
     width:100%;
     display: flex;
     justify-content: space-between;
-    padding:20px 16px;
+    padding:10px 16px 20px 16px;
     box-sizing: border-box;
+}
+.loaderWrapper{
+    width:90%;
+    margin:20px auto 0px auto;
 }
 
 .userStoryDetail{
@@ -324,11 +328,9 @@
 
 
 /* Story Loader Animation */
-.progress-container {
+.progressContainer {
     display: flex;
     flex-direction: row;
-    width: 80vw;
-    padding: 10px 0;
     cursor: pointer;
   }
   
@@ -336,7 +338,7 @@
     height: 2px;
     flex-grow: 1;
     border-radius: 4px;
-    margin: 0 5px;
+    margin: 0 1px;
     display: flex;
     background-image: -webkit-linear-gradient(left, 
       rgba(255,255,255,.5) 0%,
@@ -346,7 +348,7 @@
     );
     background-repeat: no-repeat;
     background-size: 200%;
-    background-color: #666;
+    background-color: rgba(255,255,255,1);
     background-position: 100% 50%;
     animation-timing-function: linear;
     animation-delay: .2s;

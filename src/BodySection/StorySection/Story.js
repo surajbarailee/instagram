@@ -147,14 +147,14 @@ const StoryPlayer=(props)=>{
     }
 
     const CurrentlyPlayed=(props)=>{
-        useEffect(() => {
-            const timer = setInterval(() => {
-              updatePlayingStory("i");
-            }, 5500);
-            return () => {
-              clearInterval(timer);
-            };
-          });
+        // useEffect(() => {
+        //     const timer = setInterval(() => {
+        //       updatePlayingStory("i");
+        //     }, 5500);
+        //     return () => {
+        //       clearInterval(timer);
+        //     };
+        //   });
         function updatePlayingStory(value){
             if (value==='i'){
                 if (currentPlayerIndex + 1 < playingStory.length){
@@ -202,7 +202,10 @@ const StoryPlayer=(props)=>{
                 <div style={{width:'100%',height:'100%',position:'relative'}}>
                     <div className='storyDetailWrapper'>
                         <div className="loaderWrapper">
-                            
+                            <div className="progressContainer">
+                                <div style={{animationDuration: '2s'}} className="progress"></div> 
+                                <div style={{animationDuration: '5s'}} className="progress"></div> 
+                            </div>
                         </div>
                         <div className="storyUserDetailWrapper">
                             <div className="userStoryDetail">
