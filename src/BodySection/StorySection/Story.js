@@ -186,6 +186,36 @@ const StoryPlayer=(props)=>{
             }
         }
         
+        const Progressbar=()=>{
+            return <div style={{animationDuration: '6s'}} className="progress"></div>
+        }
+        useEffect(()=>{
+            const progress = Array.from(document.querySelectorAll('.progress'))
+            const playNext = (e) => {
+                const current = e && e.target;
+                let next;
+              
+                if (current) {
+                  const currentIndex = progress.indexOf(current);
+                  if (currentIndex < progress.length) {
+                    next = progress[currentIndex+1];
+                  }
+                  current.classList.remove('active');
+                  current.classList.add('passed');
+                } 
+                
+                if (!next) {
+                  progress.map((el) => {
+                    el.classList.remove('active');
+                    el.classList.remove('passed');
+                  })
+                  next = progress[0];
+                }
+                next.classList.add('active'); 
+              }
+              progress.map(el => el.addEventListener("animationend", playNext, false));
+              playNext();
+        },[]);
         
         const playingStory  = StoryData[props.index]['story']
         const userDetail =StoryData[props.index]['userProfile']
@@ -203,8 +233,9 @@ const StoryPlayer=(props)=>{
                     <div className='storyDetailWrapper'>
                         <div className="loaderWrapper">
                             <div className="progressContainer">
-                                <div style={{animationDuration: '2s'}} className="progress"></div> 
-                                <div style={{animationDuration: '5s'}} className="progress"></div> 
+                                <Progressbar />
+                                <Progressbar />
+                                
                             </div>
                         </div>
                         <div className="storyUserDetailWrapper">
