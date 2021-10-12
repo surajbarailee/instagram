@@ -67,7 +67,7 @@ const Story=()=>{
                     </div>
                     <div className='exitStory'>
                         <button className='exitStoryButton' onClick={()=>{setstorymode(false)}}>
-                            <svg aria-label='Close'  color='#ffffff' fill='#ffffff' height='24' role='img' viewBox='0 0 48 48' width='24'><path clip-rule='evenodd' d='M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z' fill-rule='evenodd'></path></svg>
+                            <svg aria-label='Close'  color='#ffffff' fill='#ffffff' height='24' role='img' viewBox='0 0 48 48' width='24'><path clipRule='evenodd' d='M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z' fillRule='evenodd'></path></svg>
                         </button>
                     </div>
                 </div>
@@ -147,14 +147,6 @@ const StoryPlayer=(props)=>{
     }
 
     const CurrentlyPlayed=(props)=>{
-        // useEffect(() => {
-        //     const timer = setInterval(() => {
-        //       updatePlayingStory("i");
-        //     }, 5500);
-        //     return () => {
-        //       clearInterval(timer);
-        //     };
-        //   });
         function updatePlayingStory(value){
             if (value==='i'){
                 if (currentPlayerIndex + 1 < playingStory.length){
@@ -187,31 +179,32 @@ const StoryPlayer=(props)=>{
         }
         
         const Progressbar=()=>{
-            return <div style={{animationDuration: '6s'}} className="progress"></div>
+            return <div style={{animationDuration: '5s'}} className="progress"></div>
         }
+        const [flag, setflag] = useState(false)
         useEffect(()=>{
             const progress = Array.from(document.querySelectorAll('.progress'))
             const playNext = (e) => {
                 const current = e && e.target;
                 let next;
-              
                 if (current) {
-                  const currentIndex = progress.indexOf(current);
-                  if (currentIndex < progress.length) {
+                    const currentIndex = progress.indexOf(current);
+                    if (currentIndex < progress.length) {
                     next = progress[currentIndex+1];
-                  }
-                  current.classList.remove('active');
-                  current.classList.add('passed');
+                    }
+                    current.classList.remove('active');
+                    current.classList.add('passed');
+                    updatePlayingStory('i')
                 } 
                 
                 if (!next) {
-                  progress.map((el) => {
+                    progress.forEach((el) => {
                     el.classList.remove('active');
                     el.classList.remove('passed');
-                  })
-                  next = progress[0];
+                    })
+                    next = progress[0];
                 }
-                next.classList.add('active'); 
+                next.classList.add('active');
               }
               progress.map(el => el.addEventListener("animationend", playNext, false));
               playNext();
@@ -220,9 +213,6 @@ const StoryPlayer=(props)=>{
         const playingStory  = StoryData[props.index]['story']
         const userDetail =StoryData[props.index]['userProfile']
         const [currentPlayerIndex, setcurrentPlayerIndex] = useState(0)
-        if (playingStory[currentPlayerIndex]['type']==='image'){
-            //animation starting...
-        }
         return(
             <div className='currentlyPlayed'>
                 <div style={{width:'30px',paddingRight:'10px'}}>
@@ -233,8 +223,9 @@ const StoryPlayer=(props)=>{
                     <div className='storyDetailWrapper'>
                         <div className="loaderWrapper">
                             <div className="progressContainer">
-                                <Progressbar />
-                                <Progressbar />
+                                {StoryData[props.index].story.map(function(value,index){
+                                    return <Progressbar key={value['id']}/>
+                                })}
                                 
                             </div>
                         </div>
@@ -260,12 +251,12 @@ const StoryPlayer=(props)=>{
                                 </div>
                                 <div className="storySound">
                                     <button className='storyButtons'>
-                                        <svg aria-label="Video has no audio."  color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path clip-rule="evenodd" d="M42.9 24l4.6 4.6c.6.6.6 1.6 0 2.2l-1.4 1.4c-.6.6-1.6.6-2.2 0l-4.6-4.6-4.6 4.6c-.6.6-1.6.6-2.2 0l-1.4-1.4c-.6-.6-.6-1.6 0-2.2l4.6-4.6-4.6-4.6c-.6-.6-.6-1.6 0-2.2l1.4-1.4c.6-.6 1.6-.6 2.2 0l4.6 4.6 4.6-4.6c.6-.6 1.6-.6 2.2 0l1.4 1.4c.6.6.6 1.6 0 2.2L42.9 24zM24.1 47.6L11.3 34.7H1.6C.7 34.7 0 34 0 33.2V14.8c0-.8.7-1.5 1.5-1.5h9.7L24.1.4c.9-.9 2.5-.3 2.5 1v45.1c0 1.3-1.6 2-2.5 1.1z" fill-rule="evenodd"></path></svg>
+                                        <svg aria-label="Video has no audio."  color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path clipRule="evenodd" d="M42.9 24l4.6 4.6c.6.6.6 1.6 0 2.2l-1.4 1.4c-.6.6-1.6.6-2.2 0l-4.6-4.6-4.6 4.6c-.6.6-1.6.6-2.2 0l-1.4-1.4c-.6-.6-.6-1.6 0-2.2l4.6-4.6-4.6-4.6c-.6-.6-.6-1.6 0-2.2l1.4-1.4c.6-.6 1.6-.6 2.2 0l4.6 4.6 4.6-4.6c.6-.6 1.6-.6 2.2 0l1.4 1.4c.6.6.6 1.6 0 2.2L42.9 24zM24.1 47.6L11.3 34.7H1.6C.7 34.7 0 34 0 33.2V14.8c0-.8.7-1.5 1.5-1.5h9.7L24.1.4c.9-.9 2.5-.3 2.5 1v45.1c0 1.3-1.6 2-2.5 1.1z" fillRule="evenodd"></path></svg>
                                     </button>
                                 </div>
                                 <div className="storyOptions">
                                     <button className='storyButtons'>
-                                        <svg aria-label="Menu"  color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12 9.75A2.25 2.25 0 1014.25 12 2.25 2.25 0 0012 9.75zm-6 0A2.25 2.25 0 108.25 12 2.25 2.25 0 006 9.75zm12 0A2.25 2.25 0 1020.25 12 2.25 2.25 0 0018 9.75z" fill-rule="evenodd"></path></svg>
+                                        <svg aria-label="Menu"  color="#ffffff" fill="#ffffff" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12 9.75A2.25 2.25 0 1014.25 12 2.25 2.25 0 0012 9.75zm-6 0A2.25 2.25 0 108.25 12 2.25 2.25 0 006 9.75zm12 0A2.25 2.25 0 1020.25 12 2.25 2.25 0 0018 9.75z" fillRule="evenodd"></path></svg>
                                     </button>
                                 </div>
                             </div>
