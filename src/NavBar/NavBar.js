@@ -27,7 +27,7 @@ const NavBar=()=>{
         updateSearchIcon(false)
     }
     const togglesvgIcon=(value)=>{  
-        console.log('asd')
+        
         var location = window.location.pathname
         var checklocation=true
         if (value==='activity'){

@@ -7,9 +7,9 @@ import PlayButton from '../resources/play.png'
 
 //first post
 import Profile1 from '../resources/posts/guitartutsforyou.jpg'
-import GuitarOne from '../resources/guitar1.jpg'
+
 import VideoPost from '../resources/videos/guitartutorial.mp4'
-import GuitarTwo from '../resources/guitar2.jpg'
+
 
 //second post
 import Profile2 from '../resources/posts/memenepal.jpg'
@@ -32,7 +32,7 @@ import PostImage5a from '../resources/posts/post5a.mp4'
 
 
 
-import {useRef,useState} from "react";
+import {useRef,useState,useMemo} from "react";
 
 import DefaultProfile from '../resources/default_profile.jpg'
 const Body=()=>{
@@ -51,7 +51,7 @@ const NewsFeed = ()=>{
     return <div>
         {
             postdata.map((data,index)=>{
-                return <SinglePost data={data}/>
+                return <SinglePost data={data} key = {index}/>
             })
         }
 
@@ -175,6 +175,7 @@ const Post=(props)=>{
 
 const SinglePost=(props)=>{
     const [comment,updateComment] = useState('')
+    const random_comment_count = useMemo(()=>Math.floor(Math.random() * 100),[])
         return( 
             <div className="singlePostWrapper">
                     <div className="postNav" style={{height:'60px'}}>
@@ -187,7 +188,6 @@ const SinglePost=(props)=>{
                                 {props.data.postowner}
                                 </a>
                             </div>
-    
                         </div>
                         <div className="postNavRight">
                             <img src={ThreeDotMenu} alt="profile_picture" className = "dotMenu"/>
@@ -223,7 +223,7 @@ const SinglePost=(props)=>{
                             <b>{props.data.postowner}</b> {props.data.postCaption} 
                         </div>
                         <div className="commentStatus">
-                            View all {Math.floor(Math.random() * 100)} comments
+                            View all {random_comment_count} comments
                         </div>
                         <div className="commentList">
                                 {props.data.comments.map((data,index)=>{
@@ -250,7 +250,7 @@ const SinglePost=(props)=>{
                                 <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M24 48C10.8 48 0 37.2 0 24S10.8 0 24 0s24 10.8 24 24-10.8 24-24 24zm0-45C12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21S35.6 3 24 3z"></path><path d="M34.9 24c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5 1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5zm-21.8 0c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5zM24 37.3c-5.2 0-8-3.5-8.2-3.7-.5-.6-.4-1.6.2-2.1.6-.5 1.6-.4 2.1.2.1.1 2.1 2.5 5.8 2.5 3.7 0 5.8-2.5 5.8-2.5.5-.6 1.5-.7 2.1-.2.6.5.7 1.5.2 2.1 0 .2-2.8 3.7-8 3.7z"></path></svg>
                             </div>
                             <div className="commentBox">
-                                <input type="text" placeholder='Add a comment...' className="inputComment" onChange={e=>updateComment(e.target.value)}/>
+                                <input type="text" placeholder='Add a comment...' className="inputComment" onChange={(e)=>{updateComment(e.target.value)}}/>
                             </div>
                             <div className={comment.length<=0?"postButton disabled" : "postButton enabled"}>
                                 <b>Post</b>
@@ -269,7 +269,7 @@ const AccountSection =()=>{
                         <img src={DefaultProfile} alt="profile_picture" width='56px' height='56px' style={{borderRadius:'56px'}}/>  
                     </div>
                     <div className="accountNameWrapper" style={{marginLeft:'16px'}}>
-                        <div className="username">
+                        <div className="username" style={{cursor:'pointer'}}>
                             <b>suraj_barailee</b>
                         </div>
                         <div className="accountDetail"  style={{fontWeight:'500',color:'rgba(142,142,142,1)'}}>
@@ -351,7 +351,7 @@ const SuggestionSingleList =(props)=>{
                 Followed by {followers}
             </div>
         </div>
-        <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px'}}>
+        <div style={{color:'rgba(0,149,246,1)',fontWeight:'600',fontSize:'11px',cursor:'pointer'}}>
             Follow
         </div>
     </div>
@@ -424,16 +424,6 @@ var postdata = [
             'innerpostid':1,
             'type':'video',
             'mainpost':VideoPost
-        },
-        {
-            'innerpostid':2,
-            'type':'image',
-            'mainpost':GuitarOne
-        },
-        {
-            'innerpostid':2,
-            'type':'image',
-            'mainpost':GuitarTwo
         }
         ],
         'postCaption':'Here is the tutorial you have been asking for since ages...',
