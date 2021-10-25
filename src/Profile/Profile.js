@@ -374,9 +374,5 @@ const ProfileFooter=()=>{
 }
 
 
-
-
-
-
 export default Profile;
 export {ProfileFooter};
