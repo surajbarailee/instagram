@@ -136,18 +136,18 @@ const UserLabels=(props)=>{
 // <svg aria-label="Pause" class="_8-yf5 " color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path d="M15 1c-3.3 0-6 1.3-6 3v40c0 1.7 2.7 3 6 3s6-1.3 6-3V4c0-1.7-2.7-3-6-3zm18 0c-3.3 0-6 1.3-6 3v40c0 1.7 2.7 3 6 3s6-1.3 6-3V4c0-1.7-2.7-3-6-3z"></path></svg>
 
 const StoryPlayer=(props)=>{
+    const [isPlaying, setisPlaying] = useState(true)
     const storyClick=()=>{
         const main_story_parent = document.getElementById('progress_bar_status')
+        setisPlaying(!isPlaying)
         if (main_story_parent.style.animationPlayState==='paused'){
             main_story_parent.style.animationPlayState='running'
-            setisPlaying(true)
         }
         else{
             main_story_parent.style.animationPlayState='paused'
-            setisPlaying(false)
         }
     }
-    const [isPlaying, setisPlaying] = useState(true)
+    
     const setStory = props.setStory
     const [startingPointer, setstartingPointer] = useState(0)
 
