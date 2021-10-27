@@ -121,7 +121,21 @@ const Post=(props)=>{
         }
     }
     
+    const [liked, setliked] = useState(false)
     
+    const instaLiked=()=>{
+        var div = document.getElementById('instaLiked')
+        div.style.animationDuration='1000ms'
+        div.style.animationTimingFunction='ease-in-out'
+        div.style.animationName='like-heart-animation'
+
+        div.addEventListener('animationend', () => {
+            div.style=null
+          });
+        
+    }
+
+
     if (props.data[currentlyShown]['type']==='video'){
         return(
             <div className="videoWrapper">
@@ -153,7 +167,7 @@ const Post=(props)=>{
     }
     return(
         <div  style={{position:'relative'}}>
-            <div className="buttonDiv">
+            <div className="buttonDiv" onDoubleClick={()=>{console.log('clicked')}}>
                 <div className={`leftArrowWrapper ${currentlyShown===0 ? "controlHidden":""} `}
                 onClick={()=>{updatecurrentlyShown(currentlyShown-1)}}
                 style={{zIndex:'1'}}
@@ -166,8 +180,11 @@ const Post=(props)=>{
                 >
                 </div>
             </div>
-            <div>
-                <img src={props.data[currentlyShown]['mainpost']} alt={`post by${props.user}`} className="postImage" />
+            <div style={{position:'relative'}}>
+                <img src={props.data[currentlyShown]['mainpost']} alt={`post by${props.user}`} className="postImage" 
+                onDoubleClick={()=>{instaLiked()}}/>
+                <div className='instaLike' id='instaLiked'>
+                </div>
             </div>
         </div>
     )
