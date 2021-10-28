@@ -214,6 +214,13 @@
 .commentInputWrapper{
     display: flex;
 }
+
+.commentLikeButton{
+    border:0px;
+    padding:0px;
+    background-color: transparent;
+    
+}
 .smiley{
     flex:1 0 0;
 }
