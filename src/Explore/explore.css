@@ -3,9 +3,7 @@
     height: 100%;
 }
 
-.singlePictureWrapper{
-    width:calc(33.33% - 48px);
-}
+
 .imageArea{
     width: 100%;
     display:flex;
@@ -30,6 +28,8 @@
 }
 
 .singlePictureWrapper{
+    position:relative;
+    width:calc(33.33% - 48px);
     padding:0px 14px 28px 14px;
     width:293px;
     height:293px;
