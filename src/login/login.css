@@ -1,0 +1,152 @@
+.loginWrapper{
+    display:flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(250,250,250,1);
+}
+
+.rightWrapper{
+    
+    max-width: 350px;
+    
+}
+.signInlogoWrapper{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.signIn{
+    background-color: white;
+    width:100%;
+    border:1px solid rgba(219,219,219,1);
+}
+.logo{
+    
+    width:175px;
+    height:51px;
+    background-image: url('../resources/sprite2.png');
+    background-repeat: no-repeat;
+    background-position: 0px -130px;
+    cursor: pointer;
+    margin:22px
+}
+.inputLoginWrapper{
+    display: flex;
+    justify-content: center;
+    margin:0px 25px;
+    /* box-sizing: border-box; */
+}
+
+.inputLogin{
+    height:35px;
+    min-width: 260px;
+    margin:3px 10px;
+    font-size: 12px;
+    background-color: #FAFAFA;
+    border:1px solid rgba(219,219,219,1);
+    padding-left:10px;
+    border-radius: 3px;
+}
+.inputLogin:focus{
+    outline:none;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    
+}
+.loginButton{
+
+    background-color: #0095f6;
+    border:1px solid transparent;
+    border-radius: 4px; 
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color:white;
+    padding:6px 0px;
+    min-width: 275px;
+    margin: 10px 20px;
+    
+}
+.orWrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px 40px 15px 40px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #8E8E8E;
+}
+
+
+.orLines{
+    height:1px;
+    border-radius: 3px;
+    width: 100px;
+    background-color: #DBDBDB;
+} 
+
+.loginFacebook{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.loginFacebookButton{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color:#385185;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+
+.facebookIcon{
+    width:16px;
+    height:16px;
+    background-image: url('../resources/sprite2.png');
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+    cursor: pointer;
+    margin-right:15px
+}
+
+.forgotPassword{
+    font-size: 12px ;
+    text-align: center;
+    padding:20px;
+    cursor: pointer;
+}
+
+.SignUpWrapper{
+    margin-top:15px;
+    border:1px solid rgba(219,219,219,1);
+    background-color: white;
+}
+
+.signUp{
+    margin: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+.signuplink{
+    color:#0095f6;
+    font-weight: 600;
+}
+
+.getapp{
+    text-align: center;
+}
+.getappText{
+    padding-top:20px;
+}

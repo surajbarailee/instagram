@@ -376,14 +376,12 @@ const AccountSection =()=>{
                         <Links link='Hashtags' url='https://about.instagram.com'/>
                         <Links link='Language' url='https://about.instagram.com'/>
 
-                        <div style={{color :'#DEDEDE',
+                        <div style={{color :'#DEDEEA',
                         fontSize:'11px',
                         padding:'15px 0px 0px 5px',
                         fontWeight:'600'
-
-                        
                         }}> 
-                        &copy; 2021 INSTAGRAM FROM FACEBOOK 
+                        &copy; 2021 INSTAGRAM FROM META 
                         </div>
                 </div>
         </div>
