@@ -6,7 +6,7 @@
 }
 
 .rightWrapper{
-    
+    padding-top:30px;
     max-width: 350px;
     
 }
@@ -65,12 +65,17 @@
     font-size: 14px;
     line-height: 18px;
     text-align: center;
-    color:white;
+    color:white !important;
     padding:6px 0px;
     min-width: 275px;
     margin: 10px 20px;
+    text-decoration: none;
     
 }
+.Link{
+    text-decoration: none;
+    color: #0095f6;
+    font-size: 12px;}
 .orWrapper{
     display:flex;
     justify-content: space-between;
@@ -150,3 +155,57 @@
 .getappText{
     padding-top:20px;
 }
+
+
+.imageWrapper{
+    height:618px;
+}
+.leftWrapper{
+    position: relative;
+    
+}
+
+@media screen and (max-width: 850px) {
+    .leftWrapper{
+        display:none;
+    }
+}
+
+.screenshots{
+    position: absolute;
+    bottom:91px;
+    right:63px;
+}
+
+
+  .fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0.5;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0.5;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0.5;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0.5;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0.5;}
+    100% {opacity:1;}
+  }
