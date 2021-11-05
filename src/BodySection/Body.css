@@ -69,6 +69,7 @@
 
 .accountSwitchWrapper{
     width: 100%;
+    cursor:pointer;
 }
 
 .suggestionHeader{
@@ -93,6 +94,7 @@
 
 .accountFollow{
     color:rgba(0,149,246,1);
+    cursor:pointer;
 }
 
 
