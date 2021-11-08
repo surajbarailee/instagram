@@ -130,17 +130,7 @@ const UserLabels=(props)=>{
 
 
 const StoryPlayer=(props)=>{
-    const [isPlaying, setisPlaying] = useState(true)
-    const storyClick=()=>{
-        const main_story_parent = document.getElementById('progress_bar_status')
-        setisPlaying(!isPlaying)
-        if (main_story_parent.style.animationPlayState==='paused'){
-            main_story_parent.style.animationPlayState='running'
-        }
-        else{
-            main_story_parent.style.animationPlayState='paused'
-        }
-    }
+    
     
     const setStory = props.setStory
     const [startingPointer, setstartingPointer] = useState(0)
@@ -159,6 +149,21 @@ const StoryPlayer=(props)=>{
     }
 
     const CurrentlyPlayed=(props)=>{
+        const [isPlaying, setisPlaying] = useState(true)
+        const StoryClicked=()=>{
+            console.log(isPlaying)
+            const main_story_parent = document.getElementById('progress_bar_status')
+            if (isPlaying===true){
+                main_story_parent.style.animationPlayState='paused'
+            }
+            else if (isPlaying===false){
+                main_story_parent.style.animationPlayState='running'
+               
+            }
+            
+            setisPlaying(!isPlaying)
+            // console.log(main_story_parent.style.animationPlayState)
+        }
         function updatePlayingStory(value){
             if (value==='i'){
                 if (currentPlayerIndex + 1 < playingStory.length){
@@ -191,7 +196,7 @@ const StoryPlayer=(props)=>{
         }
         
         const Progressbar=()=>{
-            return <div style={{animationDuration: '5s'}} className="progress" id='progress_bar_status'></div>
+            return <div  className="progress" id='progress_bar_status'></div>
         }
         useEffect(()=>{
             const progress = Array.from(document.querySelectorAll('.progress'))
@@ -257,7 +262,7 @@ const StoryPlayer=(props)=>{
                             <div className="storyButtonsWrapper">
                                 <div className="storyPlayPause">
                                     <button className='storyButtons' id='play_pause_button'>
-                                        {isPlaying? 
+                                        {setisPlaying? 
                                         <svg aria-label="Pause" class="_8-yf5 " color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path d="M15 1c-3.3 0-6 1.3-6 3v40c0 1.7 2.7 3 6 3s6-1.3 6-3V4c0-1.7-2.7-3-6-3zm18 0c-3.3 0-6 1.3-6 3v40c0 1.7 2.7 3 6 3s6-1.3 6-3V4c0-1.7-2.7-3-6-3z"></path></svg>
                                         :
                                         <svg aria-label="Play" color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path d="M9.6 46.5c-1 0-2-.3-2.9-.8-1.8-1.1-2.9-2.9-2.9-5.1V7.3c0-2.1 1.1-4 2.9-5.1 1.9-1.1 4.1-1.1 5.9 0l30.1 17.6c1.5.9 2.3 2.4 2.3 4.1 0 1.7-.9 3.2-2.3 4.1L12.6 45.7c-.9.5-2 .8-3 .8z"></path></svg>
@@ -277,7 +282,7 @@ const StoryPlayer=(props)=>{
                             </div>
                         </div>
                     </div>
-                    <img src={playingStory[currentPlayerIndex]['source']} alt='main_story' className='storyPictureSizePlaying' onClick={()=>{storyClick()}}/>
+                    <img src={playingStory[currentPlayerIndex]['source']} alt='main_story' className='storyPictureSizePlaying' onClick={()=>{StoryClicked()}}/>
                     <div className='replyStoryWrapper'>
                         <div className='replyStoryMessageWrapper'>
                             <input type="text" placeholder={`Reply to ${userDetail['username']}`} className='replyStoryMessage' />
