@@ -22,3 +22,8 @@ some of the screen shots:
 ![image](https://user-images.githubusercontent.com/46261059/141044506-2cde835c-9acb-42ec-8f83-59a1a82474bb.png)
 
 ![image](https://user-images.githubusercontent.com/46261059/141044549-ab03670f-f9d8-46a7-b0f3-787d475c6b23.png)
+
+
+
+Some of the sources that i used to learn during this project:
+ Progress Bar example : https://codepen.io/thegamehasnoname/pen/JewZrm
