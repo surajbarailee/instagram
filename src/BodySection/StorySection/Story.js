@@ -149,20 +149,17 @@ const StoryPlayer=(props)=>{
     }
 
     const CurrentlyPlayed=(props)=>{
-        const [isPlaying, setisPlaying] = useState(true)
+        
         const StoryClicked=()=>{
-            console.log(isPlaying)
+    
             const main_story_parent = document.getElementById('progress_bar_status')
-            if (isPlaying===true){
-                main_story_parent.style.animationPlayState='paused'
-            }
-            else if (isPlaying===false){
+            if (main_story_parent.style.animationPlayState==='paused'){
                 main_story_parent.style.animationPlayState='running'
+            }
+            else {
+                main_story_parent.style.animationPlayState='paused'
                
             }
-            
-            setisPlaying(!isPlaying)
-            // console.log(main_story_parent.style.animationPlayState)
         }
         function updatePlayingStory(value){
             if (value==='i'){
@@ -225,6 +222,7 @@ const StoryPlayer=(props)=>{
               progress.map(el => el.addEventListener("animationend", playNext, false));
               playNext();
         },[]);
+
         
         const playingStory  = StoryData[props.index]['story']
         const userDetail =StoryData[props.index]['userProfile']
@@ -262,11 +260,11 @@ const StoryPlayer=(props)=>{
                             <div className="storyButtonsWrapper">
                                 <div className="storyPlayPause">
                                     <button className='storyButtons' id='play_pause_button'>
-                                        {setisPlaying? 
+                                         
                                         <svg aria-label="Pause" class="_8-yf5 " color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path d="M15 1c-3.3 0-6 1.3-6 3v40c0 1.7 2.7 3 6 3s6-1.3 6-3V4c0-1.7-2.7-3-6-3zm18 0c-3.3 0-6 1.3-6 3v40c0 1.7 2.7 3 6 3s6-1.3 6-3V4c0-1.7-2.7-3-6-3z"></path></svg>
-                                        :
-                                        <svg aria-label="Play" color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path d="M9.6 46.5c-1 0-2-.3-2.9-.8-1.8-1.1-2.9-2.9-2.9-5.1V7.3c0-2.1 1.1-4 2.9-5.1 1.9-1.1 4.1-1.1 5.9 0l30.1 17.6c1.5.9 2.3 2.4 2.3 4.1 0 1.7-.9 3.2-2.3 4.1L12.6 45.7c-.9.5-2 .8-3 .8z"></path></svg>
-                                    }
+                                        
+                                        {/* <svg aria-label="Play" color="#ffffff" fill="#ffffff" height="16" role="img" viewBox="0 0 48 48" width="16"><path d="M9.6 46.5c-1 0-2-.3-2.9-.8-1.8-1.1-2.9-2.9-2.9-5.1V7.3c0-2.1 1.1-4 2.9-5.1 1.9-1.1 4.1-1.1 5.9 0l30.1 17.6c1.5.9 2.3 2.4 2.3 4.1 0 1.7-.9 3.2-2.3 4.1L12.6 45.7c-.9.5-2 .8-3 .8z"></path></svg> */}
+                                    
                                     </button>
                                 </div>
                                 <div className="storySound">
