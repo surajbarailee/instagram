@@ -350,6 +350,8 @@
     background-position: 100% 50%;
     animation-timing-function: linear;
     animation-delay: .2s;
+    animation-duration: 5s;
+    
   }
   
   .progress.active {

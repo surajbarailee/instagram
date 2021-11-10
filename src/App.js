@@ -29,7 +29,6 @@ function App() {
 const DefaultContainer = () => {
   const location = useLocation();
   const [locationvalue, setlocationvalue] = useState(location.pathname)
-  console.log(locationvalue)
   return (
     <>
       {(window.location.pathname!=='/login')?<NavBar/>:''} 
