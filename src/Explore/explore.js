@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import commentPage from '../commentPage/commentPage'
+import commentPage from '../CommentPage/CommentPage'
 
 import Picture1 from '../resources/ExploreResources/explorer1.jpg'
 import Picture2 from '../resources/ExploreResources/explorer2.jpg'

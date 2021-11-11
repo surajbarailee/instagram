@@ -8,8 +8,9 @@ import {Route,Redirect,BrowserRouter as Router} from 'react-router-dom'
 import Inbox from './Inbox/Inbox';
 import NameTag from './Profile/NameTag/NameTag';
 import Login from './login/login';
-import {useLocation} from 'react-router-dom';
-import {useState} from 'react';
+import CommentPage from './CommentPage/CommentPage'
+
+
 function App() {
   return (
     <div style={{height:'100%',width:'100%'}}>
@@ -27,8 +28,7 @@ function App() {
    
 
 const DefaultContainer = () => {
-  const location = useLocation();
-  const [locationvalue, setlocationvalue] = useState(location.pathname)
+  
   return (
     <>
       {(window.location.pathname!=='/login')?<NavBar/>:''} 
@@ -41,6 +41,7 @@ const DefaultContainer = () => {
       <Route exact path="/suraj_barailee/" component={Profile} />
       <Route exact path="/accounts/edit" component={EditProfile} />
       <Route exact path="/nametag" component={NameTag} />
+      <Route exact path="/comment" component={CommentPage} />
       
     </>
   )
