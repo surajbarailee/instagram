@@ -1,0 +1,119 @@
+.commentPageWrapper{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.commentPageContainer{
+    border: 1px solid #dbdbdb;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.commentPostImage{
+    width:450px;
+    height:570px;
+    display: flex;
+    
+}
+
+.commentSection{
+    width:330px;
+    
+}
+
+
+.CommentPageprofileLink{
+    text-decoration: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color:rgba(38,38,38,1);
+}
+.CommentPageprofileLink:hover{
+    text-decoration:underline !important;
+}
+
+
+.dot{
+    width:4px;
+    height: 4px;
+    margin:2px 4px;
+}
+
+
+.commentPost{
+    display: flex;
+    align-items: center;
+    
+}
+
+.postDescription{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color:rgba(38,38,38,1);
+    margin-left: 10px;
+}
+
+.singleCommentWrap{
+    display: flex;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+.commentPageSingleComment{
+
+    margin-top:10px;
+    align-items: center;
+}
+.commentOptions{
+    
+    margin:0px 20px 0px 65px;
+    display:flex;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:rgba(142,142,142,1);
+    font-weight: 600;
+}
+.likedbyWrapper{
+    
+    display: flex;
+    padding-left:16px;
+    margin-top:20px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.likedby span{
+    font-weight: 600;
+}
+
+.likedBy{
+    padding-left:10px;
+}
+
+.likedByDivTime{
+    
+    
+    padding:10px 20px;
+    color:#8e8e8e;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.LowerComment{
+    border-top:1px solid rgba(239,239,239,1);
+    position:absolute;
+    width:100%;
+    
+    
+    
+}

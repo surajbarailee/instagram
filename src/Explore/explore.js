@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import commentPage from '../commentPage/commentPage'
+// import commentPage from '../CommentPage/CommentPage'
 
 import Picture1 from '../resources/ExploreResources/explorer1.jpg'
 import Picture2 from '../resources/ExploreResources/explorer2.jpg'
@@ -24,28 +24,28 @@ const Explore=()=>{
         <div className="galleryWrapper">
             <div className="galleryContainer">
                 <div className="imageArea">
-                    <div className="singlePictureWrapper" onClick={()=>{commentPage()}}>
+                    <div className="singlePictureWrapper" onClick={()=>{setcommentPage()}}>
                         <img src={Picture1} alt="picture1" className='singlePicture' />
                         <div style={{position:'absolute',top:'15px',right:'25px'}}>
                               <svg aria-label="Carousel" class="_8-yf5 edmGD" color="#ffffff" fill="#ffffff" height="28" role="img" viewBox="0 0 48 48" width="28"><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
                         </div>
                     </div>
-                    <div className="singlePictureWrapper" onClick={()=>{commentPage()}}>
+                    <div className="singlePictureWrapper" onClick={()=>{setcommentPage()}}>
                         <img src={Picture2} alt="picture1" className='singlePicture' />
                     </div>
-                    <div className="singlePictureWrapper" onClick={()=>{commentPage()}}>
+                    <div className="singlePictureWrapper" onClick={()=>{setcommentPage()}}>
                         <img src={Picture3} alt="picture1" className='singlePicture' />
                         <div style={{position:'absolute',top:'15px',right:'25px'}}>
                               <svg aria-label="Carousel" class="_8-yf5 edmGD" color="#ffffff" fill="#ffffff" height="28" role="img" viewBox="0 0 48 48" width="28"><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
                         </div>
                     </div>
-                    <div className="singlePictureWrapper" onClick={()=>{commentPage()}}>
+                    <div className="singlePictureWrapper" onClick={()=>{setcommentPage()}}>
                         <img src={Picture4} alt="picture1" className='singlePicture' />
                     </div>
-                    <div className="singlePictureWrapper" onClick={()=>{commentPage()}}>
+                    <div className="singlePictureWrapper" onClick={()=>{setcommentPage()}}>
                         <img src={Picture5} alt="picture1" className='singlePicture' />
                     </div>
-                    <div className="singlePictureWrapper" onClick={()=>{commentPage()}}>
+                    <div className="singlePictureWrapper" onClick={()=>{setcommentPage()}}>
                         <img src={Picture6} alt="picture1" className='singlePicture' />
                         <div style={{position:'absolute',top:'15px',right:'25px'}}>
                               <svg aria-label="Carousel" class="_8-yf5 edmGD" color="#ffffff" fill="#ffffff" height="28" role="img" viewBox="0 0 48 48" width="28"><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
