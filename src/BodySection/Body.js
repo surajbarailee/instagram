@@ -322,7 +322,7 @@ const SinglePost=(props)=>{
                             <div className={comment.length<=0?"postButton disabled" : "postButton enabled"}>
                                 <b>Post</b>
                             </div>
-                        </div>
+                    </div>
             </div>
        )
 }
