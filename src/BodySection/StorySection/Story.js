@@ -3,6 +3,8 @@ import './Story.css';
 import StoryLogo from '../../resources/storylogo.png';
 import { useEffect } from 'react';
 
+
+import loading from '../../resources/loader.gif'
 import Post1a from '../../resources/StoryPosts/post1a.jpg';
 
 
@@ -52,9 +54,16 @@ const Story=()=>{
     const setStory=(value)=>{
         setstorymode(value)
     }
+
+    // remove element with id as loader after 2 seconds
+    useEffect(()=>{
+        setTimeout(()=>{
+            document.getElementById('loader').remove()
+        },2000)
+    },[])
     
     return (
-        <div>
+        <div style={{overflow:'hidden'}}>
             {
                 storymode?
                 <div className='storyWrapperOn'>
@@ -70,9 +79,11 @@ const Story=()=>{
                         </button>
                     </div>
                 </div>
-                
-                :
+                :  
                 <div className='storyWrapper'  id='storyWrapper' >
+                    <div style={{textAlign:'center',margin:'5px 0px -15px 0px'}} id='loader'>
+                        <img src={loading} alt="" width='30px'/>
+                    </div>
                     <div id='storyPresentation' className='storyPresentation'>
                         {
                             userStory.map((data,i)=>{

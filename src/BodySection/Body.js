@@ -111,10 +111,6 @@ function(){
 }
 )
 
-
-
-
-
 const Post=(props)=>{
     const [isPlaying,setIsPlaying] = useState(false)   
     const [currentlyShown,setcurrentlyShown] = useState(0)
@@ -471,11 +467,6 @@ const suggestionData=[
 
 ]
 
-
-
-
-export default Body;
-
 var postdata = [
     {
         'postid':'asd1234567894561',
@@ -634,5 +625,7 @@ var postdata = [
     },
 ]
 
-                        
+           
+
+export default Body;
                             
