@@ -8,7 +8,7 @@ import {Route,Redirect,BrowserRouter as Router} from 'react-router-dom'
 import Inbox from './Inbox/Inbox';
 import NameTag from './Profile/NameTag/NameTag';
 import Login from './login/login';
-import CommentPage from './CommentPage/CommentPage'
+import CommentPage from './CommentSection/CommentPage'
 
 
 function App() {
