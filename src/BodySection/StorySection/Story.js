@@ -55,20 +55,23 @@ const Story=()=>{
         setstorymode(value)
     }
 
-    // remove element with id as loader after 2 seconds
-    useEffect(()=>{
-        setTimeout(()=>{
-            document.getElementById('loader').remove()
-        },2000)
-    },[])
+    window.onload = function() {
+        const loader = document.getElementById('spinner')
+        console.log(loader,'first')
+        if (loader){
+            loader.style.display = 'none'
+        }
+        }
+
+    
     
     return (
         <div style={{overflow:'hidden'}}>
             {
                 storymode?
                 <div className='storyWrapperOn'>
-                    <div className='storyInstaLogo'>
-                        <img src={StoryLogo} alt='' className='storyLogoImage'/>
+                    <div className='storyInstaLogo' id='logo'>
+                        <img src={StoryLogo} alt='instagram Logo' className='storyLogoImage' style={{display:'inherit'}}/>
                     </div>
                     <div className='storyPlayer' style={{display:'flex'}}>
                         <StoryPlayer setStory = {setStory}/>
@@ -78,11 +81,12 @@ const Story=()=>{
                             <svg aria-label='Close'  color='#ffffff' fill='#ffffff' height='24' role='img' viewBox='0 0 48 48' width='24'><path clipRule='evenodd' d='M41.8 9.8L27.5 24l14.2 14.2c.6.6.6 1.5 0 2.1l-1.4 1.4c-.6.6-1.5.6-2.1 0L24 27.5 9.8 41.8c-.6.6-1.5.6-2.1 0l-1.4-1.4c-.6-.6-.6-1.5 0-2.1L20.5 24 6.2 9.8c-.6-.6-.6-1.5 0-2.1l1.4-1.4c.6-.6 1.5-.6 2.1 0L24 20.5 38.3 6.2c.6-.6 1.5-.6 2.1 0l1.4 1.4c.6.6.6 1.6 0 2.2z' fillRule='evenodd'></path></svg>
                         </button>
                     </div>
+                    
                 </div>
                 :  
                 <div className='storyWrapper'  id='storyWrapper' >
-                    <div style={{textAlign:'center',margin:'5px 0px -15px 0px'}} id='loader'>
-                        <img src={loading} alt="" width='30px'/>
+                    <div style={{textAlign:'center',margin:'5px 0px -15px 0px'}} >
+                        <img src={loading} alt="" width='30px' id='spinner'/>
                     </div>
                     <div id='storyPresentation' className='storyPresentation'>
                         {
@@ -138,9 +142,8 @@ const UserLabels=(props)=>{
 }
 
 
+
 const StoryPlayer=(props)=>{
-    
-    
     const setStory = props.setStory
     const [startingPointer, setstartingPointer] = useState(0)
 
