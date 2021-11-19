@@ -1,5 +1,8 @@
 # Instagram Desktop
 ##### _A UI clone of desktop version of instagram_
+
+[checkout the project live ](https://desk-insta.netlify.app)
+
 Created using Create React App.The functionality of components and clean code was not prioritized thus not all function work.The aim for this project was to practice react. Adding smaller features and code fixes are always welcome.I have also kept some can do things in todo section of project. You can see the demo in netlify
 some of the screen shots: 
 
