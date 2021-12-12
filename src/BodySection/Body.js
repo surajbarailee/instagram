@@ -3,7 +3,7 @@ import Story from './StorySection/Story'
 import ThreeDotMenu from '../resources/postNavMenu.svg'
 
 import PlayButton from '../resources/play.png'
-
+import { suggestionData } from '../data.js'
 
 //first post
 import Profile1 from '../resources/posts/guitartutsforyou.jpg'
@@ -428,44 +428,44 @@ const Links=(props)=>{
     )
 }
 
-const suggestionData=[
-    {
-        id:1,
-        username:'bipulchettri',
-        followerFriends:['gaben','invoker','phantom_assasin'],
-        accountLink:'https://www.instagram.com/bipulchettri/',
-        profilePicture:'https://picsum.photos/id/1001/60/60'
-    },
-    {
-        id:2,
-        username:'coder.wow',
-        followerFriends:['phantom.lancer'],
-        accountLink:'https://www.instagram.com/bipulchettri/',
-        profilePicture:'https://picsum.photos/id/21/60/60'
-    },
-    {
-        id:3,
-        username:'programcreator',
-        followerFriends:['ogre_magi','slark','lancer','io'],
-        accountLink:'https://www.instagram.com/coder.wow/',
-        profilePicture:'https://picsum.photos/id/1/50/50'
-    },
-    {
-        id:4,
-        username:'penandink_art',
-        followerFriends:['nature_prophet','lancer'],
-        accountLink:'https://www.instagram.com/penandink_art/',
-        profilePicture:'https://picsum.photos/id/1035/60/60'
-    },
-    {
-        id:5,
-        username:'asmishresth',
-        followerFriends:['lina','rikimaru'],
-        accountLink:'https://www.instagram.com/asmishrestha/',
-        profilePicture:'https://picsum.photos/id/1082/60/60'
-    }
+// const suggestionData=[
+//     {
+//         id:1,
+//         username:'bipulchettri',
+//         followerFriends:['gaben','invoker','phantom_assasin'],
+//         accountLink:'https://www.instagram.com/bipulchettri/',
+//         profilePicture:'https://picsum.photos/id/1001/60/60'
+//     },
+//     {
+//         id:2,
+//         username:'coder.wow',
+//         followerFriends:['phantom.lancer'],
+//         accountLink:'https://www.instagram.com/bipulchettri/',
+//         profilePicture:'https://picsum.photos/id/21/60/60'
+//     },
+//     {
+//         id:3,
+//         username:'programcreator',
+//         followerFriends:['ogre_magi','slark','lancer','io'],
+//         accountLink:'https://www.instagram.com/coder.wow/',
+//         profilePicture:'https://picsum.photos/id/1/50/50'
+//     },
+//     {
+//         id:4,
+//         username:'penandink_art',
+//         followerFriends:['nature_prophet','lancer'],
+//         accountLink:'https://www.instagram.com/penandink_art/',
+//         profilePicture:'https://picsum.photos/id/1035/60/60'
+//     },
+//     {
+//         id:5,
+//         username:'asmishresth',
+//         followerFriends:['lina','rikimaru'],
+//         accountLink:'https://www.instagram.com/asmishrestha/',
+//         profilePicture:'https://picsum.photos/id/1082/60/60'
+//     }
 
-]
+// ]
 
 var postdata = [
     {

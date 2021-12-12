@@ -1,80 +1,96 @@
 import Post1a from '../src/resources/StoryPosts/post1a.jpg';
+import user1 from '../src/resources/StoryPosts/userStory/user1.jpg';
+import user2 from '../src/resources/StoryPosts/userStory/user2.jpg';
+import user3 from '../src/resources/StoryPosts/userStory/user3.jpg';
+import user4 from '../src/resources/StoryPosts/userStory/user4.jpg';
+import user5 from '../src/resources/StoryPosts/userStory/user5.jpg';
+import user6 from '../src/resources/StoryPosts/userStory/user6.jpg';
+import user7 from '../src/resources/StoryPosts/userStory/user7.jpg';
+import user8 from '../src/resources/StoryPosts/userStory/user8.jpg';
+import user9 from '../src/resources/StoryPosts/userStory/user9.jpg';
+import user10 from '../src/resources/StoryPosts/userStory/user10.jpg';
+import user11 from '../src/resources/StoryPosts/userStory/user11.jpg';
+import user12 from '../src/resources/StoryPosts/userStory/user12.jpg';
+import user13 from '../src/resources/StoryPosts/userStory/user13.jpg';
+import user14 from '../src/resources/StoryPosts/userStory/user14.jpg';
+import user15 from '../src/resources/StoryPosts/userStory/user15.jpg';
+
 const userStory=[
     {
         id:1,
         username:'silverswan131',
-        profile:'https://randomuser.me/api/portraits/med/men/75.jpg'
+        profile:user1
     },
     {
         id:8,
         username:'lois Ramoos',
-        profile:'https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'
+        profile:user2
     },
     {
         id:2,
         username:'marhoward',
-        profile:'https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'
+        profile:user3
     },
     {
         id:3,
         username:'vivan_scott',
-        profile:'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=60'
+        profile:user4
     },
     {
         id:4,
         username:'maxy__21',
-        profile:'https://randomuser.me/api/portraits/med/men/91.jpg'
+        profile:user5
     },
     {
         id:5,
         username:'charlie_puth',
-        profile:'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60'
+        profile:user6
     },
     {
         id:6,
         username:'gordenliam',
-        profile:'https://randomuser.me/api/portraits/med/men/73.jpg'
+        profile:user7
     },
     {
         id:7,
         username:'marsha11',
-        profile:'https://randomuser.me/api/portraits/med/men/17.jpg'
+        profile:user8
     },
     
     {
         id:9,
         username:'jessica789brown',
-        profile:'https://randomuser.me/api/portraits/med/women/55.jpg'
+        profile:user9
     },
     {
         id:10,
         username:'carmendean',
-        profile:'https://randomuser.me/api/portraits/med/women/25.jpg'
+        profile:user10
     },
     {
         id:11,
         username:'jessie_franklin',
-        profile:'https://randomuser.me/api/portraits/med/men/80.jpg'
+        profile:user11
     },
     {
         id:12,
         username:'franzis_Perez',
-        profile:'https://randomuser.me/api/portraits/med/men/78.jpg'
+        profile:user12
     },
     {
         id:13,
         username:'heather_day',
-        profile:'https://randomuser.me/api/portraits/med/women/49.jpg'
+        profile:user13
     },
     {
         id:14,
         username:'devonkim__',
-        profile:'https://randomuser.me/api/portraits/med/men/40.jpg'
+        profile:user14
     },
     {
         id:15,
         username:'MarianNR',
-        profile:'https://randomuser.me/api/portraits/med/women/61.jpg'
+        profile:user15
     }
 
 ]
@@ -85,7 +101,7 @@ const StoryData=[
         storyIndex:1,
         userProfile:{
             username:'silverswan131',
-            profilePicture:'https://randomuser.me/api/portraits/med/men/75.jpg',
+            profilePicture:user1,
         },
         storyThumbnail:Post1a,
         story:[
@@ -102,7 +118,7 @@ const StoryData=[
         storyIndex:2,
         userProfile:{
             username:'lois Ramoos',
-            profilePicture:'https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+            profilePicture:user2,
         },
         storyThumbnail:Post1a,
         story:[
@@ -119,7 +135,7 @@ const StoryData=[
         storyIndex:3,
         userProfile:{
             username:'marhoward',
-            profilePicture:'https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+            profilePicture:user3,
         },
         storyThumbnail:Post1a,
         story:[
@@ -137,7 +153,7 @@ const StoryData=[
         storyIndex:4,
         userProfile:{
             username:'vivan_scott',
-            profilePicture:'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=60'
+            profilePicture:user4,
         },
         storyThumbnail:Post1a,
         story:[
@@ -154,7 +170,7 @@ const StoryData=[
         storyIndex:5,
         userProfile:{
             username:'maxy__21',
-            profilePicture:'https://randomuser.me/api/portraits/med/women/61.jpg',
+            profilePicture:user5,
         },
         storyThumbnail:Post1a,
         story:[
@@ -170,7 +186,7 @@ const StoryData=[
         storyIndex:6,
         userProfile:{
             username:'charlie_puth',
-            profilePicture:'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+            profilePicture:user6,
         },
         storyThumbnail:Post1a,
         story:[
@@ -186,7 +202,7 @@ const StoryData=[
         storyIndex:7,
         userProfile:{
             username:'gordenliam',
-            profilePicture:'https://randomuser.me/api/portraits/med/men/73.jpg',
+            profilePicture:user7,
         },
         storyThumbnail:Post1a,
         story:[
@@ -202,7 +218,7 @@ const StoryData=[
         storyIndex:8,
         userProfile:{
             username:'jessica789brown',
-            profilePicture:'https://randomuser.me/api/portraits/med/women/55.jpg',
+            profilePicture:user8,
         },
         storyThumbnail:Post1a,
         story:[
@@ -218,7 +234,7 @@ const StoryData=[
         storyIndex:9,
         userProfile:{
             username:'carmendean',
-            profilePicture:'https://randomuser.me/api/portraits/med/women/25.jpg'
+            profilePicture:user9
         },
         storyThumbnail:Post1a,
         story:[
@@ -234,7 +250,7 @@ const StoryData=[
         storyIndex:10,
         userProfile:{
             username:'jessie_franklin',
-            profilePicture:'https://randomuser.me/api/portraits/med/men/80.jpg',
+            profilePicture:user10,
         },
         storyThumbnail:Post1a,
         story:[
@@ -249,7 +265,47 @@ const StoryData=[
 
 ]
 
+const suggestionData=[
+    {
+        id:1,
+        username:'bipulchettri',
+        followerFriends:['gaben','invoker','phantom_assasin'],
+        accountLink:'https://www.instagram.com/bipulchettri/',
+        profilePicture:user12
+    },
+    {
+        id:2,
+        username:'coder.wow',
+        followerFriends:['phantom.lancer'],
+        accountLink:'https://www.instagram.com/bipulchettri/',
+        profilePicture:user10
+    },
+    {
+        id:3,
+        username:'programcreator',
+        followerFriends:['ogre_magi','slark','lancer','io'],
+        accountLink:'https://www.instagram.com/coder.wow/',
+        profilePicture:user5
+    },
+    {
+        id:4,
+        username:'penandink_art',
+        followerFriends:['nature_prophet','lancer'],
+        accountLink:'https://www.instagram.com/penandink_art/',
+        profilePicture:user11
+    },
+    {
+        id:5,
+        username:'asmishresth',
+        followerFriends:['lina','rikimaru'],
+        accountLink:'https://www.instagram.com/asmishrestha/',
+        profilePicture:user12
+    }
+
+]
+
 export {
     StoryData,
-    userStory
+    userStory,
+    suggestionData
 }
